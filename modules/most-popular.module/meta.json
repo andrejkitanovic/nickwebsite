@@ -1,0 +1,9 @@
+{
+  "global" : true,
+  "smart_type" : "NOT_SMART",
+  "icon" : "fontawesome-5.14.0:Alternate%20Sort%20Amount%20Up:SOLID",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 56476500063,
+  "label" : "Most Popular",
+  "is_available_for_new_content" : true
+}

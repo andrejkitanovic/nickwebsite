@@ -1,0 +1,47 @@
+[ {
+  "id" : "ecd1bd83-f4d9-94aa-851d-7d052a84c178",
+  "name" : "image_field",
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : false,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "be25a535-2acc-403b-486c-e31db92f1082",
+  "name" : "header",
+  "label" : "Header",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "6dcb31a2-c70f-f7ff-135c-55e160374280",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext"
+}, {
+  "id" : "05f589bd-2f8e-5d1c-d12a-5481b48ab980",
+  "name" : "link",
+  "label" : "Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "CONTENT" ],
+  "type" : "url",
+  "default" : {
+    "content_id" : null,
+    "href" : "",
+    "type" : "CONTENT"
+  }
+} ]

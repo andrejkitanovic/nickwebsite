@@ -1,0 +1,27 @@
+
+  <section class="single-post">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          {% if module.image_field.src %}
+             {% set loadingAttr = module.image_field.loading != 'disabled' ? 'loading="{{ module.image_field.loading }}"' : '' %}
+            <img class="single-post__image" src="{{ module.image_field.src }}" alt="{{ module.image_field.alt }}" {{ loadingAttr }}>
+          {% endif %}
+        </div>
+        <div class="col-1"></div>
+        <div class="col-5">
+          <div class="single-post__info-container">
+            <div class="single-post__info">
+              <h2 class="single-post__header h3">
+                {% inline_text field="header" value="{{ module.header }}" %}
+              </h2>
+              <div class="single-post__description p1">
+                {% inline_rich_text field="description" value="{{ module.description }}" %}
+              </div>
+              <a href="{{ module.link.href }}" class="single-post__button button">learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ </section>

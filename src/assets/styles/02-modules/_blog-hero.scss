@@ -1,0 +1,16 @@
+.blog-hero {
+  height: 610px;
+  background-color: #ecf8f6;
+
+  .row,
+  .col-6,
+  &__image {
+    height: 100%;
+  }
+
+  &__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

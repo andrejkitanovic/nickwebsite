@@ -1,0 +1,46 @@
+.latest-articles {
+  padding-bottom: 120px;
+
+  &__article {
+    padding: 72px 0;
+    border-bottom: 1px solid #a1ded2;
+
+    &:last-of-type {
+      border: none;
+    }
+  }
+
+  &__article-image img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  &__article-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
+
+  &__article-date {
+    margin-bottom: 16px;
+  }
+
+  &__article-title {
+    margin-bottom: 8px;
+  }
+
+  &__article-description {
+    margin-bottom: 16px;
+  }
+
+  &__article-read {
+    color: #00609c;
+  }
+
+  &__load-more {
+    text-align: center;
+  }
+}

@@ -1,0 +1,34 @@
+.single-hero{
+    padding:120px 0;
+
+    &__header-section{
+        text-align: center;
+    }
+
+    &__header{
+        margin:0 auto;
+        max-width: 1160px;
+    }
+
+    &__description{
+        margin:0 auto;
+        max-width: 761px;
+        margin-top: 24px;
+    }
+
+    &__image{
+        margin-top: 72px;
+    }
+
+    &__image img{
+        width:100%;
+        height: auto;
+        border-radius: 16px;
+    }
+
+    &__link{
+        display: block;
+        margin-top: 24px;
+        color:#00293A;
+    }
+}

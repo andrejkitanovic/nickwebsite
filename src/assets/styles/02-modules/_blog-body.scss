@@ -1,0 +1,32 @@
+.blog-body {
+  padding: 74px 0 120px;
+
+  &__helpers {
+    top: 100px;
+    position: sticky;
+  }
+
+  &__table-of-contents {
+    padding: 32px 24px;
+    background-color: #ecf8f6;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  &__table-of-contents-text {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  &__cta {
+    margin-top: 32px;
+    padding: 24px 32px;
+    border: 1px solid #00609c;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  &__content {
+    height: 100vh;
+  }
+}

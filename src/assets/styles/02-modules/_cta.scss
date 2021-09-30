@@ -1,0 +1,35 @@
+.cta {
+  position: relative;
+  padding: 120px 0 180px;
+  background-color: #00609c;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -135px;
+    height: 100%;
+    width: calc(100% + 135px);
+    bottom: 35px;
+    background: url("https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/Assets/line.svg")
+      no-repeat bottom left / cover;
+  }
+
+  &__header {
+    color: #fff;
+    margin-bottom: 32px;
+  }
+
+  &__explore {
+    color: #00293a;
+    background-color: #fdcf85;
+    border-color:#fdcf85;
+    margin-right: 16px;
+  }
+
+  &__get-in-touch {
+    color: #fff;
+    border-color:#fdcf85;
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "global" : true,
+  "smart_type" : "NOT_SMART",
+  "icon" : "fontawesome-5.14.0:Search:SOLID",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 56478386704,
+  "label" : "Explore",
+  "is_available_for_new_content" : true
+}
