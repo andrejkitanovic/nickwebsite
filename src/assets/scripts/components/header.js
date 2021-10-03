@@ -21,5 +21,13 @@ if (gsap) {
                     : loseState();
             },
         });
+
+        const linkWithChildren = $(header).find('.has-children .header-blue__link');
+
+        $(linkWithChildren).on('click', function (e) {
+            e.preventDefault();
+
+            $(this).parent().toggleClass('open');
+        });
     });
 }

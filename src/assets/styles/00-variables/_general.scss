@@ -1,0 +1,117 @@
+//
+// Grid Options
+//
+// To avoid your options getting overridden by an update,
+// copy and paste the below options to your own sass file
+// and include it before this file.
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$grid-breakpoints: (
+  xs: 0,
+  // sm: 576px,
+  md: 1024px,
+  lg: 1440px,
+  xl: 1920px,
+);
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function breakpoint($key) {
+  $bp: strip-unit(map-get($grid-breakpoints, $key));
+  @return #{$bp - 1}px;
+}
+
+@function breakpointContainerWidth($res, $margin, $gutter-width) {
+  @return ($res - ($margin * 2)) + $gutter-width;
+}
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+  // sm: 540px,
+  // md: 720px,
+  // lg: 960px,
+  lg: 1200px,
+  xl: 1600px
+);
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns: 12;
+$grid-gutter-width: 16px;
+
+// END of Grid Options
+
+//
+// Easings
+//
+$pi: 3.14159265358979;
+$easing: (
+  Power0: (
+    none: cubic-bezier(0.25, 0.25, 0.75, 0.75),
+  ),
+  Power1: (
+    in: cubic-bezier(0.55, 0.085, 0.68, 0.53),
+    out: cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    in-out: cubic-bezier(0.455, 0.03, 0.515, 0.955),
+  ),
+  Power2: (
+    in: cubic-bezier(0.55, 0.055, 0.675, 0.19),
+    out: cubic-bezier(0.215, 0.61, 0.355, 1),
+    in-out: cubic-bezier(0.645, 0.045, 0.355, 1),
+  ),
+  Power3: (
+    in: cubic-bezier(0.895, 0.03, 0.685, 0.22),
+    out: cubic-bezier(0.165, 0.84, 0.44, 1),
+    in-out: cubic-bezier(0.77, 0, 0.175, 1),
+  ),
+  Power4: (
+    in: cubic-bezier(0.755, 0.05, 0.855, 0.06),
+    out: cubic-bezier(0.23, 1, 0.32, 1),
+    in-out: cubic-bezier(0.86, 0, 0.07, 1),
+  ),
+  Circ: (
+    in: cubic-bezier(0.6, 0.04, 0.98, 0.335),
+    out: cubic-bezier(0.075, 0.82, 0.165, 1),
+    in-out: cubic-bezier(0.785, 0.135, 0.15, 0.86),
+  ),
+  Expo: (
+    in: cubic-bezier(0.95, 0.05, 0.795, 0.035),
+    out: cubic-bezier(0.19, 1, 0.22, 1),
+    in-out: cubic-bezier(1, 0, 0, 1),
+  ),
+  Sine: (
+    in: cubic-bezier(0.47, 0, 0.745, 0.715),
+    out: cubic-bezier(0.39, 0.575, 0.565, 1),
+    in-out: cubic-bezier(0.445, 0.05, 0.55, 0.95),
+  ),
+  custom: (
+    one: cubic-bezier(0.33, 1, 0.68, 1),
+    fluid: cubic-bezier(0.3, 0, 0.22, 1),
+    normal: cubic-bezier(0.25, 0.1, 0.25, 0.1),
+  ),
+);
+
+@function ease($keys...) {
+  $map: $easing;
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+:export {
+  @each $breakpoint, $value in $grid-breakpoints {
+    #{$breakpoint}: $value;
+  }
+}
+
+$missingImage: "data:image/svg+xml,%3Csvg width='469' height='504' viewBox='0 0 469 504' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='469' height='504' rx='33' fill='%23E0F4FF'/%3E%3Cpath d='M208.002 232.065V271.933H260L259.998 232.065H208.002ZM254.109 266.038H213.895V237.962H254.109V266.038Z' fill='%23BBDCEE'/%3E%3Cpath d='M222.544 250.59C224.644 250.59 226.348 248.886 226.348 246.782C226.348 244.681 224.644 242.977 222.544 242.977C220.441 242.977 218.739 244.681 218.739 246.782C218.737 248.886 220.439 250.59 222.544 250.59Z' fill='%23BBDCEE'/%3E%3Cpath d='M252.236 262.055L239.667 246.271L232.533 255.227L229.09 250.905L220.216 262.054L252.236 262.055Z' fill='%23BBDCEE'/%3E%3C/svg%3E%0A";

@@ -1,6 +1,6 @@
   <section class="blog-hero">
         <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-md-6">
               <div class="blog-hero__image">
                 {% if module.image_field.src %}
                   {% set loadingAttr = module.image_field.loading != 'disabled' ? 'loading="{{ module.image_field.loading }}"' : '' %}
@@ -8,8 +8,8 @@
                 {% endif %}
               </div>
             </div>
-            <div class="col-1"></div>
-            <div class="col-4">
+            <div class="d-none d-md-block col-1"></div>
+            <div class="col-12 col-md-4">
                 <div class="blog-hero__content">
                   {% if content.tag_list %}
                     <div class="blog-hero__content-tag eyebrow">{% for tag in content.tag_list %}{{ tag.name }}{% if not loop.last %}, {% endif %}{% endfor %}</div>
@@ -18,6 +18,6 @@
                   <div class="blog-hero__content-description p1">{% inline_text field="description" value="{{ module.description }}" %}</div>
                 </div>
             </div>
-            <div class="col-1"></div>
+            <div class="d-none d-md-block col-1"></div>
         </div>
  </section>

@@ -9,4 +9,31 @@
   "show_emoji_picker" : false,
   "type" : "text",
   "default" : "Get the latest news delivered to your inbox."
+}, {
+  "id" : "3eda78db-7cb2-26e8-72fa-44471f63b29c",
+  "name" : "newsletter_form",
+  "label" : "Newsletter Form",
+  "required" : false,
+  "locked" : true,
+  "type" : "form",
+  "default" : {
+    "response_type" : "inline",
+    "message" : "Thanks for submitting the form."
+  }
+}, {
+  "id" : "af844a65-b911-8c2c-9901-b936d6d76c85",
+  "name" : "background_image",
+  "label" : "Background Image",
+  "required" : false,
+  "locked" : true,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
 } ]

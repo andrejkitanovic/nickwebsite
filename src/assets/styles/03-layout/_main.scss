@@ -25,10 +25,6 @@ h6 {
   padding: 0;
 }
 
-#main-content {
-  margin-top: 108px;
-}
-
 .not-padded {
   padding: 0;
 }
@@ -46,5 +42,15 @@ h6 {
   input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
   textarea {
     border-color: #818488;
+  }
+}
+
+#main-content {
+  margin-top: 108px;
+}
+
+@media screen and (max-width: breakpoint(md)) {
+  #main-content {
+    margin-top: 71px;
   }
 }

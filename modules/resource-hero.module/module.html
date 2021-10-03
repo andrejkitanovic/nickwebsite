@@ -6,9 +6,9 @@
             <h1 class="resource-hero__header h2">
              {% inline_text field="header" value="{{ module.header }}" %}
             </h1>
-            <p class="resource-hero__description p2">
+            <div class="resource-hero__description p2">
               {% inline_rich_text field="description" value="{{ module.description }}" %}
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@
           {% endif %}
           
           {% for post in selected_posts %}
-          <div class="col-4">
+          <div class="col-12 col-md-4">
             <a href="{{ post.absolute_url }}" class="resource-hero__blog">
               <div class="resource-hero__blog-image">
                 <img
@@ -39,9 +39,9 @@
                 {% for tag in post.tag_list %}{{ tag.name }}{% if not loop.last %}, {% endif %}{% endfor %}
               {% endif %}
               </div>
-              <p class="resource-hero__blog-description p1">
+              <div class="resource-hero__blog-description p1">
                 {{ post.name }}
-              </p>
+              </div>
             </a>
           </div>
           {% endfor %}

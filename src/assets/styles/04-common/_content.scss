@@ -1,6 +1,5 @@
 body {
   color: #00293a;
-  //     margin: 20px 0;
 }
 
 h1,
@@ -105,4 +104,54 @@ p {
 a {
   color: #4098d3;
   text-decoration: none;
+}
+
+@media screen and (max-width: breakpoint(md)) {
+  h1,
+  .h1,
+  h2,
+  .h2 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  h3,
+  .h3 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  h4,
+  .h4 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  h5,
+  .h5 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  // .eyebrow {
+  //   font-size: 16px;
+  //   line-height: 19px;
+  // }
+
+  // .eyebrow2 {
+  //   font-size: 14px;
+  //   line-height: 16px;
+  // }
+
+  // .eyebrow3 {
+  //   font-size: 12px;
+  //   line-height: 14px;
+  // }
+
+  // .button {
+  //   font-size: 14px;
+  //   padding: 15px 24px;
+  //   border-radius: 8px;
+  //   border-width: 2px;
+  // }
 }

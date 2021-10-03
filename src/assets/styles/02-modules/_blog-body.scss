@@ -1,6 +1,10 @@
 .blog-body {
   padding: 74px 0 120px;
 
+  &__top {
+    margin-bottom: 8px;
+  }
+
   &__helpers {
     max-width: 265px;
     top: 120px;
@@ -53,5 +57,9 @@
     padding: 32px 0;
     border-top: 2px solid #a1ded2;
     border-bottom: 2px solid #a1ded2;
+  }
+
+  &__read {
+    color: #00609c;
   }
 }

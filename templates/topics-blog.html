@@ -18,7 +18,19 @@ https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
       <section class="blog-body">
         <div class="container">
           <div class="row">
-              <div class="col-3">
+            <div class="d-none d-md-block col-3"></div>
+            <div class="col-12 col-md-9">
+              <div class="blog-body__top d-flex justify-content-between">
+                <div class="blog-body__read p2">
+                  {{ content.post_body|wordcount|divide(300) }} min read
+                </div>
+                <div class="blog-body__social-media">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+              <div class="d-none d-md-block col-3">
                 <div class="blog-body__helpers">
                   {# Blog Overview Section #}
                   {% module 'blog-overview' path='../modules/blog-overview' %}
@@ -27,7 +39,7 @@ https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
                   {% module 'blog-cta' path='../modules/blog-cta' %}
                 </div>
               </div>
-              <div class="col-9">
+              <div class="col-12 col-md-9">
                 
                 <div class="blog-body__content">
                   {# Blog Info Section #}

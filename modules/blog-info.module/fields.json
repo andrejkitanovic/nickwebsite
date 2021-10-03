@@ -5,4 +5,42 @@
   "required" : false,
   "locked" : false,
   "type" : "richtext"
+}, {
+  "id" : "432f838c-ac58-5d5b-f749-2ddd3db7071d",
+  "name" : "icons",
+  "label" : "Stats",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "779335a5-02b2-6f47-ea78-c2fb82a870d6",
+    "name" : "icon_field",
+    "label" : "Stats Icon",
+    "required" : false,
+    "locked" : false,
+    "icon_set" : "fontawesome-5.14.0",
+    "type" : "icon",
+    "default" : { }
+  }, {
+    "id" : "c39b0e43-91e0-58e3-0b5b-c2e8d18e068a",
+    "name" : "text",
+    "label" : "Stats Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "icon_field" : { }
+  }
 } ]

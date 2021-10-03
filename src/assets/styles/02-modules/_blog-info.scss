@@ -2,4 +2,39 @@
   padding: 48px;
   background-color: #ecf8f6;
   margin-bottom: 72px;
+
+  &__stats {
+    margin-top: 8px;
+  }
+
+  &__stat {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  &__stat-icon {
+    height: 40px;
+    min-width: 40px;
+    background-color: #ddf3ef;
+    border-radius: 50%;
+    margin-right: 15px;
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    svg {
+      max-width: 50%;
+      max-height: 50%;
+    }
+  }
+
+  &__stat-text {
+    line-height: 24px;
+  }
 }

@@ -11,13 +11,13 @@
       {% for post in recent_posts %}
         <a href="{{ post.absolute_url }}" class="latest-articles__article">
           <div class="row">
-            <div class="col-4">
+            <div class="col-12 col-md-4">
               <div class="latest-articles__article-image">
                 <img src="{{ post.featured_image }}" alt="Blog">
               </div>
             </div>
-            <div class="col-1"></div>
-            <div class="col-7">
+            <div class="d-none d-md-block col-1"></div>
+            <div class="col-12 col-md-7">
               <div class="latest-articles__article-info">
                 {% set splitDate = post.publish_date_localized|split(' ', 4) %}
                 <div class="latest-articles__article-date eyebrow1">{{splitDate[0]}} {{splitDate[1]}} {{splitDate[2]}}</div>

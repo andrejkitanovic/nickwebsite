@@ -1,0 +1,10 @@
+button,
+input {
+  border: none;
+  outline: transparent;
+}
+
+button,
+input[type="button"] {
+  cursor: pointer;
+}

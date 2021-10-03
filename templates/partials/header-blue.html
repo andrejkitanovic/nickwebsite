@@ -2,14 +2,10 @@
   templateType: global_partial
   label: Header Blue
 -->
-<!--
-  templateType: global_partial
-  label: Website header
--->
 <header class="header-blue">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-8 col-lg-4 col-xl-3">
+      <div class="col-10 col-md-4 col-xl-3">
         <div class="header-blue__logo">
           <img
             src="https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/header-logo-blue.svg"
@@ -17,24 +13,95 @@
           />
         </div>
       </div>
-      <div class="d-none d-lg-block col-3 col-xl-4">
+      <div class="d-none d-md-block col-3 col-xl-4">
         <div class="header-blue__navigation">
-          <div class="header-blue__link-container">
+          <div class="header-blue__link-container has-children">
             <a href="" class="header-blue__link">Topics</a>
-            <div class="header-blue__link-menu"></div>
+            <div class="header-blue__link-menu">
+
+              <a href="/topic/perspectives" class="header-blue__link-menu-single">
+                <div class="header-blue__link-menu-single-icon">
+                  <img
+                    src="https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/Header%20Blue%20Icons/perspectives.svg"
+                    alt="Perspectives"
+                  />
+                </div>
+                <div class="header-blue__link-menu-single-text">
+                  Perspectives
+                </div>
+              </a>
+
+              <a href="/topic/customer-stories" class="header-blue__link-menu-single">
+                <div class="header-blue__link-menu-single-icon">
+                  <img
+                    src="https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/Header%20Blue%20Icons/customer-stories.svg"
+                    alt="Customer Stories"
+                  />
+                </div>
+                <div class="header-blue__link-menu-single-text">
+                  Customer Stories
+                </div>
+              </a>
+
+              <a href="/topic/analytics-insights" class="header-blue__link-menu-single">
+                <div class="header-blue__link-menu-single-icon">
+                  <img
+                    src="https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/Header%20Blue%20Icons/analytics-insights.svg"
+                    alt="Analytics & Insights"
+                  />
+                </div>
+                <div class="header-blue__link-menu-single-text">
+                  Analytics & Insights
+                </div>
+              </a>
+
+              <a  href="/topic/respace" class="header-blue__link-menu-single">
+                <div class="header-blue__link-menu-single-icon">
+                  <img
+                    src="https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/Header%20Blue%20Icons/respace.svg"
+                    alt="Re:space"
+                  />
+                </div>
+                <div class="header-blue__link-menu-single-text">
+                  Re:space
+                </div>
+              </a>
+
+              <a  href="/topic/the-watercooler" class="header-blue__link-menu-single">
+                <div class="header-blue__link-menu-single-icon">
+                  <img
+                    src="https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/Header%20Blue%20Icons/the-watercooler.svg"
+                    alt="The Watercooler"
+                  />
+                </div>
+                <div class="header-blue__link-menu-single-text">
+                  The Watercooler
+                </div>
+              </a>
+
+
+
+            </div>
           </div>
           <div class="header-blue__link-container">
             <a href="" class="header-blue__link">Find Space</a>
           </div>
         </div>
       </div>
-      <div class="d-none d-lg-block col-1"></div>
-      <div class="col-4 col-lg-4">
+      <div class="d-none d-md-block col-1"></div>
+      <div class="d-none d-md-block col-4">
         <div
           class="header-blue__buttons d-flex align-items-center justify-content-end"
         >
           <a href="" class="header-blue__subscribe button">Subscribe</a>
           <a href="" class="header-blue__get-in-touch button">Get in touch</a>
+        </div>
+      </div>
+      <div class="d-block d-md-none col-2">
+        <div class="header-blue__hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
     </div>

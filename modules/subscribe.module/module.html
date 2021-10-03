@@ -1,12 +1,21 @@
-  <section class="subscribe">
+  <section class="subscribe" style="background-image:url('{% if module.background_image.src %}{{ module.background_image.src }}{% endif %}')">
     <div class="container">
       <div class="row">
-        <div class="col-8">
+        <div class="col-12 col-md-8">
           <h2 class="subscribe__header h3">      
             {% inline_text field="header" value="{{ module.header }}" %}
           </h2>
         </div>
-        <div class="col-4"></div>
+        <div class="col-12 col-md-4">
+          {% form
+            form_to_use="{{ module.newsletter_form.form_id }}"
+            response_response_type="{{ module.newsletter_form.response_type }}"
+            response_message="{{ module.newsletter_form.message }}"
+            response_redirect_id="{{ module.newsletter_form.redirect_id }}"
+            response_redirect_url="{{module.newsletter_form.redirect_url}}"
+            gotowebinar_webinar_key="{{ module.newsletter_form.gotowebinar_webinar_key }}"
+          %}
+         </div>
       </div>
     </div>
   </section>

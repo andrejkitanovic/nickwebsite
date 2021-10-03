@@ -3,21 +3,21 @@
   background-color: #00293a;
   color: #fff;
 
-  &__logo img{
-      max-width: 100%;
+  &__logo img {
+    max-width: 100%;
   }
 
-  &__description{
-      margin-top: 26px;
+  &__description {
+    margin-top: 26px;
   }
 
-  &__info{
-      font-size: 12px;
-      line-height: 14px;
-      margin-bottom: 12px;
+  &__info {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 12px;
 
-      &:last-of-type{
-        margin-bottom: 0;
+    &:last-of-type {
+      margin-bottom: 0;
     }
   }
 
@@ -34,13 +34,13 @@
 
   &__link {
     display: block;
-    color:#fff;
+    color: #fff;
     font-size: 12px;
     line-height: 14px;
     margin-bottom: 12px;
 
-    &:last-of-type{
-        margin-bottom: 0;
+    &:last-of-type {
+      margin-bottom: 0;
     }
   }
 
@@ -63,19 +63,61 @@
     margin-top: 16px;
   }
 
-  &__copyright{
-      font-size: 12px;
-      line-height: 14px;
+  &__copyright {
+    font-size: 12px;
+    line-height: 14px;
   }
 
-  &__bottom-link{
-      font-size: 12px;
-      line-height: 14px;
-      color:#fff;
-      margin-right: 8px;
+  &__bottom-link {
+    font-size: 12px;
+    line-height: 14px;
+    color: #fff;
+    margin-right: 8px;
 
-      &:last-of-type{
-          margin-right: 0;
-      }
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: breakpoint(md)) {
+  .footer {
+    padding: 60px 0;
+
+    &__main {
+      text-align: center;
+    }
+
+    &__description {
+    }
+
+    &__info {
+    }
+
+    &__header {
+      margin-top: 32px;
+    }
+
+    &__links {
+      margin-top: 10px;
+    }
+
+    &__link {
+      margin-bottom: 8px;
+    }
+
+    &__line {
+      margin-top: 32px;
+    }
+
+    &__bottom {
+      margin-top: 32px;
+    }
+
+    &__copyright {
+    }
+
+    &__bottom-link {
+    }
   }
 }
