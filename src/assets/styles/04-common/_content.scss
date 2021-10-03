@@ -51,7 +51,10 @@ h6,
   font-weight: 500;
 }
 
-.p2 {
+.p2,
+.blog-body__content p,
+.blog-body__content ul,
+.blog-body__content li {
   font-size: 16px;
   line-height: 24px;
 }
@@ -61,14 +64,21 @@ h6,
   line-height: 27px;
 }
 
-.eyebrow2{
+.eyebrow {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.eyebrow2 {
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.eyebrow3{
+.eyebrow3 {
   font-size: 12px;
   line-height: 14px;
   font-weight: 700;

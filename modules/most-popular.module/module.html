@@ -1,54 +1,31 @@
 
-  <section class="most-popular not-padded">
+  <section class="most-popular {% if !module.padded %}not-padded{% endif %}">
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h2 class="most-popular__header h3">Most Popular</h2>
+          <h2 class="most-popular__header h3">{% inline_text field="header" value="{{ module.header }}" %}</h2>
         </div>
       </div>
 
       <div class="most-popular__blogs">
         <div class="row">
-          <div class="col-4">
-            <div class="most-popular__blog">
-              <div class="most-popular__blog-image">
-                <img
-                  src="https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/Resource%20Hero/blog-1.png"
-                  alt="Blog"
-                />
-              </div>
-              <p class="most-popular__blog-description p1">
-                How to setup your hybrid workplace program in 3 steps.
-              </p>
+        {% set pop_posts = blog_popular_posts('default', 3) %}
+        {% for post in pop_posts %}
+            <div class="col-4">
+              <a href="{{ post.absolute_url }}" class="most-popular__blog">
+                <div class="most-popular__blog-image">
+                  <img
+                    src="{{ post.featured_image }}"
+                    alt="Blog"
+                  />
+                </div>
+                <p class="most-popular__blog-description p1">
+                  {{ post.name }}
+                </p>
+              </a>
             </div>
-          </div>
-          <div class="col-4">
-            <div class="most-popular__blog">
-              <div class="most-popular__blog-image">
-                <img
-                  src="https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/Resource%20Hero/blog-2.png"
-                  alt="Blog"
-                />
-              </div>
-              <p class="most-popular__blog-description p1">
-                Guide to lorem ipsum dolor sit amet, consectetur adipiscing elit
-              </p>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="most-popular__blog">
-              <div class="most-popular__blog-image">
-                <img
-                  src="https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/Resource%20Hero/blog-3.png"
-                  alt="Blog"
-                />
-              </div>
-              <p class="most-popular__blog-description p1">
-                Checklist: Is your dolor sit amet, consectetur adipiscing elit?
-              </p>
-            </div>
-          </div>
+        {% endfor %}
         </div>
       </div>
-    </div>
+
   </section>

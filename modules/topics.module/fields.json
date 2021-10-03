@@ -1,1 +1,26 @@
-[ ]
+[ {
+  "id" : "73be1f1e-ecbd-c113-c90e-1d23888c8871",
+  "name" : "topic",
+  "label" : "Topic",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "06ea37f2-c60d-d4db-7d9d-ae7d935afcae",
+    "name" : "topic_tag",
+    "label" : "Topic Tag",
+    "required" : false,
+    "locked" : false,
+    "tag_value" : "SLUG",
+    "type" : "tag"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : { }
+} ]

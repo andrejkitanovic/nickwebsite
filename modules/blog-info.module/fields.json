@@ -1,0 +1,8 @@
+[ {
+  "id" : "55272a11-5fda-146b-c9f9-4af1f149a200",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext"
+} ]

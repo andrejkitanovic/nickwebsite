@@ -4,13 +4,11 @@ import gsap from 'gsap';
 
 if (gsap) {
     $(function () {
-        const header = $('.header .header-blue');
-
-        console.log(header);
+        const header = $('header');
 
         const loseState = () => {
             $(header).map(function () {
-                $(this).classList.add('hide-top');
+                $(this).addClass('hidden');
             });
         };
 
@@ -19,7 +17,7 @@ if (gsap) {
             end: document.innerHeight,
             onUpdate: (self) => {
                 self.direction === -1
-                    ? $(header)[0].classList.remove('hide-top')
+                    ? $(header).removeClass('hidden')
                     : loseState();
             },
         });

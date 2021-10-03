@@ -1,0 +1,51 @@
+[ {
+  "id" : "44e3ec2a-0ae4-bbb3-b0c7-41535208a607",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<div>\n<div>\n<div>\n<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. adipiscing elit.</div>\n</div>\n</div>\n</div>"
+}, {
+  "id" : "8eadf6e2-9bdc-48e4-35a0-48d05e429859",
+  "name" : "button",
+  "label" : "Button",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "dbd04243-8665-bb60-b27a-10c982c78ca7",
+    "name" : "button_text",
+    "label" : "Button Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "CTA Button Here"
+  }, {
+    "id" : "461148f6-f87c-522b-22bf-bcee08ad4d5c",
+    "name" : "button_link",
+    "label" : "Button Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "type" : "url",
+    "default" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "EXTERNAL"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "button_text" : "CTA Button Here",
+    "button_link" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "EXTERNAL"
+    }
+  }
+} ]

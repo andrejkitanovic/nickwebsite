@@ -2,6 +2,8 @@
   padding-bottom: 120px;
 
   &__article {
+    display: block;
+    color: #00293a;
     padding: 72px 0;
     border-bottom: 1px solid #a1ded2;
 
@@ -41,6 +43,8 @@
   }
 
   &__load-more {
-    text-align: center;
+    display: table;
+    margin: 0 auto;
+    color: #00293a;
   }
 }

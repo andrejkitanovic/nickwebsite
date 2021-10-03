@@ -3,25 +3,33 @@
       <div class="single-hero__header-section">
         <div class="row">
           <div class="col-12">
-            <h1 class="single-hero__header h2">Customer Stories</h1>
+            <h1 class="single-hero__header h2">{% inline_text field="header" value="{{ module.header }}" %}</h1>
             <p class="single-hero__description p1">
-              Innovative thinking from industry insiders
+              {% inline_rich_text field="description" value="{{ module.description }}" %}
             </p>
           </div>
         </div>
       </div>
+
       <div class="row">
+      {% if module.most_recent %}
+        {% set selected_posts = blog_recent_tag_posts('default', module.blog_tag, 1) %}
+      {% else %}
+         {% set selected_posts = content_by_ids([module.blog]) %}
+      {% endif %}
+      {% for post in selected_posts %}
         <div class="col-12">
           <div class="single-hero__image">
             <img
-              src="https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/Single%20Hero/blog.png"
+              src="{{ post.featured_image }}"
               alt="Blog"
             />
           </div>
           <a href="" class="single-hero__link h4"
-            >Work From Anywhere: Cost Comparisons for Work</a
+            >{{ post.name }}</a
           >
         </div>
+      {% endfor %}
       </div>
     </div>
   </section>

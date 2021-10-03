@@ -1,7 +1,25 @@
 [ {
+  "id" : "4de51ee0-261c-b333-ee53-72ba18a13a4d",
+  "name" : "background",
+  "label" : "Background",
+  "help_text" : "Display's background blue color behind the section",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "616c8102-0a8f-45e3-fc86-13a74af7b937",
+  "name" : "blog_field",
+  "label" : "Blog",
+  "required" : false,
+  "locked" : false,
+  "type" : "page",
+  "default" : 56606188969
+}, {
   "id" : "ecd1bd83-f4d9-94aa-851d-7d052a84c178",
   "name" : "image_field",
-  "label" : "Image",
+  "label" : "Image Override",
   "required" : false,
   "locked" : false,
   "responsive" : true,
@@ -15,33 +33,10 @@
     "loading" : "lazy"
   }
 }, {
-  "id" : "be25a535-2acc-403b-486c-e31db92f1082",
-  "name" : "header",
-  "label" : "Header",
-  "required" : false,
-  "locked" : false,
-  "validation_regex" : "",
-  "allow_new_line" : false,
-  "show_emoji_picker" : false,
-  "type" : "text"
-}, {
   "id" : "6dcb31a2-c70f-f7ff-135c-55e160374280",
   "name" : "description",
-  "label" : "Description",
+  "label" : "Description Override",
   "required" : false,
   "locked" : false,
   "type" : "richtext"
-}, {
-  "id" : "05f589bd-2f8e-5d1c-d12a-5481b48ab980",
-  "name" : "link",
-  "label" : "Link",
-  "required" : false,
-  "locked" : false,
-  "supported_types" : [ "CONTENT" ],
-  "type" : "url",
-  "default" : {
-    "content_id" : null,
-    "href" : "",
-    "type" : "CONTENT"
-  }
 } ]

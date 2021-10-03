@@ -2,66 +2,36 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h2 class="explore__header h3">Explore Topics</h2>
+          <h2 class="explore__header h3">{% inline_text field="header" value="{{ module.header }}" %}</h2>
         </div>
       </div>
+      
+ 
       <div class="explore__items">
         <div class="row">
-          <div class="col-4">
-            <a class="explore__item d-flex align-items-center">
-              <div class="explore__icon">
-                <img
-                  src="https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/Explore%20Icons/perspectives.svg"
-                  alt="Perspectives"
-                />
+          
+          {% for item in module.item %}
+            
+            {% set tag_slug = item.item_tag_field %}
+            {% set all_tags = blog_tags('default', 250) %}
+
+            {% for tag in all_tags %}
+              {% if tag_slug == tag.slug %}
+              <div class="col-4">
+                <a href="/topic/{{ tag.slug }}" class="explore__item d-flex align-items-center">
+                  <div class="explore__icon">
+                    <img
+                      src="{{ get_asset_url('../images/module-icons/' + tag.slug + '.svg') }}"
+                      alt="{{ tag.name }}"
+                    />
+                  </div>
+                  <div class="explore__text h4">{{ tag.name }}</div>
+                </a>
               </div>
-              <div class="explore__text h4">Perspectives</div>
-            </a>
-          </div>
-          <div class="col-4">
-            <a class="explore__item d-flex align-items-center">
-              <div class="explore__icon">
-                <img
-                  src="https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/Explore%20Icons/stories.svg"
-                  alt="Customer Stories"
-                />
-              </div>
-              <div class="explore__text h4">Customer Stories</div>
-            </a>
-          </div>
-          <div class="col-4">
-            <a class="explore__item d-flex align-items-center">
-              <div class="explore__icon">
-                <img
-                  src="https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/Explore%20Icons/respace.svg"
-                  alt="Re:space"
-                />
-              </div>
-              <div class="explore__text h4">Re:space</div>
-            </a>
-          </div>
-          <div class="col-4">
-            <a class="explore__item d-flex align-items-center">
-              <div class="explore__icon">
-                <img
-                  src="https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/Explore%20Icons/analytics.svg"
-                  alt="Analytics & Insights"
-                />
-              </div>
-              <div class="explore__text h4">Analytics & Insights</div>
-            </a>
-          </div>
-          <div class="col-4">
-            <a class="explore__item d-flex align-items-center">
-              <div class="explore__icon">
-                <img
-                  src="https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/Explore%20Icons/watercooler.svg"
-                  alt="The Watercooler"
-                />
-              </div>
-              <div class="explore__text h4">The Watercooler</div>
-            </a>
-          </div>
+               {% endif %}
+            {% endfor %}
+          {% endfor %}
+ 
         </div>
       </div>
     </div>

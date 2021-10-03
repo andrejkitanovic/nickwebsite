@@ -1,1 +1,37 @@
-[ ]
+[ {
+  "id" : "11814cb3-0fef-8814-b2fd-e3425728b6e5",
+  "name" : "header",
+  "label" : "Header",
+  "required" : false,
+  "locked" : true,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Explore Topics"
+}, {
+  "id" : "16f380f9-e00d-ec57-476d-275a1147edca",
+  "name" : "item",
+  "label" : "Item",
+  "required" : false,
+  "locked" : true,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "3ff10743-3acf-22d0-d8bb-bb0f55f31b9d",
+    "name" : "item_tag_field",
+    "label" : "Item Tag",
+    "required" : false,
+    "locked" : false,
+    "tag_value" : "SLUG",
+    "type" : "tag"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : { }
+} ]

@@ -1,1 +1,58 @@
-[ ]
+[ {
+  "id" : "39be13ed-aba7-4228-a8b9-45df685176e6",
+  "name" : "header",
+  "label" : "Header",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "0613a393-9218-254f-19bf-40bf20f5a084",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext"
+}, {
+  "id" : "4f219650-d658-454a-aa7f-0dfcc31389c1",
+  "name" : "most_popular",
+  "label" : "Most Popular",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "8babcc31-8ce2-0744-df3f-43a5295e7ca9",
+  "name" : "blogs",
+  "label" : "Blogs",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 3,
+    "max" : 3,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "visibility" : {
+    "controlling_field" : "4f219650-d658-454a-aa7f-0dfcc31389c1",
+    "controlling_value_regex" : "false",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "f224b332-d71c-6c59-c1ce-4ba41abfb5c9",
+    "name" : "blog",
+    "label" : "Blog",
+    "required" : false,
+    "locked" : false,
+    "type" : "page"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ { }, { }, { } ]
+} ]

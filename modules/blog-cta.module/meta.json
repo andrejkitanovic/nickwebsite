@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "fontawesome-5.14.0:Hand%20Pointing%20Left:SOLID",
+  "host_template_types" : [ "BLOG_POST" ],
+  "module_id" : 56604773814,
+  "label" : "Blog Cta",
+  "is_available_for_new_content" : true
+}

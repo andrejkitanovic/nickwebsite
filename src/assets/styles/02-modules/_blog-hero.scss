@@ -13,4 +13,17 @@
     height: 100%;
     object-fit: cover;
   }
+
+  &__content {
+    padding-top: 120px;
+  }
+
+  &__content-tag {
+    color: #00609c;
+    margin-bottom: 24px;
+  }
+
+  &__content-header {
+    margin-bottom: 24px;
+  }
 }

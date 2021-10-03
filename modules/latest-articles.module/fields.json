@@ -1,0 +1,12 @@
+[ {
+  "id" : "922b594a-85e1-a8ce-07f0-b170731e5a05",
+  "name" : "header",
+  "label" : "Header",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Most Popular"
+} ]

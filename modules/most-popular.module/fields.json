@@ -1,1 +1,22 @@
-[ ]
+[ {
+  "id" : "1efbcd94-15f5-a2f0-9493-ab14f4e6f21d",
+  "name" : "padded",
+  "label" : "Padded",
+  "help_text" : "Add's padding to top and bottom of the section",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "ce1213f9-a58c-6857-2e27-4fcca7af97e1",
+  "name" : "header",
+  "label" : "Header",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Most Popular"
+} ]

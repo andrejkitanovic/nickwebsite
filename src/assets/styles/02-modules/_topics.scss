@@ -6,13 +6,13 @@
     padding-bottom: 80px;
     border-bottom: 1px solid #a1ded2;
 
-    &:first-of-type{
-        margin-top: 0;
+    &:first-of-type {
+      margin-top: 0;
     }
 
-    &:last-of-type{
-        padding-bottom: 0;
-        border:none;
+    &:last-of-type {
+      padding-bottom: 0;
+      border: none;
     }
   }
 
@@ -56,5 +56,9 @@
     color: #00293a;
     text-align: right;
     margin-top: 28px;
+
+    div {
+      display: inline;
+    }
   }
 }
