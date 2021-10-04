@@ -63,3 +63,19 @@
     color: #00609c;
   }
 }
+
+@media screen and (max-width: breakpoint(md)) {
+  .blog-body {
+    padding: 34px 0 64px;
+
+    &__top {
+    }
+
+    &__content {
+      padding: 0 0 60px;
+    }
+
+    &__read {
+    }
+  }
+}

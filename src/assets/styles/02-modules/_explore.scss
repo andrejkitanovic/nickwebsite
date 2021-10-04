@@ -1,9 +1,9 @@
 .explore {
   padding: 90px 0 120px;
-  background-color: #A1DED233;
+  background-color: #a1ded233;
 
-  &__items{
-      margin-top: 48px;
+  &__items {
+    margin-top: 48px;
   }
 
   &__item {
@@ -12,20 +12,43 @@
     border-radius: 8px;
     border: 2px solid #00293a;
     margin-bottom: 16px;
-    color:#00293a;
+    color: #00293a;
   }
 
-  &__icon{
+  &__icon {
     margin-right: 21px;
 
-    img{
-      width:30px;
+    img {
+      width: 30px;
       height: 30px;
       object-fit: contain;
     }
   }
 
-  &__text{
-      font-weight: 700;
+  &__text {
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: breakpoint(md)) {
+  .explore {
+    padding: 60px 0;
+
+    &__items {
+      margin-top: 32px;
+    }
+
+    &__item {
+      padding-top: 28px;
+      padding-bottom: 28px;
+      margin-bottom: 32px;
+    }
+
+    &__icon {
+      img {
+        width: 34px;
+        height: 34px;
+      }
+    }
   }
 }

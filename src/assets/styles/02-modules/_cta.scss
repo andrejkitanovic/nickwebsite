@@ -24,12 +24,40 @@
   &__explore {
     color: #00293a;
     background-color: #fdcf85;
-    border-color:#fdcf85;
+    border-color: #fdcf85;
     margin-right: 16px;
   }
 
   &__get-in-touch {
     color: #fff;
-    border-color:#fdcf85;
+    border-color: #fdcf85;
+  }
+}
+
+@media screen and (max-width: breakpoint(md)) {
+  .cta {
+    padding: 60px 0;
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   left: -135px;
+    //   height: 100%;
+    //   width: calc(100% + 135px);
+    //   bottom: 35px;
+    //   background: url("https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/Assets/line.svg")
+    //     no-repeat bottom left / cover;
+    // }
+
+    &__header {
+    }
+
+    &__explore {
+      margin-right: 0;
+      margin-bottom: 12px;
+    }
+
+    &__get-in-touch {
+    }
   }
 }

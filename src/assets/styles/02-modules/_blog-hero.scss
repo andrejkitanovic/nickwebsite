@@ -28,3 +28,29 @@
     margin-bottom: 24px;
   }
 }
+
+@media screen and (max-width: breakpoint(md)) {
+  .blog-hero {
+    height: auto;
+
+    .row,
+    .col-12,
+    &__image {
+    }
+
+    &__image img {
+    }
+
+    &__content {
+      padding: 48px 16px 60px;
+    }
+
+    &__content-tag {
+      margin-bottom: 16px;
+    }
+
+    &__content-header {
+      margin-bottom: 16px;
+    }
+  }
+}

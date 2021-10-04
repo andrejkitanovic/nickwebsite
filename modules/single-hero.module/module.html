@@ -11,25 +11,27 @@
         </div>
       </div>
 
-      <div class="row">
-      {% if module.most_recent %}
-        {% set selected_posts = blog_recent_tag_posts('default', module.blog_tag, 1) %}
-      {% else %}
-         {% set selected_posts = content_by_ids([module.blog]) %}
-      {% endif %}
-      {% for post in selected_posts %}
-        <div class="col-12">
-          <div class="single-hero__image">
-            <img
-              src="{{ post.featured_image }}"
-              alt="Blog"
-            />
-          </div>
-          <a href="" class="single-hero__link h4"
-            >{{ post.name }}</a
-          >
-        </div>
-      {% endfor %}
-      </div>
+
+          {% if module.most_recent %}
+            {% set selected_posts = blog_recent_tag_posts('default', module.blog_tag, 1) %}
+          {% else %}
+            {% set selected_posts = content_by_ids([module.blog]) %}
+          {% endif %}
+          {% for post in selected_posts %}
+            <a href="{{ post.absolute_url }}" class="single-hero__blog">
+              <div class="row">
+                <div class="col-12">
+                  <div class="single-hero__image">
+                    <img
+                      src="{{ post.featured_image }}"
+                      alt="Blog"
+                    />
+                  </div>
+                  <div class="single-hero__link h4">{{ post.name }}</div>
+                </div>
+              </div>
+            </a>
+          {% endfor %}
+     
     </div>
   </section>

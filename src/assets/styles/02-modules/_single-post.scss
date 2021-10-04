@@ -38,3 +38,29 @@
     background-color: #00293a;
   }
 }
+
+@media screen and (max-width: breakpoint(md)) {
+  .single-post {
+    padding: 60px 0;
+
+    &.background::before {
+      top: auto;
+      transform: none;
+      bottom: 0;
+    }
+
+    &__image {
+      margin-bottom: 48px;
+    }
+
+    &__header {
+      margin-bottom: 16px;
+    }
+
+    &__description {
+    }
+
+    &__button {
+    }
+  }
+}

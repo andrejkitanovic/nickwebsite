@@ -45,3 +45,28 @@
     display: none !important;
   }
 }
+
+@media screen and (max-width: breakpoint(md)) {
+  .subscribe {
+    height: auto;
+    padding: 86px 0;
+
+    &__header {
+      margin-bottom: 32px;
+    }
+  }
+
+  .subscribe .hs-form {
+    label {
+    }
+
+    .hs-email {
+    }
+
+    .hs-input {
+    }
+
+    .hs-button {
+    }
+  }
+}

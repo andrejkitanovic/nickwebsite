@@ -21,3 +21,35 @@
     margin-top: 8px;
   }
 }
+
+@media screen and (max-width: breakpoint(md)) {
+  .most-popular {
+    $el: &;
+    padding: 60px 0;
+
+    &__header {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    &__blogs {
+      margin-top: 32px;
+
+      .col-12:last-of-type #{$el}__blog {
+        margin-bottom: 0;
+      }
+    }
+
+    &__blog {
+      margin-bottom: 32px;
+    }
+
+    &__blog-image img {
+      height: 240px;
+    }
+
+    &__blog-description {
+      margin-top: 24px;
+    }
+  }
+}

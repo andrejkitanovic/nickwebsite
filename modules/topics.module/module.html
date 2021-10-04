@@ -28,7 +28,7 @@
                   {% for post in selected_posts %}
                     {% if loop.first %}
                       <div class="col-12 col-md-5">
-                        <div class="topics__topic-big">
+                        <a href="{{ post.absolute_url }}" class="topics__topic-big">
                           <div class="topics__topic-big-image">
                             <img
                               src="{{ post.featured_image }}"
@@ -38,12 +38,12 @@
                           <div class="topics__topic-big-title p1">
                             {{ post.name }}
                           </div>
-                        </div>
+                        </a>
                       </div>
                       <div class="d-none d-md-block col-1"></div>
                       <div class="col-12 col-md-6">
                     {% else %}
-                      <div class="topics__topic-small">
+                      <a href="{{ post.absolute_url }}" class="topics__topic-small">
                         <div class="topics__topic-small-image">
                           <img
                             src="{{ post.featured_image }}"
@@ -55,7 +55,7 @@
                             {{ post.name }}
                           </div>
                         </div>
-                      </div>
+                      </a>
                     {% endif %}
                     {% if loop.last %}
                       </div>
@@ -67,8 +67,11 @@
 
                 <div class="row">
                   <div class="col-12">
-                    <a href="topic/{{ tag.slug }}" class="topics__topic-link h4 d-block"
+                    <a href="topic/{{ tag.slug }}" class="topics__topic-link h4 d-none d-md-block"
                       >View All Articles in {{ tag.name }}</a
+                    >
+                    <a href="topic/{{ tag.slug }}" class="topics__topic-link h4 d-block d-md-none"
+                      >View Topic</a
                     >
                   </div>
                 </div>

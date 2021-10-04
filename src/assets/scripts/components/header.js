@@ -29,5 +29,9 @@ if (gsap) {
 
             $(this).parent().toggleClass('open');
         });
+
+        $(header).find('.hamburger').on('click', function () {
+            $(header).toggleClass('open');
+        });
     });
 }

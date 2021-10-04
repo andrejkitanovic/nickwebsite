@@ -20,7 +20,7 @@
             <div class="col-12 col-md-7">
               <div class="latest-articles__article-info">
                 {% set splitDate = post.publish_date_localized|split(' ', 4) %}
-                <div class="latest-articles__article-date eyebrow1">{{splitDate[0]}} {{splitDate[1]}} {{splitDate[2]}}</div>
+                <div class="latest-articles__article-date eyebrow2">{{splitDate[0]}} {{splitDate[1]}} {{splitDate[2]}}</div>
                 <div class="latest-articles__article-title p1">{{ post.name }}</div>
                 <div class="latest-articles__article-description p2">{{ post.meta_description }}</div>
                 <div class="latest-articles__article-read eyebrow3">{{ post.post_body|wordcount|divide(300) }} minute read</div>

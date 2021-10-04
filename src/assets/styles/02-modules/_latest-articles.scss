@@ -48,3 +48,37 @@
     color: #00293a;
   }
 }
+
+@media screen and (max-width: breakpoint(md)) {
+  .latest-articles {
+    padding: 60px 0;
+
+    &__article {
+      padding: 32px 0;
+    }
+
+    &__article-image img {
+      height: 251px;
+    }
+
+    &__article-info {
+      display: block;
+      margin-top: 24px;
+    }
+
+    &__article-date {
+    }
+
+    &__article-title {
+    }
+
+    &__article-description {
+    }
+
+    &__article-read {
+    }
+
+    &__load-more {
+    }
+  }
+}

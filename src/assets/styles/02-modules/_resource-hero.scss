@@ -21,6 +21,7 @@
   }
 
   &__blog {
+    display: block;
     color: #00293a;
   }
 
@@ -42,5 +43,41 @@
 
   &__blog-description {
     margin-top: 8px;
+  }
+}
+
+@media screen and (max-width: breakpoint(md)) {
+  .resource-hero {
+    $el: &;
+    padding: 60px 0;
+
+    &__header {
+    }
+
+    &__description {
+      margin-top: 16px;
+    }
+
+    &__blogs {
+      margin-top: 60px;
+
+      .col-12:last-of-type #{$el}__blog {
+        margin-bottom: 0;
+      }
+    }
+
+    &__blog {
+      margin-bottom: 32px;
+    }
+
+    &__blog-image img {
+    }
+
+    &__blog-type {
+    }
+
+    &__blog-description {
+      margin-top: 8px;
+    }
   }
 }
