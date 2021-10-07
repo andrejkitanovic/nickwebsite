@@ -1,0 +1,80 @@
+[ {
+  "id" : "dd8ae221-38f6-43ca-84ea-3e28b58caf03",
+  "name" : "label_text",
+  "label" : "Label",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "HOW IT WORKS"
+}, {
+  "id" : "f6c1f1de-12b7-c187-38cc-e08750a45d01",
+  "name" : "header",
+  "label" : "Header",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Putting the office of the  future to work today."
+}, {
+  "id" : "ac9370f4-dcd1-a35e-567d-6f2be7949b90",
+  "name" : "richtext_field",
+  "label" : "Rich text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Hub &amp; spoke offers a centralized hub or HQ for important meetings and a network of smaller office spaces, referred to as “spokes,” for greater workplace flexibility. It’s more than a new way to think about space. It’s a reset button that will transform your workplace and inspire your workers.</p>"
+}, {
+  "id" : "4a59fb45-e6b7-4c26-c7e9-e6a875fe69dc",
+  "name" : "steps",
+  "label" : "Steps",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "c6ceb1c6-c32a-da33-d478-d727173b40d5",
+    "name" : "step_videoplayer_field",
+    "label" : "Step Video",
+    "required" : false,
+    "locked" : false,
+    "resizable" : true,
+    "show_preview" : true,
+    "show_advanced_options" : false,
+    "type" : "videoplayer"
+  }, {
+    "id" : "bfc4d9db-4413-0e36-2f5f-7e7de3dcf1cb",
+    "name" : "step_header",
+    "label" : "Step Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Where are your workers?"
+  }, {
+    "id" : "88cba00c-557d-dd83-6d3a-7971d01e9c7e",
+    "name" : "step_description",
+    "label" : "Step Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>The short answer is: They’re everywhere. The first step in creating an effective hub &amp; spoke strategy is to assess your employee geography, so you can create a network of on-demand or dedicated space that allows for privacy when you want it and collaboration and team-building when you need it.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "step_header" : "Where are your workers?",
+    "step_description" : "<p>The short answer is: They’re everywhere. The first step in creating an effective hub &amp; spoke strategy is to assess your employee geography, so you can create a network of on-demand or dedicated space that allows for privacy when you want it and collaboration and team-building when you need it.</p>"
+  }
+} ]

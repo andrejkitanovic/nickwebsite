@@ -72,6 +72,7 @@
     align-items: center;
     height: 64px;
     padding: 0 33px;
+    @include transition(background-color 0.2s ease("fluid"));
 
     &:hover {
       background-color: #204d58;
@@ -138,17 +139,20 @@
       position: fixed;
       top: 66px;
       left: 0;
+      padding-top: 24px;
       width: 100%;
       height: 100%;
       background-color: #fff;
       z-index: -1;
       opacity: 0;
+      pointer-events: none;
       @include transition(opacity 0.2s ease("fluid"));
     }
 
     &.open &__dropdown {
       opacity: 1;
-      padding-top: 24px;
+
+      pointer-events: all;
     }
 
     &__dropdown-link {

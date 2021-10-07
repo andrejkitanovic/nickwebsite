@@ -19,4 +19,44 @@
   "show_emoji_picker" : false,
   "type" : "text",
   "default" : "Most Popular"
+}, {
+  "id" : "94b73f55-7bfb-73c7-df80-5d3087757bc3",
+  "name" : "most_popular",
+  "label" : "Most Popular",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "0d7ca595-7d68-a492-18ac-50acd4cd98b4",
+  "name" : "blogs",
+  "label" : "Blogs",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 3,
+    "max" : 3,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "visibility" : {
+    "controlling_field" : "94b73f55-7bfb-73c7-df80-5d3087757bc3",
+    "controlling_value_regex" : "false",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "494881b8-fbd2-957d-46c0-7c7d99fcf385",
+    "name" : "blog",
+    "label" : "Blog",
+    "required" : false,
+    "locked" : false,
+    "type" : "page"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ { }, { }, { } ]
 } ]

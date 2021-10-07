@@ -1,28 +1,30 @@
-<div class="blog-info">
-  <div class="blog-info__description">
-    {% inline_rich_text field="description" value="{{ module.description }}" %}
-  </div>
-  <div class="blog-info__stats">
-    <div class="row">
+{% if module.display %}
+  <div class="blog-info">
+    <div class="blog-info__description">
+      {% inline_rich_text field="description" value="{{ module.description }}" %}
+    </div>
+    <div class="blog-info__stats">
+      <div class="row">
 
-      {% for item in module.icons %}
-        <div class="col-12 col-md-6">
-          <div class="blog-info__stat">
-            <div class="blog-info__stat-icon">
-              {% icon
-                name="{{ item.icon_field.name }}"
-                style="{{ item.icon_field.type }}"
-                unicode="{{ item.icon_field.unicode }}"
-                icon_set="{{ item.icon_field.icon_set }}"
-              %}
-            </div>
-            <div class="blog-info__stat-text">
-              {% inline_text field="text" value="{{ item.text }}" %}
+        {% for item in module.icons %}
+          <div class="col-12 col-md-6">
+            <div class="blog-info__stat">
+              <div class="blog-info__stat-icon">
+                {% icon
+                  name="{{ item.icon_field.name }}"
+                  style="{{ item.icon_field.type }}"
+                  unicode="{{ item.icon_field.unicode }}"
+                  icon_set="{{ item.icon_field.icon_set }}"
+                %}
+              </div>
+              <div class="blog-info__stat-text">
+                {% inline_text field="text" value="{{ item.text }}" %}
+              </div>
             </div>
           </div>
-        </div>
-      {% endfor %}
-      
+        {% endfor %}
+
+      </div>
     </div>
   </div>
-</div>
+{% endif %}

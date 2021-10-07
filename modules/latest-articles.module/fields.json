@@ -9,4 +9,12 @@
   "show_emoji_picker" : false,
   "type" : "text",
   "default" : "Latest Articles"
+}, {
+  "id" : "32da0d61-9c16-6aff-70d7-b018b103e50a",
+  "name" : "topic_tag",
+  "label" : "Topic Tag",
+  "required" : false,
+  "locked" : false,
+  "tag_value" : "SLUG",
+  "type" : "tag"
 } ]

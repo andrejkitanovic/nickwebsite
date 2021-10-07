@@ -1,4 +1,13 @@
 [ {
+  "id" : "1af79501-ab0e-8739-aaf9-fe19a0bf79c9",
+  "name" : "display",
+  "label" : "Display",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : false
+}, {
   "id" : "55272a11-5fda-146b-c9f9-4af1f149a200",
   "name" : "description",
   "label" : "Description",

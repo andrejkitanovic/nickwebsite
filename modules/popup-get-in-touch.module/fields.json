@@ -1,0 +1,31 @@
+[ {
+  "id" : "d6c1182d-6f7c-3794-4de6-18fc07880845",
+  "name" : "header",
+  "label" : "Header",
+  "required" : false,
+  "locked" : true,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Connect with our team"
+}, {
+  "id" : "1b9f57ce-33ff-0b42-064b-23b59f05ac11",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : true,
+  "type" : "richtext",
+  "default" : "<p>Let our team know how we can help you solve your workplace needs.</p>"
+}, {
+  "id" : "1a36b308-b11f-ab20-42e9-22913f38b6d8",
+  "name" : "form_field",
+  "label" : "Form",
+  "required" : false,
+  "locked" : true,
+  "type" : "form",
+  "default" : {
+    "response_type" : "inline",
+    "message" : "Thanks for submitting the form."
+  }
+} ]

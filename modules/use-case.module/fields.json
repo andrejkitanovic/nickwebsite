@@ -1,0 +1,92 @@
+[ {
+  "id" : "b42f310f-c17f-1c39-f110-55b2e81b5f87",
+  "name" : "label_text",
+  "label" : "Label",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Use Cases"
+}, {
+  "id" : "cdacd9c0-21c6-dc7f-e488-eccb9ab824e2",
+  "name" : "header",
+  "label" : "Header",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "However you draw it up, hub & spoke works "
+}, {
+  "id" : "43aa4ae8-6c54-225e-32e1-3db6680d7ce4",
+  "name" : "richtext_field",
+  "label" : "Rich text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Different organizations have different hub &amp; spoke needs. Here are three ways this adaptable solution can be customized to meet yours.</p>"
+}, {
+  "id" : "0d11267a-f970-5ce4-4c4f-f0d078084d38",
+  "name" : "use_cases",
+  "label" : "Use Cases",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "c18778ab-445b-2b65-2f5b-4e04b0aa8d0d",
+    "name" : "use_case_image",
+    "label" : "Use Case Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "6a147825-ef61-3e38-d4dc-46b166804fb5",
+    "name" : "use_case_header",
+    "label" : "Use Case Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Use Case Name"
+  }, {
+    "id" : "01ba47f5-2a1f-767f-0563-31790de1c7ef",
+    "name" : "use_case_description",
+    "label" : "Use Case Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor auctor dignissim gravida amet ac, feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor auctor dignissim gravida.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "use_case_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "use_case_header" : "Use Case Name",
+    "use_case_description" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor auctor dignissim gravida amet ac, feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor auctor dignissim gravida.</p>"
+  }
+} ]

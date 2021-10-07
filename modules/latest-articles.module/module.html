@@ -7,7 +7,13 @@
         </div>
       </div>
 
-      {% set recent_posts = blog_recent_posts('default', 5) %}
+      {% if module.topic_tag %}
+
+        {% set recent_posts = blog_recent_tag_posts('default', module.topic_tag, 5) %}
+      {% else %}
+        {% set recent_posts = blog_recent_posts('default', 5) %}
+      {% endif %}
+      
       {% for post in recent_posts %}
         <a href="{{ post.absolute_url }}" class="latest-articles__article">
           <div class="row">
@@ -32,7 +38,7 @@
       
       <span class="row">
         <div class="col-12">
-          <a href="" class="latest-articles__load-more h4">Load More</a>
+          <a href="{{ blog_author_url('default', module.topic_tag) }}" class="latest-articles__load-more h4">Load More</a>
         </div>
       </span>
      

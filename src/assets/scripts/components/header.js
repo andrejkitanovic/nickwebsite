@@ -33,5 +33,23 @@ if (gsap) {
         $(header).find('.hamburger').on('click', function () {
             $(header).toggleClass('open');
         });
+
+        $(header).find('.header-blue__subscribe').on('click', function (e) {
+            e.preventDefault();
+
+            $('.overlay').toggleClass('open');
+            $('.popup-subscribe').toggleClass('open');
+        });
+
+        $(header).find('.header-blue__get-in-touch').on('click', function (e) {
+            e.preventDefault();
+
+            $('.overlay').toggleClass('open');
+            $('.popup-get-in-touch').toggleClass('open');
+        });
+
+        $('.overlay').on('click', function () {
+            $('.open').toggleClass('open');
+        });
     });
 }

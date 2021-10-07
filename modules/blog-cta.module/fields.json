@@ -1,19 +1,19 @@
 [ {
-  "id" : "44e3ec2a-0ae4-bbb3-b0c7-41535208a607",
+  "id" : "a1acb171-7d01-5799-9122-575756400e7c",
   "name" : "description",
   "label" : "Description",
   "required" : false,
-  "locked" : false,
+  "locked" : true,
   "type" : "richtext",
-  "default" : "<div>\n<div>\n<div>\n<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. adipiscing elit.</div>\n</div>\n</div>\n</div>"
+  "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. adipiscing elit.</p>"
 }, {
-  "id" : "8eadf6e2-9bdc-48e4-35a0-48d05e429859",
+  "id" : "0ecd5554-9822-1a8b-e152-c3ca72128394",
   "name" : "button",
   "label" : "Button",
   "required" : false,
-  "locked" : false,
+  "locked" : true,
   "children" : [ {
-    "id" : "dbd04243-8665-bb60-b27a-10c982c78ca7",
+    "id" : "5c7e39d2-9a78-4094-8827-f9d86d49ff7a",
     "name" : "button_text",
     "label" : "Button Text",
     "required" : false,
@@ -24,7 +24,7 @@
     "type" : "text",
     "default" : "CTA Button Here"
   }, {
-    "id" : "461148f6-f87c-522b-22bf-bcee08ad4d5c",
+    "id" : "154aff1a-e056-049a-400a-52b66c8a92e2",
     "name" : "button_link",
     "label" : "Button Link",
     "required" : false,

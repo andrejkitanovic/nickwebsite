@@ -1,0 +1,46 @@
+<section class="use-case">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="use-case__info">
+          <div class="use-case__label eyebrow">
+            {% inline_text field="label_text" value="{{ module.label_text }}" %}
+          </div>
+          <div class="use-case__header h2">
+            {% inline_text field="header" value="{{ module.header }}" %}
+          </div>
+          <div class="use-case__description p2">
+            {% inline_rich_text field="richtext_field" value="{{ module.richtext_field }}" %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="use-case__items">
+      
+      <div class="row">
+
+        {% for item in module.use_cases %}
+          <div class="col-12 col-md-4">
+            <div class="use-case__item">
+              <div class="use-case__item-image">
+               {% if item.use_case_image.src %}
+                {% set loadingAttr = item.use_case_image.loading != 'disabled' ? 'loading="{{ item.use_case_image.loading }}"' : '' %}
+                <img src="{{ item.use_case_image.src }}" alt="{{ item.use_case_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+               {% endif %}
+              </div>
+              <div class="use-case__item-header h4">
+                {% inline_text field="use_case_header" value="{{ item.use_case_header }}" %}
+              </div>
+              <div class="use-case__item-description p2">
+                {% inline_rich_text field="use_case_description" value="{{ item.use_case_description }}" %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        
+      </div>
+   
+    </div>
+  </div>
+</section>

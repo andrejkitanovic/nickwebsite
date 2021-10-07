@@ -1,0 +1,77 @@
+[ {
+  "id" : "c73b5604-0df8-e5e5-e5a2-3f76fcf6a918",
+  "name" : "label_text",
+  "label" : "Label",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Benefits"
+}, {
+  "id" : "340afcd4-bf35-91d3-2335-2291ac6af1e8",
+  "name" : "header",
+  "label" : "Header",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "More than a workplace model,  a competitive edge "
+}, {
+  "id" : "b737b435-74b3-d6eb-9419-72a3ff7b7785",
+  "name" : "image_field",
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "d1b57e86-52ff-abb1-a7fe-89f0841a2d21",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>The right hub &amp; spoke strategy can help your organization stay ahead of the curve (and your competitors) by:</p>"
+}, {
+  "id" : "ddd85fad-aaf3-9248-c9ce-4b5555ff6999",
+  "name" : "benefits",
+  "label" : "Benefits",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "bf8a049c-86e7-9336-6022-986de2f86ff3",
+    "name" : "benefit",
+    "label" : "Benefit",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Making your employees happier by giving them greater flexibility over where they work"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "benefit" : "Making your employees happier by giving them greater flexibility over where they work"
+  }
+} ]

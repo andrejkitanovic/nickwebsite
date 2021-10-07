@@ -1,4 +1,14 @@
 [ {
+  "id" : "bda715d8-20fb-9a09-d786-48a097373b89",
+  "name" : "alignment",
+  "label" : "Alignment",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "default", "Image Left" ], [ "reverse", "Image Right" ] ],
+  "type" : "choice",
+  "default" : "default"
+}, {
   "id" : "4de51ee0-261c-b333-ee53-72ba18a13a4d",
   "name" : "background",
   "label" : "Background",

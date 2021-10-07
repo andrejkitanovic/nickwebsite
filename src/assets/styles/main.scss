@@ -21,6 +21,8 @@
 @import "./03-layout/header";
 @import "./03-layout/header-blue";
 @import "./03-layout/footer";
+@import "./03-layout/overlay";
+@import "./03-layout/popup";
 
 // -- VENDOR
 @import "./05-vendor/slick";
@@ -39,3 +41,9 @@
 @import "./02-modules/blog-body";
 @import "./02-modules/blog-info";
 @import "./02-modules/blog-listing";
+@import "./02-modules/blog-quote";
+@import "./02-modules/popup-subscribe";
+@import "./02-modules/popup-get-in-touch";
+@import "./02-modules/how-it-works";
+@import "./02-modules/use-case";
+@import "./02-modules/benefits";

@@ -1,4 +1,14 @@
 [ {
+  "id" : "c0042231-06a2-4382-0d37-03be698a4266",
+  "name" : "alignment",
+  "label" : "Alignment",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "default", "Image Left" ], [ "reverse", "Image Right" ] ],
+  "type" : "choice",
+  "default" : "default"
+}, {
   "id" : "6afb98c6-2095-3f61-bf52-b83cbf6b72bb",
   "name" : "image_field",
   "label" : "Image",

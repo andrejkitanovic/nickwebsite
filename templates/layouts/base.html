@@ -20,6 +20,14 @@
       {% block header %}
         {% global_partial path='../partials/header-blue.html' %}
       {% endblock header %}
+      
+      {% include '../partials/overlay.html' %}
+     
+      {# Popup Subscribe Section #}
+      {% module 'popup-subscribe' path='../../modules/popup-subscribe' %}
+
+      {# Popup Subscribe Section #}
+      {% module 'popup-get-in-touch' path='../../modules/popup-get-in-touch' %}
 
       {% block body %}
       {% endblock body %}
