@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <div class="use-case__items">
+    <div class="use-case__items d-none d-md-block">
       
       <div class="row">
 
@@ -42,5 +42,33 @@
       </div>
    
     </div>
+
+    <div class="use-case__items-slider swiper-container d-block d-md-none">
+      <div class="swiper-wrapper">
+
+              {% for item in module.use_cases %}
+                  <div class="use-case__item swiper-slide">
+                    <div class="use-case__item-image">
+                     {% if item.use_case_image.src %}
+                      {% set loadingAttr = item.use_case_image.loading != 'disabled' ? 'loading="{{ item.use_case_image.loading }}"' : '' %}
+                      <img src="{{ item.use_case_image.src }}" alt="{{ item.use_case_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                     {% endif %}
+                    </div>
+                    <div class="use-case__item-info">
+                      <div class="use-case__item-header h4">
+                        {% inline_text field="use_case_header" value="{{ item.use_case_header }}" %}
+                      </div>
+                      <div class="use-case__item-description p2">
+                        {% inline_rich_text field="use_case_description" value="{{ item.use_case_description }}" %}
+                      </div>
+                    </div>
+                  </div>
+              {% endfor %}
+
+      </div>
+      <div class="use-case__items-slider-pagination"></div>
+    </div>
+
+
   </div>
 </section>

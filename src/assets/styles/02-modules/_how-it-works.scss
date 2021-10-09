@@ -32,7 +32,7 @@
     video,
     img {
       height: 100%;
-      max-width: 100%;
+      width: 100%;
       object-fit: cover;
     }
   }
@@ -52,5 +52,45 @@
 
   &__step-header {
     margin-bottom: 8px;
+  }
+}
+
+@media screen and (max-width: breakpoint(md)) {
+  .how-it-works {
+    padding: 60px 0;
+
+    &__label {
+      margin-bottom: 16px;
+    }
+
+    &__header {
+      margin-bottom: 16px;
+    }
+
+    &__step {
+      margin-top: 48px;
+    }
+
+    &__step-video {
+      height: 215px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+    }
+
+    &__step-info {
+      padding-left: 0;
+    }
+
+    &__step-number {
+      margin-bottom: 8px;
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    &__step-header {
+      margin-bottom: 8px;
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 }

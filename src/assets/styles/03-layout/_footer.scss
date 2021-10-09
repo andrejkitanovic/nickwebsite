@@ -12,11 +12,13 @@
   }
 
   &__info {
+    display: block;
     font-size: 12px;
     line-height: 14px;
     margin-bottom: 12px;
+    color: #fff;
 
-    &:last-of-type {
+    &:last-child {
       margin-bottom: 0;
     }
   }
@@ -112,6 +114,10 @@
 
     &__bottom {
       margin-top: 32px;
+
+      .col-6:last-of-type {
+        padding-left: 0;
+      }
     }
 
     &__copyright {

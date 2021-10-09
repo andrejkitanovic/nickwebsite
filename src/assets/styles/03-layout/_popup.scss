@@ -16,6 +16,18 @@
     pointer-events: all;
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    background: no-repeat center center / cover;
+    // background-image: url("{{ get_asset_url('../images/svg/subscribe-line.svg') }}");
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .row {
     height: 100%;
   }
@@ -38,45 +50,7 @@
     padding-left: 40px;
     padding-right: 51px;
     width: 100%;
-  }
-}
-
-.popup-get-in-touch .hs-form,
-.popup-subscribe .hs-form {
-  display: block;
-
-  label {
-    display: none;
-  }
-
-  .hs-email {
-    width: 100%;
-  }
-
-  .hs-input {
-    width: 100%;
-    font-size: 17px;
-    padding: 11px 16px;
-    border-radius: 8px;
-    border: 2px solid #00293a;
-    margin-bottom: 16px;
-  }
-
-  .hs-button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #00293a;
-    color: #fff;
-    font-weight: bold;
-    font-size: 17px;
-    padding: 11px 24px;
-    border-radius: 8px;
-    float: right;
-    text-transform: uppercase;
-  }
-
-  .hs-error-msgs {
-    display: none !important;
+    position: relative;
+    z-index: 1;
   }
 }

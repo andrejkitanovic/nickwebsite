@@ -10,42 +10,6 @@
   }
 }
 
-.subscribe .hs-form {
-  display: flex;
-  border-radius: 8px;
-  border: 2px solid #00293a;
-  overflow: hidden;
-
-  label {
-    display: none;
-  }
-
-  .hs-email {
-    width: 100%;
-  }
-
-  .hs-input {
-    width: 100%;
-    font-size: 17px;
-    padding: 11px 16px;
-  }
-
-  .hs-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #00293a;
-    color: #fff;
-    font-weight: bold;
-    font-size: 17px;
-    padding: 11px 24px;
-  }
-
-  .hs-error-msgs {
-    display: none !important;
-  }
-}
-
 @media screen and (max-width: breakpoint(md)) {
   .subscribe {
     height: auto;
@@ -53,20 +17,6 @@
 
     &__header {
       margin-bottom: 32px;
-    }
-  }
-
-  .subscribe .hs-form {
-    label {
-    }
-
-    .hs-email {
-    }
-
-    .hs-input {
-    }
-
-    .hs-button {
     }
   }
 }

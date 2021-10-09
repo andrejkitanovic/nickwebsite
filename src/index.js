@@ -17,3 +17,4 @@ const includeComponent = (script) => require(`./assets/scripts/components/${scri
 // ----------- Custom scripts ---------------
 includeComponent('header');
 includeComponent('blogOverview');
+includeComponent('slider');

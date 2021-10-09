@@ -1,0 +1,43 @@
+
+  <section class="scenarios">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="scenarios__label eyebrow">{% inline_text field="label_text" value="{{ module.label_text }}" %}</div>
+          <h2 class="scenarios__header h2">{% inline_text field="header" value="{{ module.header }}" %}</h2>
+        </div>
+      </div>
+
+      <div class="scenarios__blogs">
+        <div class="row">
+
+        {% set list = [] %}
+        {% for item in module.blogs %}
+          {% do list.append(item.blog) %}
+        {% endfor %}
+        {% set selected_posts = content_by_ids(list) %}
+        
+        
+        {% for post in selected_posts %}
+            <div class="col-12 col-md-4">
+              <a href="{{ post.absolute_url }}" class="scenarios__blog">
+                <div class="scenarios__blog-image">
+                  <img
+                    src="{{ post.featured_image }}"
+                    alt="Blog"
+                  />
+                </div>
+                <div class="scenarios__blog-description p1 arrow-right">
+                  {{ post.name }}
+                </div>
+              </a>
+            </div>
+        {% endfor %}
+        </div>
+      </div>
+
+      <a href="/scenarios" class="scenarios__view-more h5 arrow-long-right">
+        View more scenarios
+      </a>
+    </div>
+  </section>

@@ -1,10 +1,95 @@
 button,
 input {
   border: none;
-  outline: transparent;
+  outline-color: #ecf8f6;
+}
+
+select {
+  outline-color: #ecf8f6;
 }
 
 button,
 input[type="button"] {
   cursor: pointer;
+}
+
+.hs-form {
+  label {
+    display: none;
+  }
+
+  .hs-email {
+    width: 100%;
+  }
+
+  fieldset {
+    max-width: 100% !important;
+  }
+
+  .hs-input {
+    width: 100% !important;
+    font-size: 17px;
+    padding: 11px 16px;
+    border-radius: 8px;
+    border: 2px solid #00293a;
+    margin-bottom: 16px;
+  }
+
+  .hs-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00293a;
+    color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 11px 24px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .hs-error-msgs {
+    display: none !important;
+  }
+
+  textarea {
+    height: 130px;
+    resize: none;
+  }
+}
+
+.ask-question .hs-form {
+  .hs-button {
+    width: 100%;
+  }
+}
+
+.popup-get-in-touch .hs-form,
+.popup-subscribe .hs-form {
+  display: block;
+
+  .hs-button {
+    display: inline-flex;
+    float: right;
+  }
+}
+
+.subscribe .hs-form {
+  display: flex;
+  border-radius: 8px;
+  border: 2px solid #00293a;
+  overflow: hidden;
+  padding: 0;
+
+  .hs-input {
+    border-radius: 0;
+    border: none;
+    margin: 0;
+  }
+
+  .hs-button {
+    border-radius: 0;
+    margin: 0;
+  }
 }

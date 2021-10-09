@@ -4,7 +4,7 @@
     "files.eol": "\r\n",
     "files.associations": {
         "*.html": "html-hubl",
-        // "*.css": "css-hubl"
+        "*.css": "css-hubl",
     },
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true

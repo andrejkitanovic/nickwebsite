@@ -1,0 +1,82 @@
+.challenge-solution {
+  position: relative;
+  padding: 120px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url(https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/scenario-line.svg)
+      no-repeat center center / cover;
+    height: 70vw;
+    width: 100vw;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+
+  .col-md-6 {
+    padding: 0;
+  }
+
+  &__container {
+    max-width: 990px;
+    border: 2px solid #00293a;
+    border-radius: 12px;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 3;
+  }
+
+  &__single {
+    padding: 72px;
+    height: 100%;
+    background-color: #fff;
+
+    &.right {
+      background-color: #00293a;
+    }
+  }
+
+  &__label {
+    margin-bottom: 24px;
+    color: #00609c;
+
+    &.right {
+      color: #ecf8f6;
+    }
+  }
+
+  &__header {
+    margin-bottom: 24px;
+  }
+
+  &__header,
+  &__description {
+    &.right {
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: breakpoint(md)) {
+  .challenge-solution {
+    padding: 60px 0;
+
+    &__container {
+      margin: 0 32px;
+      border-radius: 8px;
+    }
+
+    &__single {
+      padding: 60px 32px;
+    }
+
+    &__label {
+      margin-bottom: 16px;
+    }
+
+    &__header {
+      margin-bottom: 16px;
+    }
+  }
+}

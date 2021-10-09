@@ -1,3 +1,9 @@
 .popup-get-in-touch {
   height: 725px;
+
+  &::after {
+    background-image: url("{{ get_asset_url('../images/svg/get-in-touch-line.svg') }}");
+    bottom: 80px;
+    height: 60%;
+  }
 }

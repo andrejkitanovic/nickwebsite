@@ -1,0 +1,32 @@
+<section class="challenge-solution">
+    <div class="challenge-solution__container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="challenge-solution__single">
+            <div class="challenge-solution__label eyebrow">
+              {% inline_text field="challenge.label_text" value="{{ module.challenge.label_text }}" %}
+            </div>
+            <div class="challenge-solution__header h3">
+              {% inline_text field="challenge.header" value="{{ module.challenge.header }}" %}
+            </div>
+            <div class="challenge-solution__description p2">
+              {% inline_rich_text field="challenge.description" value="{{ module.challenge.description }}" %}
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="challenge-solution__single right">
+            <div class="challenge-solution__label right eyebrow">
+              {% inline_text field="solution.label_text" value="{{ module.solution.label_text }}" %}
+            </div>
+            <div class="challenge-solution__header right h3">
+              {% inline_text field="solution.header" value="{{ module.solution.header }}" %}
+            </div>
+            <div class="challenge-solution__description right p2">
+              {% inline_rich_text field="solution.description" value="{{ module.solution.description }}" %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>

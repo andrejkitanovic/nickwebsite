@@ -16,7 +16,7 @@
       <div class="resource-hero__blogs">
         <div class="row">
           {% if module.most_popular %}
-            {% set selected_posts = blog_popular_posts('default', 3) %}
+            {% set selected_posts = blog_popular_posts(57121617429, 3) %}
           {% else %}
             {% set list = [] %}
             {% for item in module.blogs %}
@@ -39,7 +39,7 @@
                 {% for tag in post.tag_list %}{{ tag.name }}{% if not loop.last %}, {% endif %}{% endfor %}
               {% endif %}
               </div>
-              <div class="resource-hero__blog-description p1">
+              <div class="resource-hero__blog-description p1 arrow-right">
                 {{ post.name }}
               </div>
             </a>

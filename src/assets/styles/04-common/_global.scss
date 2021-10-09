@@ -1,0 +1,47 @@
+@mixin arrow {
+  position: relative;
+  padding-right: 28px;
+  min-width: 100%;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: no-repeat center center / contain;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.arrow-right {
+  @include arrow;
+  padding-right: 32px;
+
+  &::after {
+    background-image: url("{{ get_asset_url('../icons/svg/arrow-right.svg') }}");
+    width: 11px;
+    height: 19px;
+  }
+}
+
+.arrow-long-right {
+  @include arrow;
+
+  &::after {
+    background-image: url("{{ get_asset_url('../icons/svg/arrow-long-right.svg') }}");
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.arrow-down {
+  @include arrow;
+  min-width: auto;
+
+  &::after {
+    background-image: url("{{ get_asset_url('../icons/svg/arrow-down.svg') }}");
+    width: 12px;
+    height: 8px;
+  }
+}

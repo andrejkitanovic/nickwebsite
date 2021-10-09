@@ -26,6 +26,11 @@
   &__overview-text {
     font-size: 14px;
     line-height: 28px;
+
+    p.active {
+      font-weight: bold;
+      letter-spacing: -0.1px;
+    }
   }
 
   &__cta {
@@ -81,7 +86,7 @@
     }
 
     &__content {
-      padding: 0 0 60px;
+      padding: 48px 0 60px;
     }
 
     &__read {

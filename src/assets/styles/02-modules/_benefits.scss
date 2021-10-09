@@ -23,7 +23,7 @@
 
     img {
       height: 100%;
-      max-width: 100%;
+      width: 100%;
       object-fit: cover;
     }
   }
@@ -45,5 +45,46 @@
   &__benefit-number {
     color: #00609c;
     width: 50px;
+  }
+}
+
+@media screen and (max-width: breakpoint(md)) {
+  .benefits {
+    padding-top: 30px;
+
+    &__label {
+      margin-bottom: 16px;
+    }
+
+    &__header {
+      margin-bottom: 24px;
+    }
+
+    &__image {
+      height: 365px;
+      border-radius: 8px;
+    }
+
+    &__description {
+      padding-top: 24px;
+      margin-bottom: 32px;
+    }
+
+    &__benefit {
+      display: block;
+      margin-bottom: 57px;
+      text-align: center;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    &__benefit-number {
+      font-size: 24px;
+      line-height: 30px;
+      width: 100%;
+      margin-bottom: 8px;
+    }
   }
 }

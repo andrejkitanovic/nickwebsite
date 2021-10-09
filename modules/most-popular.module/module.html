@@ -11,7 +11,7 @@
         <div class="row">
           
         {% if module.most_popular %}
-          {% set selected_posts = blog_popular_posts('default', 3) %}
+          {% set selected_posts = blog_popular_posts(57121617429, 3) %}
         {% else %}
           {% set list = [] %}
           {% for item in module.blogs %}
@@ -30,7 +30,7 @@
                     alt="Blog"
                   />
                 </div>
-                <div class="most-popular__blog-description p1">
+                <div class="most-popular__blog-description p1 arrow-right">
                   {{ post.name }}
                 </div>
               </a>

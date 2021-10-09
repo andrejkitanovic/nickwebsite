@@ -1,0 +1,91 @@
+[ {
+  "id" : "0039a4c2-f09c-f46b-26ba-94a5ddb2be41",
+  "name" : "challenge",
+  "label" : "Challenge",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "7009c893-a49b-0be4-e700-775d2e9d6f03",
+    "name" : "label_text",
+    "label" : "Label",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Challenge"
+  }, {
+    "id" : "6b1ec193-16c4-a54e-9aa0-2d18ed13b18d",
+    "name" : "header",
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Responding to changing employer and employee workspace needs"
+  }, {
+    "id" : "256d1c41-6581-b4da-58c7-73c1cf23be04",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Your employees want flexibility. You want a thriving corporate culture. At a time of heightened uncertainty, every business needs a workplace that helps bolster the bottom line.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "label_text" : "Challenge",
+    "header" : "Responding to changing employer and employee workspace needs",
+    "description" : "<p>Your employees want flexibility. You want a thriving corporate culture. At a time of heightened uncertainty, every business needs a workplace that helps bolster the bottom line.</p>"
+  }
+}, {
+  "id" : "3ebf73f2-a589-6f0c-da2b-9cc78e89c91d",
+  "name" : "solution",
+  "label" : "Solution",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "c4aac095-d1e7-87f5-528c-4a9de4c98032",
+    "name" : "label_text",
+    "label" : "Label",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Solution"
+  }, {
+    "id" : "0c7a3ba5-690a-bdd6-43d5-eb3911385e79",
+    "name" : "header",
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Responding to changing employer and employee workspace needs"
+  }, {
+    "id" : "aec379b3-e451-b052-f95d-160bc9a8beb9",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Your employees want flexibility. You want a thriving corporate culture. At a time of heightened uncertainty, every business needs a workplace that helps bolster the bottom line.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "label_text" : "Solution",
+    "header" : "Responding to changing employer and employee workspace needs",
+    "description" : "<p>Your employees want flexibility. You want a thriving corporate culture. At a time of heightened uncertainty, every business needs a workplace that helps bolster the bottom line.</p>"
+  }
+} ]
