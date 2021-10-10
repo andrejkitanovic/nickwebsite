@@ -10,6 +10,7 @@
   z-index: $z-modal;
   opacity: 0;
   pointer-events: none;
+  overflow: hidden;
 
   &.open {
     opacity: 1;
@@ -32,6 +33,32 @@
     height: 100%;
   }
 
+  &__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 20px;
+    height: 20px;
+    z-index: $z-overlay;
+    cursor: pointer;
+
+    @include hover-opacity;
+
+    span {
+      position: absolute;
+      display: block;
+      width: 2px;
+      height: 21px;
+      background: #00293a;
+      transform: rotate(135deg);
+      right: 8px;
+
+      &:last-child {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
   &__left {
     background-color: #003a5d;
     height: 100%;
@@ -51,6 +78,34 @@
     padding-right: 51px;
     width: 100%;
     position: relative;
-    z-index: 1;
+    z-index: $z-ahead;
+  }
+}
+
+@media screen and (max-width: breakpoint(md)) {
+  .popup-get-in-touch,
+  .popup-subscribe {
+    height: auto !important;
+
+    &__left {
+      padding: 40px 35px;
+    }
+
+    &__header {
+      margin-bottom: 14px;
+    }
+
+    &__form {
+      padding: 40px 35px;
+    }
+
+    &__close {
+      top: 14px;
+      right: 14px;
+
+      span {
+        background-color: #fff;
+      }
+    }
   }
 }

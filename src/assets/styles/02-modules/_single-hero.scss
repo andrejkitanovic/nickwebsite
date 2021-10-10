@@ -18,17 +18,16 @@
 
   &__image {
     margin-top: 72px;
+    height: 465px;
+    border-radius: 16px;
+
+    @include media-cover;
+    @include image-zoom;
   }
 
   &__blog {
     display: block;
     color: #00293a;
-  }
-
-  &__image img {
-    width: 100%;
-    height: auto;
-    border-radius: 16px;
   }
 
   &__link {
@@ -51,9 +50,7 @@
 
     &__image {
       margin-top: 60px;
-    }
-
-    &__image img {
+      height: 246px;
     }
 
     &__link {

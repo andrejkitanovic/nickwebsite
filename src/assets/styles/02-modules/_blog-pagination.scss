@@ -17,10 +17,23 @@
     color: #00293a;
     font-size: 17px;
     margin-right: 12px;
+    @include hover-opacity;
 
     &.active {
       background-color: #00293a;
       color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: breakpoint(md)) {
+  .blog-pagination {
+    padding-bottom: 60px;
+
+    &__container a {
+      width: 40px;
+      height: 40px;
+      margin-right: 8px;
     }
   }
 }

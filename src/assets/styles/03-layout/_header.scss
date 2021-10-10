@@ -26,20 +26,11 @@
     font-size: 16px;
     line-height: 25px;
     color: #00293a;
+    padding-right: 18px;
 
-    &::after {
-      content: "";
-      display: inline-block;
-      margin-left: 6px;
-      width: 12px;
-      height: 9px;
-      background-image: url("https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/Icons/dropdown.svg");
-      @include transition(transform 0.2s ease("fluid"));
-    }
-
-    &:hover::after {
-      transform: rotate(180deg);
-    }
+    // &:hover::after {
+    // transform: rotate(180deg);
+    // }
   }
 
   &__link-menu {

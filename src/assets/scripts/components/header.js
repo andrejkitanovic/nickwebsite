@@ -31,6 +31,8 @@ if (gsap) {
         });
 
         $(header).find('.hamburger').on('click', function () {
+            closeOpenPopups();
+
             $(header).toggleClass('open');
         });
 
@@ -38,7 +40,7 @@ if (gsap) {
             $('.open').removeClass('open');
         };
 
-        $(header).find('.header-blue__subscribe').on('click', function (e) {
+        $(header).find('.popup-button-subscribe').on('click', function (e) {
             e.preventDefault();
             closeOpenPopups();
 
@@ -46,7 +48,7 @@ if (gsap) {
             $('.popup-subscribe').addClass('open');
         });
 
-        $(header).find('.header-blue__get-in-touch').on('click', function (e) {
+        $(header).find('.popup-button-get-in-touch').on('click', function (e) {
             e.preventDefault();
             closeOpenPopups();
 
@@ -54,7 +56,7 @@ if (gsap) {
             $('.popup-get-in-touch').addClass('open');
         });
 
-        $('.overlay').on('click', function () {
+        $('.overlay, .popup-close').on('click', function () {
             closeOpenPopups();
         });
     });

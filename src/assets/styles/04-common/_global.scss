@@ -1,3 +1,12 @@
+@mixin media-cover {
+  img,
+  video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
 @mixin arrow {
   position: relative;
   padding-right: 28px;

@@ -1,0 +1,11 @@
+.follow {
+  &__icon {
+    margin-right: 27px;
+
+    @include hover-opacity;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

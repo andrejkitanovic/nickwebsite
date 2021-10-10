@@ -30,9 +30,11 @@
     font-size: 16px;
     line-height: 25px;
     color: #fff;
+
+    @include hover-opacity;
   }
 
-  &__link-container.has-children &__link {
+  &__link.arrow-down-white {
     &::after {
       content: "";
       display: inline-block;
@@ -44,7 +46,7 @@
     }
   }
 
-  &__link-container.has-children.open {
+  &__link-container.open {
     #{$el}__link::after {
       transform: rotate(180deg);
     }

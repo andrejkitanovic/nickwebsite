@@ -25,11 +25,13 @@
     color: #00293a;
   }
 
-  &__blog-image img {
+  &__blog-image {
     width: 100%;
     height: 280px;
-    object-fit: cover;
     border-radius: 16px;
+
+    @include media-cover;
+    @include image-zoom;
   }
 
   &__blog-type {
@@ -68,9 +70,6 @@
 
     &__blog {
       margin-bottom: 32px;
-    }
-
-    &__blog-image img {
     }
 
     &__blog-type {

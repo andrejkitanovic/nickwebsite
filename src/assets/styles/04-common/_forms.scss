@@ -1,17 +1,19 @@
 button,
 input {
   border: none;
-  outline-color: #ecf8f6;
+  outline-color: #00609c;
 }
 
 select {
-  outline-color: #ecf8f6;
+  outline-color: #00609c;
 }
 
 button,
 input[type="button"] {
   cursor: pointer;
 }
+
+// GLOBAL //
 
 .hs-form {
   label {
@@ -42,11 +44,13 @@ input[type="button"] {
     background-color: #00293a;
     color: #fff;
     font-weight: bold;
-    font-size: 17px;
-    padding: 11px 24px;
+    font-size: 14px;
+    padding: 13px 24px;
     text-transform: uppercase;
     border-radius: 8px;
     cursor: pointer;
+
+    @include hover-opacity;
   }
 
   .hs-error-msgs {
@@ -58,6 +62,18 @@ input[type="button"] {
     resize: none;
   }
 }
+
+.hs_cos_wrapper {
+  .submitted-message {
+    font-size: 24px;
+    display: flex;
+    height: 100%;
+    font-weight: 700;
+    padding-bottom: 2px;
+  }
+}
+
+// LOCAL //
 
 .ask-question .hs-form {
   .hs-button {
@@ -72,6 +88,10 @@ input[type="button"] {
   .hs-button {
     display: inline-flex;
     float: right;
+  }
+
+  .hs-submit {
+    overflow: hidden;
   }
 }
 
@@ -91,5 +111,16 @@ input[type="button"] {
   .hs-button {
     border-radius: 0;
     margin: 0;
+  }
+
+  .submitted-message {
+    color: #fff;
+    margin-top: 16px;
+  }
+}
+
+.subscribe .hs_cos_wrapper {
+  .submitted-message {
+    color: #fff;
   }
 }

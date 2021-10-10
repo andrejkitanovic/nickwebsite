@@ -26,11 +26,13 @@
     color: #00293a;
   }
 
-  &__topic-big-image img {
+  &__topic-big-image {
     width: 100%;
     height: 296px;
-    object-fit: cover;
     border-radius: 16px;
+
+    @include media-cover;
+    @include image-zoom;
   }
 
   &__topic-big-title {
@@ -46,11 +48,13 @@
     margin-right: 24px;
   }
 
-  &__topic-small-image img {
+  &__topic-small-image {
     width: 160px;
     height: 124px;
-    object-fit: cover;
     border-radius: 8px;
+
+    @include media-cover;
+    @include image-zoom;
   }
 
   &__topic-small-info {
@@ -64,6 +68,8 @@
     color: #00293a;
     text-align: right;
     margin-top: 28px;
+
+    @include hover-opacity;
 
     div {
       display: inline;
@@ -90,7 +96,7 @@
       margin-bottom: 32px;
     }
 
-    &__topic-big-image img {
+    &__topic-big-image {
       height: 197px;
       border-radius: 8px;
     }
@@ -108,7 +114,7 @@
       margin-right: 0;
     }
 
-    &__topic-small-image img {
+    &__topic-small-image {
       width: 100%;
       height: 197px;
     }

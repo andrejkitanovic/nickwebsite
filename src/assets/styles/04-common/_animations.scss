@@ -2,12 +2,36 @@
 // Summary: Fade in + Scale down
 
 @include keyframes(reveal) {
-    0% {
-        @include transform(scale(1.05));
-        @include opacity(0);
+  0% {
+    @include transform(scale(1.05));
+    @include opacity(0);
+  }
+  100% {
+    @include transform(scale(1));
+    @include opacity(1);
+  }
+}
+
+@mixin image-zoom {
+  overflow: hidden;
+
+  img {
+    transition: transform 0.2s ease("fluid");
+  }
+
+  @media screen and (min-width: breakpoint(md)) {
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
     }
-    100% {
-        @include transform(scale(1));
-        @include opacity(1);
-    }
+  }
+}
+
+@mixin hover-opacity {
+  transition: opacity 0.2s ease("fluid");
+
+  &:hover {
+    opacity: 0.6;
+  }
 }

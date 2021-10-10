@@ -1,6 +1,6 @@
 .blog-hero {
   position: relative;
-  z-index: 1;
+  z-index: $z-ahead;
   height: 610px;
   background-color: #ecf8f6;
   overflow: hidden;
@@ -11,10 +11,8 @@
     height: 100%;
   }
 
-  &__image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  &__image {
+    @include media-cover;
   }
 
   &__content {
@@ -38,9 +36,6 @@
     .row,
     .col-12,
     &__image {
-    }
-
-    &__image img {
     }
 
     &__content {

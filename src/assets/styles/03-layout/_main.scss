@@ -46,9 +46,14 @@ h6 {
 }
 
 input[type="submit"],
-button {
+button,
+select {
   @include appearance(none);
   -webkit-border-radius: none;
+}
+
+select {
+  background-color: #fff;
 }
 
 a[href^="tel"] {

@@ -119,16 +119,21 @@
     </div>
     <div class="footer__bottom">
       <div class="row">
+        <div class="d-block d-md-none col-12">
+          {% include "../partials/follow.html" %}
+        </div>
         <div class="col-6 col-md-3">
           <div class="footer__copyright">© LiquidSpace, Inc. 2021</div>
         </div>
-        <div class="d-none d-md-block col-6"></div>
+        <div class="d-none d-md-block col-6">
+          {% include "../partials/follow.html" %}
+        </div>
         <div class="col-6 col-md-3">
           <div
             class="footer__bottom-links d-flex align-items-center justify-content-end"
           >
-            <a class="footer__bottom-link">Terms Of Use</a>
-            <a class="footer__bottom-link">Privacy Policy</a>
+            <a href="" class="footer__bottom-link">Terms Of Use</a>
+            <a href="" class="footer__bottom-link">Privacy Policy</a>
           </div>
         </div>
       </div>

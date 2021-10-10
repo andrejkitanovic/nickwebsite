@@ -1,1 +1,74 @@
-[ ]
+[ {
+  "id" : "a7d1dd45-9173-c31e-1937-8286f1560e97",
+  "name" : "header",
+  "label" : "Header",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Ready to continue your journey?</p>\n<p>There are two great ways to do it</p>"
+}, {
+  "id" : "6a01033e-23d7-bc78-6fec-545eecdfbc7d",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : ""
+}, {
+  "id" : "ede98bef-2359-e4c8-e49a-02ee317b044e",
+  "name" : "buttons",
+  "label" : "Buttons",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "a2d22f97-4b9d-1773-f001-36aa8eadf7cd",
+    "name" : "button_style",
+    "label" : "Button Style",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "default", "Without background" ], [ "background", "With background" ] ],
+    "type" : "choice",
+    "default" : "default"
+  }, {
+    "id" : "418ed800-0669-5706-1fc6-5de4579f151c",
+    "name" : "button_url",
+    "label" : "Button URL",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "type" : "url",
+    "default" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "EXTERNAL"
+    }
+  }, {
+    "id" : "45a7f169-c2fd-df05-fb44-55efc1289308",
+    "name" : "button_text",
+    "label" : "Button Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "button_style" : "default",
+    "button_url" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "EXTERNAL"
+    }
+  }
+} ]

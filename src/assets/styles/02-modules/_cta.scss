@@ -18,19 +18,28 @@
 
   &__header {
     color: #fff;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
   }
 
-  &__explore {
-    color: #00293a;
-    background-color: #fdcf85;
-    border-color: #fdcf85;
-    margin-right: 16px;
+  &__description {
+    color: #fff;
+    margin-bottom: 24px;
+    max-width: 900px;
   }
 
-  &__get-in-touch {
+  &__buttons {
+    margin-top: 8px;
+  }
+
+  &__button {
     color: #fff;
     border-color: #fdcf85;
+    margin-right: 16px;
+
+    &.background {
+      color: #00293a;
+      background-color: #fdcf85;
+    }
   }
 }
 
@@ -45,14 +54,12 @@
     //   height: 100%;
     //   width: calc(100% + 135px);
     //   bottom: 35px;
-    //   background: url("https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/Assets/line.svg")
-    //     no-repeat bottom left / cover;
     // }
 
     &__header {
     }
 
-    &__explore {
+    &__button {
       margin-right: 0;
       margin-bottom: 12px;
     }

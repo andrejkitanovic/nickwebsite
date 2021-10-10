@@ -41,6 +41,8 @@
     line-height: 14px;
     margin-bottom: 12px;
 
+    @include hover-opacity;
+
     &:last-of-type {
       margin-bottom: 0;
     }
@@ -75,6 +77,8 @@
     line-height: 14px;
     color: #fff;
     margin-right: 8px;
+
+    @include hover-opacity;
 
     &:last-of-type {
       margin-right: 0;
@@ -118,6 +122,10 @@
       .col-6:last-of-type {
         padding-left: 0;
       }
+    }
+
+    &__bottom .follow {
+      margin-bottom: 26px;
     }
 
     &__copyright {

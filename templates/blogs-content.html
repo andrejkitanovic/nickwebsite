@@ -24,9 +24,11 @@ https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
                   {{ content.post_body|wordcount|divide(300) }} min read
                 </div>
                 <div class="blog-body__social-media">
+                  {% include './partials/share.html' %}
                 </div>
               </div>
             </div>
+        
           </div>
           <div class="row">
               <div class="d-none d-md-block col-3">
@@ -49,18 +51,19 @@ https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
               </div>
           </div>
           <div class="row">
+          
               <div class="d-none d-md-block col-3">
               
               </div>
-              <div class="col-9 col-md-6">
-                <div class="blog-body__bottom">
+              <div class="col-12 col-md-9">
+                <div class="blog-body__bottom d-flex align-items-start justify-content-between">
                   <div class="blog-body__resources p2">
                     {% module "resources" label="Resources" path='@hubspot/rich_text' html='' %}
                   </div>
+                  <div class="blog-body__social-media">
+                    {% include './partials/share.html' %}
+                  </div>
                 </div>
-              </div>
-              <div class="col-3">
-                {% include './partials/share.html' %}
               </div>
           </div>
         </div>
