@@ -2,7 +2,7 @@
   position: relative;
   z-index: $z-ahead;
   height: 610px;
-  background-color: #ecf8f6;
+  background-color: $background-secondary;
   overflow: hidden;
 
   .row,
@@ -20,7 +20,7 @@
   }
 
   &__content-tag {
-    color: #00609c;
+    color: $blue-text;
     margin-bottom: 24px;
   }
 

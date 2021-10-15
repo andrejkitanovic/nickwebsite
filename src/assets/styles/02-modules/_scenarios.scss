@@ -4,7 +4,7 @@
   &__label {
     margin-bottom: 24px;
     text-align: center;
-    color: #00609c;
+    color: $blue-text;
   }
 
   &__header {
@@ -17,7 +17,7 @@
   }
 
   &__blog {
-    color: #00293a;
+    color: $color-text;
     display: block;
   }
 
@@ -34,7 +34,7 @@
   &__view-more {
     display: table;
     margin-left: auto;
-    color: #00293a;
+    color: $color-text;
     min-width: auto;
   }
 }

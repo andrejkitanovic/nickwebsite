@@ -1,11 +1,11 @@
 button,
 input {
   border: none;
-  outline-color: #00609c;
+  outline-color: $blue-text;
 }
 
 select {
-  outline-color: #00609c;
+  outline-color: $blue-text;
 }
 
 button,
@@ -33,7 +33,7 @@ input[type="button"] {
     font-size: 17px;
     padding: 11px 16px;
     border-radius: 8px;
-    border: 2px solid #00293a;
+    border: 2px solid $color-text;
     margin-bottom: 16px;
   }
 
@@ -41,7 +41,7 @@ input[type="button"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #00293a;
+    background-color: $color-text;
     color: #fff;
     font-weight: bold;
     font-size: 14px;
@@ -98,7 +98,7 @@ input[type="button"] {
 .subscribe .hs-form {
   display: flex;
   border-radius: 8px;
-  border: 2px solid #00293a;
+  border: 2px solid $color-text;
   overflow: hidden;
   padding: 0;
 

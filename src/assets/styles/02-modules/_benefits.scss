@@ -6,7 +6,7 @@
   }
 
   &__label {
-    color: #00609c;
+    color: $blue-text;
     margin-bottom: 24px;
   }
 
@@ -39,7 +39,7 @@
   }
 
   &__benefit-number {
-    color: #00609c;
+    color: $blue-text;
     width: 50px;
   }
 }

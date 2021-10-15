@@ -22,7 +22,7 @@
 
   &__blog {
     display: block;
-    color: #00293a;
+    color: $color-text;
   }
 
   &__blog-image {
@@ -36,7 +36,7 @@
 
   &__blog-type {
     text-transform: uppercase;
-    color: #00609c;
+    color: $blue-text;
     font-size: 14px;
     line-height: 16px;
     margin-top: 24px;

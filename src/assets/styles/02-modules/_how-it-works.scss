@@ -1,6 +1,6 @@
 .how-it-works {
   padding: 120px 0;
-  background-color: #ecf8f6;
+  background-color: $background-secondary;
 
   &__info {
     text-align: center;
@@ -10,7 +10,7 @@
 
   &__label {
     margin-bottom: 24px;
-    color: #00609c;
+    color: $blue-text;
   }
 
   &__header {
@@ -42,7 +42,7 @@
 
   &__step-number {
     margin-bottom: 8px;
-    color: #00609c;
+    color: $blue-text;
   }
 
   &__step-header {

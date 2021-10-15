@@ -1,3 +1,5 @@
+$offset-top: 120px;
+
 .blog-body {
   padding: 74px 0 120px;
 
@@ -7,19 +9,21 @@
 
   &__helpers {
     max-width: 265px;
-    top: 120px;
+    top: $offset-top;
+    max-height: calc(100vh - #{$offset-top});
+    overflow: scroll;
     position: sticky;
   }
 
   &__overview {
     padding: 32px 24px;
-    background-color: #ecf8f6;
+    background-color: $background-secondary;
     width: 100%;
     border-radius: 8px;
   }
 
   &__overview-header {
-    color: #00609c;
+    color: $blue-text;
     margin-bottom: 16px;
   }
 
@@ -29,14 +33,14 @@
 
     p.active {
       font-weight: bold;
-      letter-spacing: -0.1px;
+      letter-spacing: -0.4px;
     }
   }
 
   &__cta {
     margin-top: 32px;
     padding: 24px 32px;
-    border: 1px solid #00609c;
+    border: 1px solid $blue-text;
     width: 100%;
     border-radius: 8px;
   }
@@ -48,28 +52,44 @@
   &__cta-button {
     display: block;
     text-align: center;
-    background-color: #00293a;
+    background-color: $color-text;
     color: #fff;
     line-height: 16px;
   }
 
   &__content {
     padding: 32px 0;
-    border-top: 2px solid #a1ded2;
-    border-bottom: 2px solid #a1ded2;
+    border-top: 2px solid $secondary-color;
+    border-bottom: 2px solid $secondary-color;
+
+    img {
+      max-width: 100%;
+      height: auto !important;
+    }
   }
 
   &__read {
-    color: #00609c;
+    color: $blue-text;
   }
 
   &__resources {
-    color: #00609c;
+    color: $blue-text;
     max-width: 620px;
   }
 
   &__bottom {
     margin-top: 25px;
+  }
+}
+
+@media screen and (max-height: 900px) {
+  $offset-top: 20px;
+
+  .blog-body {
+    &__helpers {
+      top: $offset-top;
+      max-height: calc(100vh - #{$offset-top});
+    }
   }
 }
 

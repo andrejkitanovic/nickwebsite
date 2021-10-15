@@ -7,7 +7,7 @@
 
   &__label {
     margin-bottom: 24px;
-    color: #00609c;
+    color: $blue-text;
   }
 
   &__header {
@@ -62,12 +62,12 @@
 
     &__item-info {
       padding: 16px;
-      background-color: #ecf8f6;
+      background-color: $background-secondary;
       border-radius: 8px;
     }
 
     &__item-header {
-      color: #00609c;
+      color: $blue-text;
     }
 
     &__items-slider-pagination {
@@ -90,12 +90,12 @@
           width: 16px;
           height: 16px;
           border-radius: 50%;
-          border: 1px solid #00609c;
+          border: 1px solid $blue-text;
           opacity: 0;
         }
 
         &-active {
-          background-color: #00609c;
+          background-color: $blue-text;
 
           &::before {
             opacity: 1;

@@ -10,7 +10,7 @@
     height: 70%;
     left: 0;
     position: absolute;
-    background-color: #ecf8f6;
+    background-color: $background-secondary;
   }
 
   &__image {
@@ -35,7 +35,7 @@
 
   &__button {
     color: #fff;
-    background-color: #00293a;
+    background-color: $color-text;
   }
 }
 

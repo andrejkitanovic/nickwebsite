@@ -20,7 +20,7 @@
 
   &__container {
     max-width: 990px;
-    border: 2px solid #00293a;
+    border: 2px solid $color-text;
     border-radius: 12px;
     margin: 0 auto;
     overflow: hidden;
@@ -33,16 +33,16 @@
     background-color: #fff;
 
     &.right {
-      background-color: #00293a;
+      background-color: $color-text;
     }
   }
 
   &__label {
     margin-bottom: 24px;
-    color: #00609c;
+    color: $blue-text;
 
     &.right {
-      color: #ecf8f6;
+      color: $background-secondary;
     }
   }
 

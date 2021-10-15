@@ -27,13 +27,13 @@
 
   &__blog {
     display: block;
-    color: #00293a;
+    color: $color-text;
   }
 
   &__link {
     display: block;
     margin-top: 24px;
-    color: #00293a;
+    color: $color-text;
   }
 }
 

@@ -19,7 +19,6 @@ $(function () {
 
             $(blogBodyOverviewText).find('p').each(function (index) {
                 let posTop = $(blogContentH2[index]).position().top;
-                console.log(posTop);
 
                 // let h = $($(this).attr('href')).height();
                 if (posTop <= windscroll) {

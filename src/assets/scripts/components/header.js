@@ -31,9 +31,13 @@ if (gsap) {
         });
 
         $(header).find('.hamburger').on('click', function () {
-            closeOpenPopups();
+            // closeOpenPopups();
 
+            $('.popup-get-in-touch.open').removeClass('open');
+            $('.popup-subscribe.open').removeClass('open');
+            // if (!$(header).hasClass('open')) {
             $(header).toggleClass('open');
+            // }
         });
 
         const closeOpenPopups = () => {

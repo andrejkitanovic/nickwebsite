@@ -25,7 +25,7 @@
   &__link {
     font-size: 16px;
     line-height: 25px;
-    color: #00293a;
+    color: $color-text;
     padding-right: 18px;
 
     // &:hover::after {
@@ -74,7 +74,7 @@
       height: 2px;
       margin-bottom: 3px;
       border-radius: 15px;
-      background-color: #00293a;
+      background-color: $color-text;
 
       &:last-of-type {
         margin-bottom: 0;

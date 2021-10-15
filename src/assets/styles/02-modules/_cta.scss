@@ -1,9 +1,19 @@
 .cta {
   position: relative;
   padding: 120px 0 180px;
-  background-color: #00609c;
+  background-color: $blue-text;
   display: flex;
   align-items: center;
+
+  &__alignment {
+    &-center {
+      text-align: center;
+    }
+
+    &-right {
+      text-align: right;
+    }
+  }
 
   &::before {
     content: "";
@@ -37,7 +47,7 @@
     margin-right: 16px;
 
     &.background {
-      color: #00293a;
+      color: $color-text;
       background-color: #fdcf85;
     }
   }

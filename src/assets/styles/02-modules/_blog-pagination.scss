@@ -13,14 +13,14 @@
     width: 50px;
     height: 50px;
     border-radius: 7px;
-    border: 2px solid #00293a;
-    color: #00293a;
+    border: 2px solid $color-text;
+    color: $color-text;
     font-size: 17px;
     margin-right: 12px;
     @include hover-opacity;
 
     &.active {
-      background-color: #00293a;
+      background-color: $color-text;
       color: #fff;
     }
   }

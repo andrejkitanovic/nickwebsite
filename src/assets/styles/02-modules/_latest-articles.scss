@@ -3,9 +3,9 @@
 
   &__article {
     display: block;
-    color: #00293a;
+    color: $color-text;
     padding: 72px 0;
-    border-bottom: 1px solid #a1ded2;
+    border-bottom: 1px solid $secondary-color;
 
     &:last-of-type {
       border: none;
@@ -41,13 +41,13 @@
   }
 
   &__article-read {
-    color: #00609c;
+    color: $blue-text;
   }
 
   &__load-more {
     display: table;
     margin: 0 auto;
-    color: #00293a;
+    color: $color-text;
 
     @include hover-opacity;
   }

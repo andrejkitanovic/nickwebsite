@@ -25,7 +25,7 @@
                   {{content.meta_description}}
                 {% endif %}
               </div>
-              <a href="{{ content.absolute_url }}" class="single-post__button button">learn more</a>
+              <a href="{% if module.link_override.href %}{{ module.link_override.href }}{% else %}{{ content.absolute_url }}{% endif %}" class="single-post__button button">learn more</a>
             </div>
           </div>
         </div>

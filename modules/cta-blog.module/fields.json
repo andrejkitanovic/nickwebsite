@@ -1,35 +1,34 @@
 [ {
-  "id" : "886d48c3-60b6-44ae-935b-a5814583f94e",
+  "id" : "d7c836a8-3c60-15f7-187c-03dec0e76d53",
   "name" : "alignment",
   "label" : "Alignment",
   "required" : false,
-  "locked" : false,
+  "locked" : true,
   "display" : "select",
   "choices" : [ [ "left", "Left" ], [ "center", "Center" ], [ "right", "Right" ] ],
   "type" : "choice",
   "default" : "left"
 }, {
-  "id" : "a7d1dd45-9173-c31e-1937-8286f1560e97",
+  "id" : "02e839a2-80e2-1975-c465-7dbc4baca89d",
   "name" : "header",
   "label" : "Header",
   "required" : false,
-  "locked" : false,
+  "locked" : true,
   "type" : "richtext",
-  "default" : "<p>Ready to continue your journey?</p>\n<p>There are two great ways to do it</p>"
+  "default" : "<p>Ready to continue your journey?</p>\n<p>There are two great ways to do it.</p>"
 }, {
-  "id" : "6a01033e-23d7-bc78-6fec-545eecdfbc7d",
+  "id" : "c4d1d6bb-2c9e-9c40-2f19-520079e06c3f",
   "name" : "description",
   "label" : "Description",
   "required" : false,
-  "locked" : false,
-  "type" : "richtext",
-  "default" : ""
+  "locked" : true,
+  "type" : "richtext"
 }, {
-  "id" : "ede98bef-2359-e4c8-e49a-02ee317b044e",
+  "id" : "764443b6-ba0d-1cb0-b0e7-ca25b53806e7",
   "name" : "buttons",
   "label" : "Buttons",
   "required" : false,
-  "locked" : false,
+  "locked" : true,
   "occurrence" : {
     "min" : null,
     "max" : null,
@@ -37,7 +36,7 @@
     "default" : null
   },
   "children" : [ {
-    "id" : "a2d22f97-4b9d-1773-f001-36aa8eadf7cd",
+    "id" : "95278ddf-7d22-2121-ac4d-a067dabfbcb4",
     "name" : "button_style",
     "label" : "Button Style",
     "required" : false,
@@ -47,7 +46,7 @@
     "type" : "choice",
     "default" : "default"
   }, {
-    "id" : "418ed800-0669-5706-1fc6-5de4579f151c",
+    "id" : "22c8ea6d-1eb6-13b7-6f8e-6631f18b6497",
     "name" : "button_url",
     "label" : "Button URL",
     "required" : false,
@@ -60,7 +59,7 @@
       "type" : "EXTERNAL"
     }
   }, {
-    "id" : "45a7f169-c2fd-df05-fb44-55efc1289308",
+    "id" : "738f14b9-d852-732c-1464-7f1feafcd47e",
     "name" : "button_text",
     "label" : "Button Text",
     "required" : false,
@@ -69,7 +68,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "B"
+    "default" : "Button Text"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -81,6 +80,6 @@
       "href" : "",
       "type" : "EXTERNAL"
     },
-    "button_text" : "B"
+    "button_text" : "Button Text"
   }
 } ]

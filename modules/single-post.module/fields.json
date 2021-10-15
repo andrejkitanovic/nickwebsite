@@ -49,4 +49,17 @@
   "required" : false,
   "locked" : false,
   "type" : "richtext"
+}, {
+  "id" : "7fcb269e-2205-951e-57fb-0d2893594317",
+  "name" : "link_override",
+  "label" : "Link Override",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "type" : "url",
+  "default" : {
+    "content_id" : null,
+    "href" : "",
+    "type" : "EXTERNAL"
+  }
 } ]

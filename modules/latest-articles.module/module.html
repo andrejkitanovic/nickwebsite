@@ -9,9 +9,9 @@
 
       {% if module.topic_tag %}
 
-        {% set recent_posts = blog_recent_tag_posts(57121617429, module.topic_tag, 5) %}
+        {% set recent_posts = blog_recent_tag_posts(57176331600, module.topic_tag, 5) %}
       {% else %}
-        {% set recent_posts = blog_recent_posts(57121617429, 5) %}
+        {% set recent_posts = blog_recent_posts(57176331600, 5) %}
       {% endif %}
       
       {% for post in recent_posts %}
@@ -38,7 +38,7 @@
       
       <span class="row">
         <div class="col-12">
-          <a href="{{ blog_tag_url(57121617429, module.topic_tag) }}" class="latest-articles__load-more h4 arrow-down">Load More</a>
+          <a href="{{ blog_tag_url(57176331600, module.topic_tag) }}" class="latest-articles__load-more h4 arrow-down">Load More</a>
         </div>
       </span>
      

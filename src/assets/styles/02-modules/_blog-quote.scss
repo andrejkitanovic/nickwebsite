@@ -9,7 +9,7 @@
     height: 80%;
     left: 0;
     position: absolute;
-    background-color: #ecf8f6;
+    background-color: $background-secondary;
   }
 
   &__info-container {
@@ -23,13 +23,13 @@
   }
 
   &__header {
-    color: #00293a;
+    color: $color-text;
     margin-bottom: 24px;
   }
 
   &__author {
     font-weight: 700;
-    color: #00609c;
+    color: $blue-text;
   }
 
   &__image img {
