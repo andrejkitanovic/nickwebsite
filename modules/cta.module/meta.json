@@ -2,7 +2,7 @@
   "global" : false,
   "icon" : "fontawesome-5.14.0:Hand%20Pointing%20Up:SOLID",
   "host_template_types" : [ "PAGE" ],
-  "module_id" : 56479460715,
+  "module_id" : 56717308685,
   "label" : "CTA",
   "is_available_for_new_content" : true
 }

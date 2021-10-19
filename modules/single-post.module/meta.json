@@ -2,7 +2,7 @@
   "global" : false,
   "icon" : "fontawesome-5.14.0:Grip%20Lines:SOLID",
   "host_template_types" : [ "PAGE" ],
-  "module_id" : 56469472518,
+  "module_id" : 56713429259,
   "label" : "Single Post",
   "is_available_for_new_content" : true
 }

@@ -29,9 +29,50 @@
     "locked" : false,
     "tag_value" : "SLUG",
     "type" : "tag"
+  }, {
+    "id" : "7a1c14aa-917a-988d-cc29-11ae7a3495a7",
+    "name" : "item_image",
+    "label" : "Item Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "aee95afe-f4fa-df47-93ec-7434128d1cab",
+    "name" : "item_link",
+    "label" : "Item Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "CONTENT", "EXTERNAL" ],
+    "type" : "url",
+    "default" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "CONTENT"
+    }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "type" : "group",
-  "default" : { }
+  "default" : {
+    "item_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "item_link" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "CONTENT"
+    }
+  }
 } ]

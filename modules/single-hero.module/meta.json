@@ -2,7 +2,7 @@
   "global" : false,
   "icon" : "fontawesome-5.14.0:Clone:SOLID",
   "host_template_types" : [ "PAGE" ],
-  "module_id" : 56479535904,
+  "module_id" : 56717871933,
   "label" : "Single Hero",
   "is_available_for_new_content" : true
 }

@@ -1,34 +1,38 @@
-{% set content = content_by_id(module.blog_field) %}
-<section class="single-post {% if module.background %}background{% endif %}">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-6 {% if (module.alignment == 'reverse') %}order-md-3{% else %}order-md-1{% endif %}">
-          {% if module.image_field.src %}
-             {% set loadingAttr = module.image_field.loading != 'disabled' ? 'loading="{{ module.image_field.loading }}"' : '' %}
-            <img class="single-post__image" src="{{ module.image_field.src }}" alt="{{ module.image_field.alt }}" {{ loadingAttr }}>
-          {% else %}
-            <img class="single-post__image" src="{{ content.featured_image }}" alt="{{ content.name }}">
-          {% endif %}
-        </div>
-        <div class="d-none d-md-block col-1 order-2"></div>
-        <div class="col-12 col-md-5 {% if (module.alignment == 'reverse') %}order-md-1{% else %}order-md-3{% endif %}">
-          <div class="single-post__info-container">
-            <div class="single-post__info">
-              <h2 class="single-post__header h3">
-                {{content.name}}
-                {% inline_text field="header" value="{{ module.header }}" %}
-              </h2>
-              <div class="single-post__description p1">
-                {% if module.description %}
-                  {% inline_rich_text field="description" value="{{ module.description }}" %}
-                {% else %}
-                  {{content.meta_description}}
-                {% endif %}
+{% if module.display %}
+  {% set content = content_by_id(module.blog_field) %}
+  <section class="single-post {% if module.background %}background{% endif %}">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 {% if (module.alignment == 'reverse') %}order-md-3{% else %}order-md-1{% endif %}">
+            {% if module.image_field.src %}
+               {% set loadingAttr = module.image_field.loading != 'disabled' ? 'loading="{{ module.image_field.loading }}"' : '' %}
+              <img class="single-post__image" src="{{ module.image_field.src }}" alt="{{ module.image_field.alt }}" {{ loadingAttr }}>
+            {% else %}
+              <img class="single-post__image" src="{{ content.featured_image }}" alt="{{ content.name }}">
+            {% endif %}
+          </div>
+          <div class="d-none d-md-block col-1 order-2"></div>
+          <div class="col-12 col-md-5 {% if (module.alignment == 'reverse') %}order-md-1{% else %}order-md-3{% endif %}">
+            <div class="single-post__info-container">
+              <div class="single-post__info">
+                <h2 class="single-post__header h3">
+                  {{content.name}}
+                  {% inline_text field="header" value="{{ module.header }}" %}
+                </h2>
+                <div class="single-post__description p1">
+                  {% if module.description %}
+                    {% inline_rich_text field="description" value="{{ module.description }}" %}
+                  {% else %}
+                    {{content.meta_description}}
+                  {% endif %}
+                </div>
+                <a href="{% if module.link_override.href %}{{ module.link_override.href }}{% else %}{{ content.absolute_url }}{% endif %}" class="single-post__button button">Learn More</a>
               </div>
-              <a href="{% if module.link_override.href %}{{ module.link_override.href }}{% else %}{{ content.absolute_url }}{% endif %}" class="single-post__button button">learn more</a>
             </div>
           </div>
         </div>
       </div>
-    </div>
- </section>
+   </section>
+{% else %}
+  <section class="single-post__empty"></section>
+{% endif %}

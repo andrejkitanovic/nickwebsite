@@ -13,10 +13,20 @@
             <div class="d-none d-md-block col-1 order-2"></div>
             <div class="col-12 col-md-4 {% if (module.alignment == 'reverse') %}order-md-1{% else %}order-md-3{% endif %}">
                 <div class="blog-hero__content">
-                  {% if content.tag_list %}
-                    <div class="blog-hero__content-tag eyebrow">{% for tag in content.tag_list %}{{ tag.name }}{% if not loop.last %}, {% endif %}{% endfor %}</div>
+                  {% if module.subheader %}
+                      <div class="blog-hero__content-tag eyebrow">{% inline_text field="subheader" value="{{ module.subheader }}" %}</div>
+                  {% else %}
+                    {% if content.tag_list %}
+                      <div class="blog-hero__content-tag eyebrow">{% for tag in content.tag_list %}{{ tag.name }}{% if not loop.last %}, {% endif %}{% endfor %}</div>
+                    {% endif %}
                   {% endif %}
-                  <h1 class="blog-hero__content-header h2">{{ content.name }}</h1>
+                  <h1 class="blog-hero__content-header h2">
+                    {% if module.header %}
+                      {% inline_text field="header" value="{{ module.header }}" %}
+                    {% else %}
+                      {{ content.name }}
+                    {% endif %}
+                  </h1>
                   <div class="blog-hero__content-description p1">
                     {% if module.description %}
                       {% inline_text field="description" value="{{ module.description }}" %}

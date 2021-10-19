@@ -17,4 +17,13 @@
   "locked" : false,
   "tag_value" : "SLUG",
   "type" : "tag"
+}, {
+  "id" : "fa7ad183-2631-ed46-f3ff-28fd000c50b8",
+  "name" : "blog_field",
+  "label" : "Blog",
+  "help_text" : "Only change this if you need to link to tags on the scenarios blog",
+  "required" : false,
+  "locked" : false,
+  "type" : "blog",
+  "default" : 57176331600
 } ]

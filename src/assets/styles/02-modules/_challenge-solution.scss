@@ -1,6 +1,7 @@
 .challenge-solution {
   position: relative;
   padding: 120px 0;
+  overflow-y: hidden;
 
   &::before {
     content: "";

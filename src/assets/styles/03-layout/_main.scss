@@ -70,3 +70,10 @@ a[href^="tel"] {
     margin-top: 66px;
   }
 }
+
+@media screen and (max-width: breakpoint(sm)) {
+  .container {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}

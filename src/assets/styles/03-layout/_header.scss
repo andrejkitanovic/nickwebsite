@@ -1,19 +1,28 @@
-.header {
+.header-blue {
+  $el: &;
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #fff;
-  padding: 30px 0;
   font-weight: bold;
   z-index: $z-header;
-  transition: transform 0.3s ease("fluid");
 
-  &.hidden {
+  &__container {
+    background-color: $color-text;
+    padding: 30px 0;
+    transition: transform 0.3s ease("fluid");
+  }
+
+  &.hidden &__container {
     transform: translateY(-100%);
   }
 
   &__logo {
     margin-bottom: -4px;
+  }
+
+  &__logo-second {
+    margin-left: 16px;
+    margin-top: 4px;
   }
 
   &__link-container {
@@ -25,60 +34,181 @@
   &__link {
     font-size: 16px;
     line-height: 25px;
-    color: $color-text;
-    padding-right: 18px;
+    color: #fff;
 
-    // &:hover::after {
-    // transform: rotate(180deg);
-    // }
+    @include hover-opacity;
+
+    div {
+      display: inline;
+    }
+  }
+
+  &__link.arrow-down-white {
+    &::after {
+      content: "";
+      display: inline-block;
+      margin-left: 6px;
+      width: 12px;
+      height: 9px;
+      background-image: url("https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/Header%20Blue%20Icons/dropdown.svg");
+      @include transition(transform 0.2s ease("fluid"));
+    }
+  }
+
+  &__link-container.open {
+    #{$el}__link::after {
+      transform: rotate(180deg);
+    }
+
+    #{$el}__link-menu {
+      display: block;
+    }
   }
 
   &__link-menu {
     display: none;
     position: absolute;
     left: 0;
-    top: 100%;
+    top: calc(100% + 10px);
     width: 382px;
-    height: 448px;
     border-radius: 8px;
-    background-color: #fff;
-    border: 1px solid #cfd2d4;
+    background-color: $color-text;
+    border: 1px solid #204d58;
     z-index: $z-header;
+    padding: 24px 0;
   }
 
-  &__link:hover + &__link-menu,
-  &__link-menu:hover {
-    display: block;
+  &__link-menu-single {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    padding: 0 33px;
+    @include transition(background-color 0.2s ease("fluid"));
+
+    &:hover {
+      background-color: #204d58;
+    }
   }
 
-  &__search {
-    margin-bottom: -4px;
+  &__link-menu-single-icon {
+    width: 33px;
+    margin-right: 17px;
   }
 
-  &__signup {
-    margin-left: 28px;
+  &__link-menu-single-text {
+    color: #fff;
   }
 
-  &__profile {
-    margin-left: 28px;
-    margin-bottom: -4px;
+  &__subscribe {
+    color: $color-text;
+    background-color: $secondary-color;
+    border-color: $secondary-color;
   }
 
-  &__hamburger {
-    width: 18px;
-    margin-left: 15px;
-    cursor: pointer;
+  &__get-in-touch {
+    margin-left: 40px;
+    color: #fff;
+    border-color: $secondary-color;
+  }
+}
 
-    span {
-      display: block;
-      height: 2px;
-      margin-bottom: 3px;
-      border-radius: 15px;
-      background-color: $color-text;
+@media screen and (max-width: breakpoint(md)) {
+  .header-blue {
+    $el: &;
 
-      &:last-of-type {
-        margin-bottom: 0;
+    &__container {
+      padding: 15px 0;
+    }
+
+    &.hidden &__container {
+      transform: none;
+    }
+
+    &__logo {
+      margin-bottom: 0;
+    }
+
+    &__hamburger {
+      width: 18px;
+      cursor: pointer;
+      float: right;
+
+      span {
+        display: block;
+        height: 2px;
+        margin-bottom: 3px;
+        border-radius: 15px;
+        background-color: #fff;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
       }
+    }
+
+    &__dropdown {
+      position: fixed;
+      top: 66px;
+      left: 0;
+      padding-top: 24px;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      z-index: -1;
+      opacity: 0;
+      pointer-events: none;
+      @include transition(opacity 0.2s ease("fluid"));
+    }
+
+    &.open &__dropdown {
+      opacity: 1;
+
+      pointer-events: all;
+    }
+
+    &__dropdown-link-container.open {
+      background-color: $background-secondary;
+
+      #{$el}__dropdown-link::after {
+        transform: translateY(-50%) rotate(180deg);
+      }
+
+      #{$el}__dropdown-link-menu {
+        display: block;
+      }
+    }
+
+    &__dropdown-link {
+      display: block;
+      padding: 8px 0;
+      margin: 0 32px;
+      color: $color-text;
+
+      &::after {
+        @include transition(transform 0.2s ease("fluid"));
+      }
+    }
+
+    &__dropdown-link-menu {
+      display: none;
+      background-color: #fff;
+      padding: 0 48px;
+      padding-top: 8px;
+    }
+
+    &__dropdown-link-menu-single {
+      display: block;
+      font-weight: 400;
+      padding: 4px 0;
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 4px;
+      color: $color-text;
+    }
+
+    &__dropdown hr {
+      border-color: #c0c5c8;
+      border-top: none;
     }
   }
 }

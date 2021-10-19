@@ -25,9 +25,30 @@
     "loading" : "lazy"
   }
 }, {
-  "id" : "782cd2f4-004d-4e54-7374-18b49ceb27f3",
+  "id" : "ee5c3119-052d-af14-95ea-114735991a7f",
+  "name" : "subheader",
+  "label" : "Topic Name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "acf2d2a8-ac67-7e95-e3d3-fa5c1fb1681e",
+  "name" : "header",
+  "label" : "Header",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "14ea80f2-741f-83fe-2392-57cfeb79a956",
   "name" : "description",
   "label" : "Description",
+  "inline_help_text" : "Possible side effects: When editing this field TITLE (Header) will disappear until refresh (Hubspot BUG)",
   "required" : false,
   "locked" : false,
   "type" : "richtext"

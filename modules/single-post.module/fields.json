@@ -1,4 +1,13 @@
 [ {
+  "id" : "48e32e63-fd2e-4f87-3714-99f43b3c8ccd",
+  "name" : "display",
+  "label" : "Display",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : true
+}, {
   "id" : "bda715d8-20fb-9a09-d786-48a097373b89",
   "name" : "alignment",
   "label" : "Alignment",

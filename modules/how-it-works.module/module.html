@@ -39,6 +39,16 @@
                   {% end_widget_attribute %}
                 {% end_widget_block %}
               {% endif %}
+              {% if item.step_image.src %}
+		{% set sizeAttrs = 'width="{{ item.step_image.width }}" height="{{ item.step_image.height }}"' %}
+		{% if item.step_image.size_type == 'auto' %}
+			{% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+		{% elif item.step_image.size_type == 'auto_custom_max' %}
+			{% set sizeAttrs = 'width="{{ item.step_image.max_width }}" height="{{ item.step_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+		{% endif %}
+		 {% set loadingAttr = item.step_image.loading != 'disabled' ? 'loading="{{ item.step_image.loading }}"' : '' %}
+		<img src="{{ item.step_image.src }}" alt="{{ item.step_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+	{% endif %}  
               </div>
             </div>
             <div class="col-12 col-md-6">

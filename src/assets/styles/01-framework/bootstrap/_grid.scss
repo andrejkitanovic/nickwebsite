@@ -49,8 +49,8 @@ $grid-gutter-width: 16px !default;
 @media (min-width: map-get($grid-breakpoints, xs)) and (max-width: map-get($grid-breakpoints, sm)) {
   .row > .col,
   .row > [class*="col-"] {
-    padding-right: 16px;
-    padding-left: 16px;
+    padding-right: 24px;
+    padding-left: 24px;
   }
 }
 

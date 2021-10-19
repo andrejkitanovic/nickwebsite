@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch --env=dev",
+    "watch": "webpack --watch --env=prod",
     "build:prod": "rm -rf build && webpack --progress --colors -p --env=prod",
     "build:dev": "webpack --progress --colors -d --env=dev",
     "update:packages": "rm -rf node_modules && npm update --save-dev && npm update --save"

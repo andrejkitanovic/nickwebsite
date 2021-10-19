@@ -11,15 +11,15 @@ h1,
 
 h2,
 .h2 {
-  font-size: 48px;
-  line-height: 48px;
+  font-size: 36px;
+  line-height: 45px;
   font-weight: 700;
 }
 
 h3,
 .h3 {
-  font-size: 36px;
-  line-height: 45px;
+  font-size: 32px;
+  line-height: 40px;
   font-weight: 700;
 }
 
@@ -109,13 +109,17 @@ a {
   text-decoration: none;
 }
 
-@media screen and (max-width: breakpoint(md)) {
+@media screen and (max-width: breakpoint(lg)) {
   h1,
-  .h1,
-  h2,
-  .h2 {
+  .h1 {
     font-size: 36px;
     line-height: 45px;
+  }
+
+  h2,
+  .h2 {
+    font-size: 32px;
+    line-height: 40px;
   }
 
   h3,
@@ -137,24 +141,17 @@ a {
   }
 
   // .eyebrow {
-  //   font-size: 16px;
-  //   line-height: 19px;
   // }
 
   // .eyebrow2 {
-  //   font-size: 14px;
-  //   line-height: 16px;
   // }
 
   // .eyebrow3 {
-  //   font-size: 12px;
-  //   line-height: 14px;
   // }
 
   .button {
     display: block;
     text-align: center;
     padding: 15px 8px;
-    //   border-width: 2px;
   }
 }

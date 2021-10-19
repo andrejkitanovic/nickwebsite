@@ -13,17 +13,20 @@
           {% for item in module.item %}
             
             {% set tag_slug = item.item_tag_field %}
-            {% set all_tags = blog_tags(57176331600, 250) %}
+            {% set blog_tag_list = blog_tags(57176331600, 250) %}
+            {% set scenario_tag_list = blog_tags(57279563831, 250) %}
+
+            {% set all_tags = (blog_tag_list + scenario_tag_list) | unique %}
 
             {% for tag in all_tags %}
               {% if tag_slug == tag.slug %}
               <div class="col-12 col-md-4">
-                <a href="/{{ tag.slug }}" class="explore__item d-flex align-items-center">
+                <a href="{{ item.item_link.href }}" class="explore__item d-flex align-items-center">
                   <div class="explore__icon">
-                    <img
-                      src="{{ get_asset_url('../images/module-icons/' + tag.slug + '.svg') }}"
-                      alt="{{ tag.name }}"
-                    />
+                      {% if item.item_image.src %}
+                         {% set loadingAttr = item.item_image.loading != 'disabled' ? 'loading="{{ item.item_image.loading }}"' : '' %}
+                        <img src="{{ item.item_image.src }}" alt="{{ item.item_image.alt }}" {{ loadingAttr }}>
+                      {% endif %}
                   </div>
                   <div class="explore__text h4">{{ tag.name }}</div>
                 </a>

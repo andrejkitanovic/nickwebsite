@@ -1,10 +1,11 @@
 
-  <section class="cta cta__alignment-{{ module.alignment }}">
+  <section class="cta cta__alignment-{{ module.alignment }} {% if 'scenarios' in request.path %}scenario{% endif %}">
+
     <div class="container">
       <div class="row">
         <div class="col-12">
           <h2 class="cta__header">
-            {% inline_rich_text field="header" value="{{ module.header }}" %}
+            {% inline_text field="header" value="{{ module.header }}" %}
           </h2>
           {% if module.description %}
           <h2 class="cta__description p2">

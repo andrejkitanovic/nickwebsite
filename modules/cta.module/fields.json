@@ -9,13 +9,16 @@
   "type" : "choice",
   "default" : "left"
 }, {
-  "id" : "a7d1dd45-9173-c31e-1937-8286f1560e97",
+  "id" : "806ca99c-a502-c351-c499-9899cb88897e",
   "name" : "header",
   "label" : "Header",
   "required" : false,
   "locked" : false,
-  "type" : "richtext",
-  "default" : "<p>Ready to continue your journey?</p>\n<p>There are two great ways to do it</p>"
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Ready to continue your journey? <br>There are two great ways to do it"
 }, {
   "id" : "6a01033e-23d7-bc78-6fec-545eecdfbc7d",
   "name" : "description",

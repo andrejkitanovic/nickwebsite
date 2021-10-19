@@ -4,6 +4,7 @@
   background-color: $blue-text;
   display: flex;
   align-items: center;
+  overflow-y: hidden;
 
   &__alignment {
     &-center {
@@ -24,6 +25,17 @@
     bottom: 35px;
     background: url("https://f.hubspotusercontent10.net/hubfs/9346563/Liquid/Assets/line.svg")
       no-repeat bottom left / cover;
+  }
+
+  &.scenario::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    background: url("https://f.hubspotusercontent30.net/hubfs/4810033/Vector%20%284%29.png")
+      no-repeat center right/contain;
+    height: 95%;
   }
 
   &__header {
@@ -53,18 +65,20 @@
   }
 }
 
-@media screen and (max-width: breakpoint(md)) {
+@media screen and (max-width: breakpoint(lg)) {
   .cta {
     padding: 60px 0;
 
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   left: -135px;
-    //   height: 100%;
-    //   width: calc(100% + 135px);
-    //   bottom: 35px;
-    // }
+    &::before {
+      left: 0;
+      height: 32vw;
+      bottom: 150px;
+    }
+
+    &.scenario::before {
+      bottom: 0;
+      height: 100%;
+    }
 
     &__header {
     }

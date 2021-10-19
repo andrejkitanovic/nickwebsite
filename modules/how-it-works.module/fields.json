@@ -51,6 +51,22 @@
     "show_advanced_options" : false,
     "type" : "videoplayer"
   }, {
+    "id" : "3c7adeda-b6dd-54a9-6dbe-803e9cf21826",
+    "name" : "step_image",
+    "label" : "Step Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
     "id" : "bfc4d9db-4413-0e36-2f5f-7e7de3dcf1cb",
     "name" : "step_header",
     "label" : "Step Header",
@@ -74,6 +90,12 @@
   "expanded" : false,
   "type" : "group",
   "default" : {
+    "step_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
     "step_header" : "Where are your workers?",
     "step_description" : "<p>The short answer is: They’re everywhere. The first step in creating an effective hub &amp; spoke strategy is to assess your employee geography, so you can create a network of on-demand or dedicated space that allows for privacy when you want it and collaboration and team-building when you need it.</p>"
   }
