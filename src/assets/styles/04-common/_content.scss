@@ -148,7 +148,9 @@ a {
 
   // .eyebrow3 {
   // }
+}
 
+@media screen and (max-width: breakpoint(sm)) {
   .button {
     display: block;
     text-align: center;

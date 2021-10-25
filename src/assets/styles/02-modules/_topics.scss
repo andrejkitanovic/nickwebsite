@@ -77,6 +77,16 @@
   }
 }
 
+@media screen and (max-width: breakpoint(lg)) {
+  .topics {
+    &__topic-header {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 32px;
+    }
+  }
+}
+
 @media screen and (max-width: breakpoint(md)) {
   .topics {
     padding: 60px 0;

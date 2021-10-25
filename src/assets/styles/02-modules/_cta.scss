@@ -4,7 +4,7 @@
   background-color: $blue-text;
   display: flex;
   align-items: center;
-  overflow-y: hidden;
+  overflow-x: hidden;
 
   &__alignment {
     &-center {
@@ -84,11 +84,18 @@
     }
 
     &__button {
-      margin-right: 0;
-      margin-bottom: 12px;
     }
 
     &__get-in-touch {
+    }
+  }
+}
+
+@media screen and (max-width: breakpoint(sm)) {
+  .cta {
+    &__button {
+      margin-right: 0;
+      margin-bottom: 12px;
     }
   }
 }
