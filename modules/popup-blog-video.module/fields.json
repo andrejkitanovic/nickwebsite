@@ -1,0 +1,12 @@
+[ {
+  "id" : "ec287277-3834-0448-9e01-293a61714b9f",
+  "name" : "video_iframe_link",
+  "label" : "Video Iframe link",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "placeholder" : "Embed iframe link",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+} ]

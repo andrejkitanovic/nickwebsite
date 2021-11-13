@@ -75,6 +75,22 @@ if (gsap) {
             closeOpenPopups();
         });
 
+        const blogQuoteImage = $('.blog-quote__image');
+        const popupBlogVideo = $('.popup-blog-video');
+        if (blogQuoteImage.length && popupBlogVideo.length) {
+            $('.blog-quote').addClass('hoverable');
+            $(popupBlogVideo).find('.popup-blog-video__header').html($('.blog-quote__header').html());
+            $(popupBlogVideo).find('.popup-blog-video__author').html($('.blog-quote__author').html());
+
+            $(blogQuoteImage).on('click', function (e) {
+                e.preventDefault();
+                closeOpenPopups();
+
+                $('.overlay').addClass('open');
+                $(popupBlogVideo).addClass('open');
+            });
+        }
+
         // window.on('load', function () {
         // });
         // if (window.location.href.includes('#get-in-touch')) {

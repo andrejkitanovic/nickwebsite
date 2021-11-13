@@ -1,4 +1,5 @@
 .blog-quote {
+  $el: &;
   position: relative;
 
   &::before {
@@ -32,9 +33,54 @@
     color: $blue-text;
   }
 
-  &__image img {
+  &.hoverable {
+    #{$el}__image {
+      cursor: pointer;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0;
+        transition: opacity 0.2s ease("fluid");
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url("{{ get_asset_url('../images/svg/play.svg') }}")
+          no-repeat center center / contain;
+        width: 90px;
+        height: 90px;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.2s ease("fluid");
+      }
+
+      &:hover::before {
+        opacity: 0.6;
+      }
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    overflow: hidden;
     max-width: 95%;
     border-radius: 8px;
+
+    img {
+      width: 100% !important;
+    }
   }
 }
 
@@ -56,6 +102,7 @@
     }
 
     &__image {
+      max-width: 100%;
       text-align: center;
     }
   }
