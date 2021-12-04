@@ -1,55 +1,20 @@
 // # General
-@import "./00-variables/general";
+@import "./00-variables";
 
 // # Framework
 @import "./01-framework/bootstrap/grid";
+@import "./01-framework/colors";
 @import "./01-framework/mixins";
 @import "./01-framework/fonts";
 
-// -- COMMON
-@import "./04-common/global";
-@import "./04-common/animations";
-@import "./04-common/forms";
-@import "./04-common/images";
-@import "./04-common/content";
-@import "./04-common/main";
-@import "./04-common/grid";
-@import "./04-common/z-index";
-
 // -- LAYOUT
-@import "./03-layout/main";
-@import "./03-layout/header";
-@import "./03-layout/footer";
-@import "./03-layout/overlay";
-@import "./03-layout/popup";
+@import "./02-layout";
+
+// -- COMMON
+@import "./03-common";
+
+// -- MODULES
+@import "./04-modules";
 
 // -- VENDOR
 @import "./05-vendor/slick";
-
-// -- MODULES
-@import "./02-modules/resource-hero";
-@import "./02-modules/single-hero";
-@import "./02-modules/explore";
-@import "./02-modules/single-post";
-@import "./02-modules/subscribe";
-@import "./02-modules/topics";
-@import "./02-modules/most-popular";
-@import "./02-modules/cta";
-@import "./02-modules/latest-articles";
-@import "./02-modules/blog-hero";
-@import "./02-modules/blog-body";
-@import "./02-modules/blog-info";
-@import "./02-modules/blog-listing";
-@import "./02-modules/blog-quote";
-@import "./02-modules/popup-subscribe";
-@import "./02-modules/popup-get-in-touch";
-@import "./02-modules/popup-blog-video";
-@import "./02-modules/how-it-works";
-@import "./02-modules/use-case";
-@import "./02-modules/benefits";
-@import "./02-modules/scenarios";
-@import "./02-modules/challenge-solution";
-@import "./02-modules/ask-question";
-@import "./02-modules/blog-pagination";
-@import "./02-modules/share";
-@import "./02-modules/follow";

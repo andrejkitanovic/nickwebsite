@@ -1,0 +1,27 @@
+<section class="text-categories">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="text-categories__title">{{ module.title }}</div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-6">
+        <div class="text-categories__list">
+          {% for item in module.items %}
+            <div class="text-categories__item">
+              <div class="d-flex align-items-center">
+                <div>
+                  <img src="{{ item.image.src }}" alt="{{ item.image.alt }}" class="text-categories__item__image" />
+                </div>
+                <div>
+                  <div class="text-categories__item__title">{{ item.title }}</div>
+                  <div class="text-categories__item__label">{{ item.label_field }}</div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

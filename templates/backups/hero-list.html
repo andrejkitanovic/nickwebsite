@@ -1,0 +1,36 @@
+<!--
+  templateType: "none"
+  isAvailableForNewContent: false
+-->
+<section class="hero-list <?php the_field('background') ?>">
+
+    <div class="container">
+        <div class="hero-list__container">
+
+            <div class="row">
+
+                <div class="col-sm-6 col-12">
+                    <h1 class="hero-list__header">{{ module.title }}</h1>
+
+                    <div class="hero-list__list">
+                        {% for item in module.list %}
+                            <div class="hero-list__item">
+                                <div class="hero-list__item-image" style="background-image:url('<?php echo $item['image']['url'] ?>')"></div>
+                                <div class="hero-list__item-text">{{ item.text }}</div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="hero-list__image d-sm-none d-block" style="background-image:url('<?php echo get_field('image')['url'] ?>')"></div>
+                    <a href="#" class="hero-list__postie-button postie-button postie-button--big">Contact Us</a>
+                    <div class="hero-list__image d-sm-none d-block bg-blue" style="background-image:url('<?php echo get_field('image')['url'] ?>')"></div>
+                </div>
+                <div class="col-md-5 col-6 pr-0 d-sm-block d-none">
+                    <div class="hero-list__image" style="background-image:url('<?php echo get_field('image')['url'] ?>')"></div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+        </div>
+    </div>
+
+</section>

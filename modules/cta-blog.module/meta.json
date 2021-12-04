@@ -1,9 +1,0 @@
-{
-  "global" : true,
-  "smart_type" : "NOT_SMART",
-  "icon" : "fontawesome-5.14.0:Hand%20Pointing%20Up:SOLID",
-  "host_template_types" : [ "BLOG_POST" ],
-  "module_id" : 57179334157,
-  "label" : "CTA Blog",
-  "is_available_for_new_content" : true
-}

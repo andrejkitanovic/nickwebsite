@@ -1,27 +1,9 @@
-
-  <section class="cta cta__alignment-{{ module.alignment }} {% if 'scenarios' in request.path %}scenario{% endif %}">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h2 class="cta__header">
-            {% inline_text field="header" value="{{ module.header }}" %}
-          </h2>
-          {% if module.description %}
-          <h2 class="cta__description p2">
-            {% inline_rich_text field="description" value="{{ module.description }}" %}
-          </h2>
-          {% endif %}
-        </div>
-      </div>
-      <div class="row">
-          <div class="col-12">
-            <div class="cta__buttons">
-              {% for item in module.buttons %}
-                <a href="{{ item.button_url.href }}" class="cta__button {% if item.button_style == 'background' %}background{% endif%} button">{% inline_text field="button_text" value="{{ item.button_text }}" %}</a>
-              {% endfor %}
-            </div>
-          </div>
-      </div>
-    </div>
-  </section>
+<section class="cta">
+	<div class="container">
+		<div class="cta__image" style="background-image:url('{{module.image.src}}')"></div>
+        <h2 class="cta__header">
+            {{ module.title }}
+        </h2>
+    <a href="{{ module.button.url.href }}" class="cta__postie-button postie-button postie-button--big">{{ module.button.text }}</a>
+	</div>
+</section>

@@ -1,180 +1,4 @@
 /*
-@name: Prefixed transition
-@values: Variable values
-@example:
-  @include transition(transform);
-*/
-
-@mixin transition($properties...) {
-  -webkit-transition: $properties;
-  -moz-transition: $properties;
-  -ms-transition: $properties;
-  -o-transition: $properties;
-  transition: $properties;
-}
-
-@mixin transition-timing-function($properties...) {
-  -webkit-transition-timing-function: $properties;
-  -moz-transition-timing-function: $properties;
-  -ms-transition-timing-function: $properties;
-  -o-transition-timing-function: $properties;
-  transition-timing-function: $properties;
-}
-
-/*
-@name: Prefixed transform
-@values: Variable values
-@example:
-  @include transform(translateX(10px));
-*/
-
-@mixin transform($properties...) {
-  -webkit-transform: $properties;
-  -moz-transform: $properties;
-  -ms-transform: $properties;
-  -o-transform: $properties;
-  transform: $properties;
-}
-
-/*
-@name: Prefixed transform-origin
-@values: Variable values
-@example:
-  @include transform(translateX(10px));
-*/
-
-@mixin transform-origin($properties...) {
-  -webkit-transform-origin: $properties;
-  -moz-transform-origin: $properties;
-  -ms-transform-origin: $properties;
-  -o-transform-origin: $properties;
-  transform-origin: $properties;
-}
-
-/*
-@name: Prefixed box-shadow
-@values: Variable values
-@example:
-  @include box-shadow(0 1px 0 0 #ccddcc);
-*/
-
-@mixin box-shadow($properties...) {
-  -webkit-box-shadow: $properties;
-  -moz-box-shadow: $properties;
-  box-shadow: $properties;
-}
-
-/*
-@name: Prefixed box-sizing
-@values: Any value that box-sizing accepts
-@example:
-  @include box-sizing(border-box);
-*/
-
-@mixin box-sizing($properties) {
-  -webkit-box-sizing: $properties;
-  -moz-box-sizing: $properties;
-  box-sizing: $properties;
-}
-
-/*
-@name: Prefixed input placeholder
-@values: Variable content
-@example:
-  @include placeholder {
-    content ...;
-  };
-*/
-
-@mixin placeholder {
-  &.placeholder {
-    @content;
-  }
-  &:-moz-placeholder {
-    @content;
-  }
-  &::-moz-placeholder {
-    @content;
-  }
-  &:-ms-input-placeholder {
-    @content;
-  }
-  &::-webkit-input-placeholder {
-    @content;
-  }
-}
-
-/*
-@name: Prefixed appearance
-@values: Any value accepted by Appearance;
-@example:
-  @include appearance(none);
-*/
-
-@mixin appearance($value) {
-  -webkit-appearance: $value;
-  -moz-appearance: $value;
-  appearance: $value;
-}
-
-/*
-@name: Prefixed keyframes
-@values: name, content;
-@example:
-  @include keyframes(fadeOut) {
-    0%   { left: 0; }
-    100% { left: 100px; }
-  }
-*/
-
-@mixin keyframes($name) {
-  @-webkit-keyframes #{$name} {
-    @content;
-  }
-  @-moz-keyframes #{$name} {
-    @content;
-  }
-  @-ms-keyframes #{$name} {
-    @content;
-  }
-  @-o-keyframes #{$name} {
-    @content;
-  }
-  @keyframes #{$name} {
-    @content;
-  }
-}
-
-/*
-@name: Prefixed animation
-@values: Animation name;
-@example:
-  @include animation(fadeOut);
-*/
-
-@mixin animation($name...) {
-  -webkit-animation: $name;
-  -moz-animation: $name;
-  -ms-animation: $name;
-  -o-animation: $name;
-  animation: $name;
-}
-
-/*
-@name: Prefixed border-radius
-@values: Any values border-radius accepts;
-@example:
-  @include border-radius(2px);
-*/
-
-@mixin border-radius($values...) {
-  -webkit-border-radius: $values;
-  -moz-border-radius: $values;
-  -ms-border-radius: $values;
-  border-radius: $values;
-}
-
-/*
 @name: Prefixed opacity
 @values: Non-hex numerical value;
 @example:
@@ -211,24 +35,16 @@
   background: linear-gradient($direction, $color-stops);
 }
 
+
 /*
-@name: Fetch easing type
+@name: Fetch Postie color
 @param: var EaseType
 @example:
   ease('fluid');
 */
 
-@function ease($easetype) {
-  $easing: (
-    "fluid": cubic-bezier(0.3, 0, 0.22, 1),
-    "normal": cubic-bezier(0.25, 0.1, 0.25, 0.1),
-  );
-
-  @if map-has-key($easing, $easetype) == false {
-    @error 'Invalid ease type: `#{$easetype}`';
-  }
-
-  @return map-get($easing, $easetype);
+@function getPostieColor($specific) {
+  @return map-get($postieColors, $specific);
 }
 
 /*

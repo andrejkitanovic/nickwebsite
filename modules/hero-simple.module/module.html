@@ -1,0 +1,20 @@
+<section class="hero-simple">
+
+    <div class="container">
+        <div class="row">
+            <div class="d-none d-md-block col-1 {% if module.order == 'reverse' %}order-2{% endif %}"></div>
+            <div class="col-12 col-sm-6 {% if module.order == 'reverse' %}order-3{% endif %}">
+                <div class="hero-simple__header-container">
+                    <h2 class="hero-simple__header">{{ module.title }}</h2>
+                </div>
+
+            </div>
+
+
+            <div class="col-12 col-sm-6 col-md-5">
+                <div class="hero-simple__image" style="background-image:url('{{module.image.src}}')"></div>
+            </div>
+        </div>
+    </div>
+
+</section>

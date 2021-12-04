@@ -1,0 +1,7 @@
+{
+  "global" : false,
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 60383511834,
+  "label" : "Text Categories",
+  "is_available_for_new_content" : true
+}

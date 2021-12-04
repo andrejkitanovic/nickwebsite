@@ -8,7 +8,7 @@ const configDirs = {
     APP_DIR: APP_DIR
 };
 
-function buildConfig(env) {
+function buildConfig (env) {
     if (env === 'dev' || env === 'prod') {
         return require('./config/' + env + '.js')(configDirs);
     } else {

@@ -1,0 +1,39 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-weight: normal;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.main {
+  padding-top: 80px;
+  padding-bottom: 0.1px;
+  background: getPostieColor("offWhite");
+}
+
+main {
+  .container-fluid {
+    padding: 0;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+@media (max-width: breakpoint(sm)) {
+  .main {
+    padding-top: 73px;
+  }
+}

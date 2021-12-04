@@ -1,0 +1,25 @@
+<section class="three-box">
+    <h2 class="three-box__header">
+      {{ module.title }}
+    </h2>
+    <div class="three-box__boxes">
+        <div class="container">
+            <div class="three-box__boxes-container">
+                {% for item in module.boxes %}
+                        <div class="three-box__box">
+                            <div class="three-box__box-image-holder">
+                                <img src="{{item.image.src}}" alt="{{item.image.alt}}" class="three-box__box-image">
+                            </div>
+                            <div class="three-box__box-title">{{item.title}}</div>
+                            <div class="three-box__box-text"><p>
+                              {{item.text}}
+                              </p></div>
+                          {% if item.link %}
+                            <a class="three-box__box-link" href="{{item.url.href}}">{{item.link_text}}</a>
+                          {% endif %}
+                        </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

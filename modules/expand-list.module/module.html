@@ -1,0 +1,56 @@
+<section class="expand-list">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 col-12">
+              <h2 class="expand-list__header">
+                {{ module.title }}
+              </h2>
+
+              <div class="expand-list__list-header">
+                {{ module.text }}
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-sm-6 col-12">
+                <div class="expand-list__items">
+                {% for item in module.list %}
+
+                    <div class="expand-list__item {% if loop.index0 == 0%}expand-list__image--expanded{% endif %}" data-index="{{ loop.index0 }}">
+                        <div class="expand-list__item-head">
+                            <div class="expand-list__item-image" style="background-image:url('{{item.image.src}}')">
+                            </div>
+
+                            <div class="expand-list__item-info">
+                                <div class="expand-list__item-title">{{ item.title }}</div>
+                                <div class="expand-list__item-subtitle">{{ item.subtitle }}</div>
+                            </div>
+
+                            <div class="expand-list__icon-mobile d-sm-none d-block">
+                                <?php get_template_part('partials/icons/icon_chevron_circle') ?>
+                            </div>
+                        </div>
+                        
+                        <div class="expand-list__item-body">
+                            <div class="expand-list__item-description">{{ item.description }}</div>
+                            <div class="d-block d-sm-none expand-list__image-mobile" data-index="{{ loop.index0 }}" style="background-image:url('{{item.big_image.src}}')">
+                            </div>
+<!--                             <a class="expand-list__item-button postie-button postie-button--arrow icon-light" href="<?php echo $single['link']['url']; ?>"><?php echo $single['link']['title']; ?></a> -->
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-6 d-sm-block d-none">
+            {% for item in module.list %}
+                <div class="expand-list__image {% if loop.index0 == 0%}expand-list__image--expanded{% endif %}" data-index="{{ loop.index0 }}" style="background-image:url('{{item.big_image.src}}')">
+               </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

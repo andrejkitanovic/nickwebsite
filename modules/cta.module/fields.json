@@ -1,58 +1,60 @@
 [ {
-  "id" : "886d48c3-60b6-44ae-935b-a5814583f94e",
-  "name" : "alignment",
-  "label" : "Alignment",
-  "required" : false,
-  "locked" : false,
-  "display" : "select",
-  "choices" : [ [ "left", "Left" ], [ "center", "Center" ], [ "right", "Right" ] ],
-  "type" : "choice",
-  "default" : "left"
-}, {
-  "id" : "806ca99c-a502-c351-c499-9899cb88897e",
-  "name" : "header",
-  "label" : "Header",
+  "id" : "93811376-b515-58ba-cca2-bfdf2c45d7fa",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
   "required" : false,
   "locked" : false,
   "validation_regex" : "",
   "allow_new_line" : false,
   "show_emoji_picker" : false,
   "type" : "text",
-  "default" : "Ready to continue your journey? <br>There are two great ways to do it"
+  "default" : "Unlock the Power of deckerdevs."
 }, {
-  "id" : "6a01033e-23d7-bc78-6fec-545eecdfbc7d",
-  "name" : "description",
-  "label" : "Description",
+  "id" : "98592906-263b-0f12-e5ce-5d1f3ff01b7a",
+  "name" : "image",
+  "display_width" : null,
+  "label" : "Image",
   "required" : false,
   "locked" : false,
-  "type" : "richtext",
-  "default" : ""
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/logo-icon.png",
+    "alt" : "logo-icon",
+    "loading" : "lazy",
+    "width" : 500,
+    "height" : 433,
+    "max_width" : 500,
+    "max_height" : 433
+  }
 }, {
-  "id" : "ede98bef-2359-e4c8-e49a-02ee317b044e",
-  "name" : "buttons",
-  "label" : "Buttons",
+  "id" : "fb7ef141-16b8-1fcb-98e7-bfa3d167a323",
+  "name" : "button",
+  "display_width" : null,
+  "label" : "Button",
   "required" : false,
   "locked" : false,
-  "occurrence" : {
-    "min" : null,
-    "max" : null,
-    "sorting_label_field" : null,
-    "default" : null
-  },
   "children" : [ {
-    "id" : "a2d22f97-4b9d-1773-f001-36aa8eadf7cd",
-    "name" : "button_style",
-    "label" : "Button Style",
+    "id" : "9b6508fc-3b6d-f257-07f6-54c6d8224446",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Text",
     "required" : false,
     "locked" : false,
-    "display" : "select",
-    "choices" : [ [ "default", "Without background" ], [ "background", "With background" ] ],
-    "type" : "choice",
-    "default" : "default"
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Contact us"
   }, {
-    "id" : "418ed800-0669-5706-1fc6-5de4579f151c",
-    "name" : "button_url",
-    "label" : "Button URL",
+    "id" : "125df7f4-17f7-8e3d-6917-5377c065e53f",
+    "name" : "url",
+    "display_width" : null,
+    "label" : "URL",
     "required" : false,
     "locked" : false,
     "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
@@ -62,28 +64,16 @@
       "href" : "",
       "type" : "EXTERNAL"
     }
-  }, {
-    "id" : "45a7f169-c2fd-df05-fb44-55efc1289308",
-    "name" : "button_text",
-    "label" : "Button Text",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "B"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "type" : "group",
   "default" : {
-    "button_style" : "default",
-    "button_url" : {
+    "text" : "Contact us",
+    "url" : {
       "content_id" : null,
       "href" : "",
       "type" : "EXTERNAL"
-    },
-    "button_text" : "B"
+    }
   }
 } ]

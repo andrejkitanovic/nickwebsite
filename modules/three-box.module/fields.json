@@ -1,0 +1,172 @@
+[ {
+  "id" : "d4a09ac3-cf1d-7b60-da9f-5758e8108c4c",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Explore our pricing"
+}, {
+  "id" : "4ee6ff33-48c9-f078-abec-758a1a1bc95d",
+  "name" : "boxes",
+  "display_width" : null,
+  "label" : "Boxes",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "12cb00f2-8f0b-c338-3061-29f11c272995",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Title"
+  }, {
+    "id" : "a41d8840-932a-ee93-29eb-de8944c1b07e",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  }, {
+    "id" : "cfd627be-2673-07bf-0db9-5b8582cfb2a6",
+    "name" : "image",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/logo-icon.png",
+      "alt" : "logo-icon",
+      "loading" : "lazy",
+      "width" : 500,
+      "height" : 433,
+      "max_width" : 500,
+      "max_height" : 433
+    }
+  }, {
+    "id" : "e6a89801-7462-be65-9ed5-c79c03046a9b",
+    "name" : "link_text",
+    "display_width" : null,
+    "label" : "Link Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Link"
+  }, {
+    "id" : "385d851e-fcd9-c8d0-e2a6-84dda4971c27",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "bbde112e-4bbb-f179-3348-c6f800beefb5",
+    "name" : "url",
+    "display_width" : null,
+    "label" : "URL",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "type" : "url",
+    "default" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "EXTERNAL"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "title" : "Title",
+    "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/logo-icon.png",
+      "alt" : "logo-icon",
+      "loading" : "lazy",
+      "width" : 500,
+      "height" : 433,
+      "max_width" : 500,
+      "max_height" : 433
+    },
+    "link_text" : "Link",
+    "url" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "EXTERNAL"
+    },
+    "link" : true
+  }, {
+    "title" : "Title",
+    "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/logo-icon.png",
+      "alt" : "logo-icon",
+      "loading" : "lazy",
+      "width" : 500,
+      "height" : 433,
+      "max_width" : 500,
+      "max_height" : 433
+    },
+    "link_text" : "Link",
+    "url" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "EXTERNAL"
+    },
+    "link" : true
+  }, {
+    "title" : "Title",
+    "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/logo-icon.png",
+      "alt" : "logo-icon",
+      "loading" : "lazy",
+      "width" : 500,
+      "height" : 433,
+      "max_width" : 500,
+      "max_height" : 433
+    },
+    "link_text" : "Link",
+    "url" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "EXTERNAL"
+    },
+    "link" : true
+  } ]
+} ]

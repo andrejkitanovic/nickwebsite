@@ -1,0 +1,32 @@
+<section class="hero-list {{ module.color }}">
+
+    <div class="container">
+        <div class="hero-list__container">
+
+            <div class="row">
+
+                <div class="col-sm-6 col-12 {% if module.order == 'reverse' %}order-2{% endif %}">
+                    <h1 class="hero-list__header">{{ module.title }}</h1>
+
+                    <div class="hero-list__list">
+                        {% for item in module.list %}
+                            <div class="hero-list__item">
+                                <div class="hero-list__item-image" style="background-image:url('{{ item.image.src }}')"></div>
+                                <div class="hero-list__item-text">{{ item.text }}</div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="hero-list__image d-sm-none d-block" style="background-image:url('{{ module.image.src }}')"></div>
+                    <a href="{{ module.button.url.href }}" class="cta__postie-button postie-button postie-button--big">{{ module.button.text }}</a>
+                    <div class="hero-list__image d-sm-none d-block bg-blue" style="background-image:url('{{ module.image.src }}')"></div>
+                </div>
+                <div class="col-md-5 col-6 pr-0 d-sm-block d-none">
+                    <div class="hero-list__image" style="background-image:url('{{ module.image.src }}')"></div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+        </div>
+    </div>
+
+</section>

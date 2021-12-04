@@ -1,0 +1,98 @@
+[ {
+  "id" : "e8d4ff6e-0853-e5ab-3f13-2a5c76637e2e",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "This is just some of the great features which deckerdevs offers"
+}, {
+  "id" : "510eaf6d-8d9b-0856-874f-37991ee3a74b",
+  "name" : "text",
+  "display_width" : null,
+  "label" : "Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "You can benefit from:"
+}, {
+  "id" : "c3b40faf-fccc-7275-2203-584b0033f408",
+  "name" : "image",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/logo-icon.png",
+    "alt" : "logo-icon",
+    "loading" : "lazy",
+    "width" : 500,
+    "height" : 433,
+    "max_width" : 500,
+    "max_height" : 433
+  }
+}, {
+  "id" : "594f9374-2916-edae-d1cb-ce35ba6b627f",
+  "name" : "checklist",
+  "display_width" : null,
+  "label" : "Checklist",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 5
+  },
+  "children" : [ {
+    "id" : "7a5e1c67-1d8e-e062-e538-66f01cab6465",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : " 70% better <b>development</b> team"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "text" : " 70% better <b>development</b> team"
+  }, {
+    "text" : " 70% better <b>development</b> team"
+  }, {
+    "text" : " 70% better <b>development</b> team"
+  }, {
+    "text" : " 70% better <b>development</b> team"
+  }, {
+    "text" : " 70% better <b>development</b> team"
+  } ]
+}, {
+  "id" : "6924616d-9454-83e5-7a85-1af03f420095",
+  "name" : "description",
+  "display_width" : null,
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Don't hesitate contact us!"
+} ]

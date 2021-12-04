@@ -1,8 +1,0 @@
-{
-  "global" : false,
-  "icon" : "fontawesome-5.14.0:Dice%20Three:SOLID",
-  "host_template_types" : [ "PAGE", "BLOG_POST" ],
-  "module_id" : 57178672917,
-  "label" : "Scenarios",
-  "is_available_for_new_content" : true
-}

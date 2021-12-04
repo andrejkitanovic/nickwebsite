@@ -1,0 +1,18 @@
+
+<section class="features">
+  <div class="features__title">{{ module.title }}</div>
+  <div class="features__items">
+
+    {% for item in module.items %}
+      <div class="features__item">
+            <div class="features__item__image-holder">
+              <img src="{{item.image.src}}" alt="{{item.image.alt}}" />
+            </div>
+            <div class="features__item__text-holder">
+              <div class="features__item__title">{{ item.title }}</div>
+              <div class="features__item__text">{{ item.text }}</div>
+            </div>
+        </div>
+    {% endfor %}
+  </div>
+</section>

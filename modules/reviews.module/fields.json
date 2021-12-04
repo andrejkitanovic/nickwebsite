@@ -1,0 +1,162 @@
+[ {
+  "id" : "6730b3fe-c8e9-1bb6-aea6-025de462ef73",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Our happy clients"
+}, {
+  "id" : "79474544-b15c-6c26-7f8a-b780f0fc3bad",
+  "name" : "image",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/logo-icon.png",
+    "alt" : "logo-icon",
+    "loading" : "lazy",
+    "width" : 500,
+    "height" : 433,
+    "max_width" : 500,
+    "max_height" : 433
+  }
+}, {
+  "id" : "7f3d5cf0-ab50-1f8c-2a72-956e28d72da6",
+  "name" : "reviews",
+  "display_width" : null,
+  "label" : "Reviews",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "eaa51109-eff0-3439-3992-f163c9b65f90",
+    "name" : "review",
+    "display_width" : null,
+    "label" : "Review",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><span>We always knew that deckerdevs had great potential for our brand but we could never figure out how to really measure the impact and see if our efforts were worth it. Deckerdevs gave us that website and we were blown away by how strong the results were.</span></p>"
+  }, {
+    "id" : "17824643-fe16-a3c5-5e45-e86938e2c4ab",
+    "name" : "image",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/logo-icon.png",
+      "alt" : "logo-icon",
+      "loading" : "lazy",
+      "width" : 500,
+      "height" : 433,
+      "max_width" : 500,
+      "max_height" : 433
+    }
+  }, {
+    "id" : "82d4f6a9-4add-632c-53d4-f7212fd8c2af",
+    "name" : "name_field",
+    "display_width" : null,
+    "label" : "Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "John Johnson"
+  }, {
+    "id" : "ee48613a-8d9f-fb6e-f297-edb77d445ab3",
+    "name" : "role",
+    "display_width" : null,
+    "label" : "Role",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "CEO"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "review" : "<p><span>We always knew that deckerdevs had great potential for our brand but we could never figure out how to really measure the impact and see if our efforts were worth it. Deckerdevs gave us that website and we were blown away by how strong the results were.</span></p>",
+    "name_field" : "John Johnson",
+    "role" : "CEO",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/logo-icon.png",
+      "alt" : "logo-icon",
+      "loading" : "lazy",
+      "width" : 500,
+      "height" : 433,
+      "max_width" : 500,
+      "max_height" : 433
+    }
+  }, {
+    "review" : "<p><span>We always knew that deckerdevs had great potential for our brand but we could never figure out how to really measure the impact and see if our efforts were worth it. Deckerdevs gave us that website and we were blown away by how strong the results were.</span></p>",
+    "name_field" : "John Johnson",
+    "role" : "CEO",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/logo-icon.png",
+      "alt" : "logo-icon",
+      "loading" : "lazy",
+      "width" : 500,
+      "height" : 433,
+      "max_width" : 500,
+      "max_height" : 433
+    }
+  }, {
+    "review" : "<p><span>We always knew that deckerdevs had great potential for our brand but we could never figure out how to really measure the impact and see if our efforts were worth it. Deckerdevs gave us that website and we were blown away by how strong the results were.</span></p>",
+    "name_field" : "John Johnson",
+    "role" : "CEO",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/logo-icon.png",
+      "alt" : "logo-icon",
+      "loading" : "lazy",
+      "width" : 500,
+      "height" : 433,
+      "max_width" : 500,
+      "max_height" : 433
+    }
+  }, {
+    "review" : "<p><span>We always knew that deckerdevs had great potential for our brand but we could never figure out how to really measure the impact and see if our efforts were worth it. Deckerdevs gave us that website and we were blown away by how strong the results were.</span></p>",
+    "name_field" : "John Johnson",
+    "role" : "CEO",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/logo-icon.png",
+      "alt" : "logo-icon",
+      "loading" : "lazy",
+      "width" : 500,
+      "height" : 433,
+      "max_width" : 500,
+      "max_height" : 433
+    }
+  } ]
+} ]

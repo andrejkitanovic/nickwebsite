@@ -1,9 +1,0 @@
-{
-  "global" : true,
-  "smart_type" : "NOT_SMART",
-  "icon" : "fontawesome-5.14.0:Mail%20Bulk:SOLID",
-  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
-  "module_id" : 56915224436,
-  "label" : "Popup Get in Touch",
-  "is_available_for_new_content" : true
-}

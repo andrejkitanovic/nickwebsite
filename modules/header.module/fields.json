@@ -1,78 +1,82 @@
 [ {
-  "id" : "2dca2462-d9ee-ff90-5478-ca25fdf0821e",
-  "name" : "topics_header",
-  "label" : "Topics Header",
+  "id" : "35f32d4d-442a-fe89-4d78-5bab1bb30101",
+  "name" : "logo",
+  "display_width" : null,
+  "label" : "Logo",
   "required" : false,
   "locked" : true,
-  "validation_regex" : "",
-  "allow_new_line" : false,
-  "show_emoji_picker" : false,
-  "type" : "text",
-  "default" : "Topics"
-}, {
-  "id" : "e71f9625-f7db-7b2e-7a76-4209690223a4",
-  "name" : "topics",
-  "label" : "Topics",
-  "required" : false,
-  "locked" : true,
-  "occurrence" : {
-    "min" : null,
-    "max" : null,
-    "sorting_label_field" : null,
-    "default" : null
-  },
-  "children" : [ {
-    "id" : "51f11d3f-8739-3ac8-c94a-8d7b2d8b556b",
-    "name" : "topics_tag",
-    "label" : "Topics Tag",
-    "required" : false,
-    "locked" : false,
-    "tag_value" : "SLUG",
-    "type" : "tag"
-  }, {
-    "id" : "1153edda-55b9-ce19-4a2c-25ed8e0e9977",
-    "name" : "topic_link",
-    "label" : "Topic Link",
-    "required" : false,
-    "locked" : false,
-    "supported_types" : [ "CONTENT", "EXTERNAL" ],
-    "type" : "url",
-    "default" : {
-      "content_id" : null,
-      "href" : "",
-      "type" : "CONTENT"
-    }
-  }, {
-    "id" : "ff0c42d4-1660-c621-dc6b-4edcb28f33fb",
-    "name" : "topic_image",
-    "label" : "Topic Image",
-    "required" : false,
-    "locked" : false,
-    "responsive" : true,
-    "resizable" : true,
-    "show_loading" : false,
-    "type" : "image",
-    "default" : {
-      "size_type" : "auto",
-      "src" : "",
-      "alt" : null,
-      "loading" : "lazy"
-    }
-  } ],
-  "tab" : "CONTENT",
-  "expanded" : false,
-  "type" : "group",
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
   "default" : {
-    "topic_link" : {
-      "content_id" : null,
-      "href" : "",
-      "type" : "CONTENT"
+    "size_type" : "auto",
+    "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/deckerdevs%20brand%20assets/logo-black-color.png",
+    "alt" : "logo-black-color",
+    "loading" : "lazy",
+    "width" : 500,
+    "height" : 282,
+    "max_width" : 500,
+    "max_height" : 282
+  }
+}, {
+  "id" : "b7abcbbd-40c3-da07-9b23-00405f51aaa0",
+  "name" : "simplemenu_field",
+  "display_width" : null,
+  "label" : "Simple menu",
+  "required" : false,
+  "locked" : true,
+  "type" : "simplemenu",
+  "default" : [ {
+    "isPublished" : true,
+    "pageLinkId" : 60360632182,
+    "contentGroupId" : null,
+    "pageLinkName" : "home page",
+    "isDeleted" : false,
+    "categoryId" : 1,
+    "subCategory" : "site_page",
+    "contentType" : "site_page",
+    "state" : "PUBLISHED_OR_SCHEDULED",
+    "linkLabel" : "Home",
+    "linkUrl" : null,
+    "linkParams" : null,
+    "linkTarget" : null,
+    "type" : "PAGE_LINK",
+    "children" : [ ]
+  }, {
+    "isPublished" : true,
+    "pageLinkId" : 60454526804,
+    "contentGroupId" : null,
+    "pageLinkName" : "contact",
+    "isDeleted" : false,
+    "categoryId" : 1,
+    "subCategory" : "site_page",
+    "contentType" : "site_page",
+    "state" : "PUBLISHED_OR_SCHEDULED",
+    "linkLabel" : "Contact",
+    "linkUrl" : null,
+    "linkParams" : null,
+    "linkTarget" : null,
+    "type" : "PAGE_LINK",
+    "children" : [ ]
+  } ]
+}, {
+  "id" : "0b8bc2f6-bfdd-30ce-53db-2e2f48956cbf",
+  "name" : "contact_us_link",
+  "display_width" : null,
+  "label" : "Contact Us Link",
+  "required" : false,
+  "locked" : true,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "type" : "CONTENT",
+      "href" : null,
+      "content_id" : 60454526804
     },
-    "topic_image" : {
-      "size_type" : "auto",
-      "src" : "",
-      "alt" : null,
-      "loading" : "lazy"
-    }
+    "open_in_new_tab" : false,
+    "no_follow" : false
   }
 } ]

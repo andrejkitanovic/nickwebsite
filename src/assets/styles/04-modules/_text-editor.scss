@@ -1,0 +1,130 @@
+.text-editor {
+  margin-top: 60px;
+  margin-bottom: 70px;
+
+  &__header {
+    margin-bottom: 21px;
+  }
+
+  &__text {
+    p,
+    ul,
+    li {
+      margin: 0;
+      color: #68858e;
+      font-size: 17px;
+      line-height: 26px;
+
+      b,
+      strong {
+        color: #163d5d;
+      }
+    }
+
+    blockquote {
+      position: relative;
+      padding: 23px 30px 33px 86px;
+      max-width: 670px;
+      background-color: #eaf8ff;
+      margin: 0;
+      border-radius: 7px;
+
+      p {
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 600;
+        color: #163d5d;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        background: url("../../icons/svg/blockquote.svg") no-repeat center
+          center;
+        background-size: contain;
+        display: inline-block;
+        left: 30px;
+        top: 33px;
+        width: 28px;
+        height: 22px;
+      }
+    }
+  }
+}
+
+@media (max-width: breakpoint(md)) {
+  .text-editor {
+    // margin-top: 60px;
+    // margin-bottom: 70px;
+
+    &__header {
+      margin-bottom: 46px;
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    &__text {
+      p,
+      ul,
+      li {
+        font-size: 17px;
+        line-height: 24px;
+      }
+
+      blockquote {
+        // padding: 23px 30px 33px 86px;
+        // max-width: 670px;
+        // border-radius: 7px;
+
+        p {
+          // font-size: 30px;
+          // line-height: 40px;
+        }
+
+        &::before {
+          // left: 30px;
+          // top: 33px;
+          // width: 28px;
+          // height: 22px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: breakpoint(sm)) {
+  .text-editor {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    &__header {
+      margin-bottom: 32px;
+      font-size: 30px;
+      line-height: 32px;
+    }
+
+    &__text {
+      p,
+      ul,
+      li {
+        font-size: 15px;
+        line-height: 24px;
+      }
+      blockquote {
+        padding: 18px 25px 22px 65px;
+        // max-width: 670px;
+        // border-radius: 7px;
+
+        p {
+          font-size: 24px;
+          line-height: 32px;
+        }
+
+        &::before {
+          left: 20px;
+          top: 24px;
+        }
+      }
+    }
+  }
+}

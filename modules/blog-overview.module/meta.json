@@ -1,8 +1,0 @@
-{
-  "global" : false,
-  "icon" : "fontawesome-5.14.0:Eye:SOLID",
-  "host_template_types" : [ "BLOG_POST" ],
-  "module_id" : 56716944658,
-  "label" : "Blog Overview",
-  "is_available_for_new_content" : true
-}

@@ -1,0 +1,141 @@
+[ {
+  "id" : "31df980c-0e23-bbfa-76e2-a762a958e745",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Title"
+}, {
+  "id" : "9b4ccff9-9488-a431-b13e-5e89413875f2",
+  "name" : "items",
+  "display_width" : null,
+  "label" : "Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 5
+  },
+  "children" : [ {
+    "id" : "86fbad98-658a-bbe2-7409-f8609a018dcd",
+    "name" : "image",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/logo-icon.png",
+      "alt" : "logo-icon",
+      "loading" : "lazy",
+      "width" : 500,
+      "height" : 433,
+      "max_width" : 500,
+      "max_height" : 433
+    }
+  }, {
+    "id" : "563a23c2-0ee4-8279-fdc0-2281100a1719",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Title"
+  }, {
+    "id" : "ab1e56ab-2f26-7ae3-cfdc-c5882bb24833",
+    "name" : "label_field",
+    "display_width" : null,
+    "label" : "Label",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Label"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/logo-icon.png",
+      "alt" : "logo-icon",
+      "loading" : "lazy",
+      "width" : 500,
+      "height" : 433,
+      "max_width" : 500,
+      "max_height" : 433
+    },
+    "title" : "Title",
+    "label_field" : "Label"
+  }, {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/logo-icon.png",
+      "alt" : "logo-icon",
+      "loading" : "lazy",
+      "width" : 500,
+      "height" : 433,
+      "max_width" : 500,
+      "max_height" : 433
+    },
+    "title" : "Title",
+    "label_field" : "Label"
+  }, {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/logo-icon.png",
+      "alt" : "logo-icon",
+      "loading" : "lazy",
+      "width" : 500,
+      "height" : 433,
+      "max_width" : 500,
+      "max_height" : 433
+    },
+    "title" : "Title",
+    "label_field" : "Label"
+  }, {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/logo-icon.png",
+      "alt" : "logo-icon",
+      "loading" : "lazy",
+      "width" : 500,
+      "height" : 433,
+      "max_width" : 500,
+      "max_height" : 433
+    },
+    "title" : "Title",
+    "label_field" : "Label"
+  }, {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/logo-icon.png",
+      "alt" : "logo-icon",
+      "loading" : "lazy",
+      "width" : 500,
+      "height" : 433,
+      "max_width" : 500,
+      "max_height" : 433
+    },
+    "title" : "Title",
+    "label_field" : "Label"
+  } ]
+} ]

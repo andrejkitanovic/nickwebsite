@@ -1,0 +1,44 @@
+<section class="request-demo custom-form-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-12">
+       <!--[if lte IE 8]>
+      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+      <![endif]-->
+        <h2 class="request-demo__header">
+          {{ module.title }}
+        </h2>
+
+      <div class="request-demo__description">{{ module.description }}</div>
+      
+
+        {% form
+          form_to_use="{{ module.form.form_id }}"
+          response_response_type="{{ module.form.response_type }}"
+          response_message="{{ module.form.message }}"
+          response_redirect_id="{{ module.form.redirect_id }}"
+          response_redirect_url="{{module.form.redirect_url}}"
+          gotowebinar_webinar_key="{{ module.form.gotowebinar_webinar_key }}"
+        %}
+      </div>
+      <div class="col-sm-1 d-sm-block d-none"><div class="line"></div></div>
+      <div class="col-lg-4 col-sm-5 col-12">
+        <div class="request-demo__title">{{ module.reviews_title }}</div>
+        {% for item in module.list %}
+          <div class="request-demo__item">
+            <div class="request-demo__item__description">{{ item.text }}</div>
+            <div class="d-flex align-items-center">
+              <div>
+                <img src="{{ item.image.src }}" alt="{{ item.image.url }}" class="request-demo__item__image">
+              </div>
+              <div>
+                <div class="request-demo__item__title">{{ item.name_field }}</div>
+                <div class="request-demo__item__label">{{ item.role }}</div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

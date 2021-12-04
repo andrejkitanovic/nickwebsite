@@ -1,127 +1,49 @@
-<header class="header-blue">
-  <div class="header-blue__dropdown d-block d-md-none">
-    <div class="header-blue__dropdown-link-container">
-      <a href="" class="header-blue__dropdown-link has-children arrow-down">{% inline_text field="topics_header" value="{{ module.topics_header }}" %}</a>
+   <header class="header" role="banner">
 
-      <div class="header-blue__dropdown-link-menu">
-        {% for item in module.topics %}
-           {% set tag_slug = item.topics_tag %}
-            {% set blog_tag_list = blog_tags(57176331600, 250) %}
-            {% set scenario_tag_list = blog_tags(57279563831, 250) %}
-            {% set all_tags = (blog_tag_list + scenario_tag_list) | unique %}
+        <div class="container">
+            <div class="header__container">
 
-              {% for tag in all_tags %}
-                {% if tag_slug == tag.slug %}
-                 <a href="{{ item.topic_link.href }}" class="header-blue__dropdown-link-menu-single">
-                    <div class="header-blue__dropdown-link-menu-single-text">
-                      {{ tag.name }}
+
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-2 col-4">
+                        <a href="/" class="d-sm-block d-none"><img class="header__logo" src="{{ module.logo.src }}" alt="{{ module.logo.alt }}"></a>
+                        <a href="/" class="d-sm-none d-block"><img class="header__logo" src="{{ module.logo.src }}" alt="{{ module.logo.alt }}"></a>
                     </div>
-                  </a>
-                 {% endif %}
-              {% endfor %}
-        {% endfor %}
-       </div>
-      
-      
-    </div>
-    <div class="header-blue__dropdown-link-container">
-      <a href="//liquidspace.com/search" class="header-blue__dropdown-link">Find Space</a>
-    </div>
-    <hr/>
-    <div class="header-blue__dropdown-link-container">
-      <a href="" class="header-blue__dropdown-link popup-button-subscribe">Subscribe</a>
-    </div>
-    <div class="header-blue__dropdown-link-container">
-      <a href="" class="header-blue__dropdown-link  popup-button-get-in-touch">Get in Touch</a>
-    </div>
-    <hr/>
-    <div class="header-blue__dropdown-link-container">
-      <a href="//liquidspace.com" class="header-blue__dropdown-link">Return to Main Site</a>
-    </div>
-    <div class="header-blue__dropdown-link-container">
-      <a href="//liquidspace.com/share-office-meeting-space" class="header-blue__dropdown-link">Become a Host</a>
-    </div>
-    <div class="header-blue__dropdown-link-container">
-      <a href="//support.liquidspace.com/hc/en-us" class="header-blue__dropdown-link">Help</a>
-    </div>
-  </div>
 
+                    <div class="col-lg-6 col-md-7 d-md-block d-none">
 
-  <div class="header-blue__container">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-10 col-md-4 col-xl-3">
-          <span class="d-flex align-items-center">
-            <a href="https://liquidspace.com/" class="header-blue__logo">
-              <img
-                src="https://f.hubspotusercontent30.net/hubfs/4810033/The%20Current%20Header%20Icons/Header%20Logo.svg"
-                alt="Logo"
-              />
-            </a>
-            <a href="https://blog.liquidspace.com" class="header-blue__logo-second d-none d-md-block">
-              <img
-                src="https://f.hubspotusercontent30.net/hubfs/4810033/The%20Current%20Header%20Icons/The%20Current.svg"
-                alt="Logo"
-              />
-            </a>
-          </span>
-        </div>
-        <div class="d-none d-md-block col-3 col-xl-4">
-          <div class="header-blue__navigation">
-            <div class="header-blue__link-container">
-              <a href="" class="header-blue__link arrow-down-white has-children">{% inline_text field="topics_header" value="{{ module.topics_header }}" %}</a>
-              <div class="header-blue__link-menu">
-
-
-              {% for item in module.topics %}
-                {% set tag_slug = item.topics_tag %}
-                 {% set blog_tag_list = blog_tags(57176331600, 250) %}
-                 {% set scenario_tag_list = blog_tags(57279563831, 250) %}
-                 {% set all_tags = (blog_tag_list + scenario_tag_list) | unique %}
-     
-                   {% for tag in all_tags %}
-                     {% if tag_slug == tag.slug %}
-                       <a href="{{ item.topic_link.href }}" class="header-blue__link-menu-single">
-                        <div class="header-blue__link-menu-single-icon">
-                         	{% if item.topic_image.src %}
-                             {% set loadingAttr = item.topic_image.loading != 'disabled' ? 'loading="{{ item.topic_image.loading }}"' : '' %}
-                            <img src="{{ item.topic_image.src }}" alt="{{ item.topic_image.alt }}" {{ loadingAttr }}>
-                          {% endif %}
+<!--                             <nav class="header__links">
+                                        <div class="header__link-holder">
+																					{% simple_menu menu_tree="{{ module.simplemenu_field }}" %}
+                                        </div>
+                            </nav> -->
+                        {% simple_menu menu_tree="{{ module.simplemenu_field }}" %}
+                    </div>
+                    <div class="col-md-3 col-8 header__right">
+                        {# <a class="header__login" href="<?php echo $login['url'] ?>">Login</a> #}
+											{% set href = module.contact_us_link.url.href %}
+											{% if module.contact_us_link.url.type is equalto "EMAIL_ADDRESS" %}
+												{% set href = "mailto:" + href %}
+											{% endif %}
+											<a href="{{ href }}" class="header__postie-button postie-button postie-button--small"
+												{% if module.contact_us_link.open_in_new_tab %}target="_blank"{% endif %}
+												{% if module.contact_us_link.rel %}rel="{{ module.contact_us_link.rel }}"{% endif %}
+												>
+												Contact Us
+											</a>
+                        <div class="header__hamburger-button d-inline-block d-md-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
-                        <div class="header-blue__link-menu-single-text">
-                          {{tag.name}}
-                        </div>
-                      </a>
-                      {% endif %}
-                   {% endfor %}
-             {% endfor %}
+                    </div>
+                </div>
 
-        
+            </div>
+        </div>
 
-              </div>
-            </div>
-            <div class="header-blue__link-container">
-              <a href="//liquidspace.com/search" class="header-blue__link">Find Space</a>
-            </div>
-          </div>
-        </div>
-        <div class="d-none d-md-block col-1"></div>
-        <div class="d-none d-md-block col-4">
-          <div
-            class="header-blue__buttons d-flex align-items-center justify-content-end"
-          >
-            <a href="" class="header-blue__subscribe button popup-button-subscribe">Subscribe</a>
-            <a href="" class="header-blue__get-in-touch button popup-button-get-in-touch">Get in touch</a>
-          </div>
-        </div>
-        <div class="d-block d-md-none col-2">
-          <div class="header-blue__hamburger hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      </div>
+
+    </header>
+   <div class="header__dropdown d-flex d-md-none">
+	     {% simple_menu menu_tree="{{ module.simplemenu_field }}" %}
     </div>
-  </div>
-</header>

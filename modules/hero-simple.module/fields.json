@@ -1,0 +1,45 @@
+[ {
+  "id" : "3bec4a57-5ad5-675d-e535-4668bc83f51b",
+  "name" : "order",
+  "display_width" : null,
+  "label" : "Order",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "normal", "Normal" ], [ "reverse", "Reverse" ] ],
+  "type" : "choice",
+  "default" : "normal"
+}, {
+  "id" : "ba332a1a-b37c-313b-16f9-69cda1f85da9",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Welcome to the page, this is simple header text description which show how long this text should be"
+}, {
+  "id" : "f5cf7e83-b508-1280-f566-b0435d103221",
+  "name" : "image",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/logo-icon.png",
+    "alt" : "logo-icon",
+    "loading" : "lazy",
+    "width" : 500,
+    "height" : 433,
+    "max_width" : 500,
+    "max_height" : 433
+  }
+} ]

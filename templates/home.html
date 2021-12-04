@@ -9,7 +9,8 @@ used for the navigation skipper in the header.html file. More information on the
 navigation skipper can be found here:
 https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
 
-<main id="main-content" class="body-container-wrapper">
- 
+<main id="main-content" class="body-container-wrapper main">
+{% dnd_area 'dnd_area' label='Main section'  class='body-container' %}
+{% end_dnd_area %}
 </main>
 {% endblock body %}

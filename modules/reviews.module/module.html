@@ -1,0 +1,90 @@
+<section class="reviews">
+
+	<div class="container">
+
+		<div class="row first-row">
+			<div class="col-md-4 col-sm-7 col-6">
+        <h2 class="reviews__header">
+          {{ module.title }}
+        </h2>
+			</div>
+			<div class="col-md-8 col-5 d-sm-block d-none">
+				<div class="reviews__navigation">
+					<button class="reviews__nav-button reviews__nav-button--prev"></button>
+					<button class="reviews__nav-button reviews__nav-button--next"></button>
+				</div>
+			</div>
+			<div class="col-6 d-block d-sm-none text-right">
+				<img src="{{ module.image.src }}" class="mobile-fish" alt="{{ module.image.alt }}" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 d-md-block d-none">
+
+
+				<img src="{{ module.image.src }}" alt="{{ module.image.alt }}" class="reviews__image">
+			</div>
+			<div class="col-md-8 col-12 pr-0">
+
+				<div class="reviews__reviews swiper-container d-sm-block d-none">
+					<div class="swiper-wrapper">
+						{% for item in module.reviews %}
+              {% if (loop.index0 % 4 == 0) %}
+								<div class="swiper-slide">
+									<div class="reviews__slide">
+									{% endif %}
+									<div class="reviews__review">
+										<div class="reviews__review-text">
+											{{ item.review }}
+										</div>
+
+										<div class="reviews__review-person">
+											<div class="reviews__review-image" style="background-image:url('{{ item.image.src }}')">
+											</div>
+
+											<div class="reviews__review-info">
+												<div class="reviews__review-name">{{ item.name_field }}</div>
+												<div class="reviews__review-role">{{ item.role }}</div>
+											</div>
+										</div>
+									</div>
+                    {% if ((loop.index0 + 1) % 4 == 0) %}
+									</div>
+								</div>
+               {% endif %}
+						{% endfor %}
+					</div>
+				</div>
+
+				<div class="reviews__reviews-mobile swiper-container d-block d-sm-none">
+					<div class="swiper-wrapper">
+						{% for item in module.reviews %}
+							<div class="swiper-slide">
+								<div class="reviews__review">
+									<div class="reviews__review-text">
+										{{ item.review }}
+									</div>
+									<div class="reviews__review-person">
+										<div class="reviews__review-image" style="background-image:url('{{ item.image.src }}')">
+										</div>
+
+										<div class="reviews__review-info">
+											<div class="reviews__review-name">{{ item.name_field }}</div>
+											<div class="reviews__review-role">{{ item.role }}</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-12 d-sm-none d-block">
+			<div class="reviews__navigation">
+				<button class="reviews__nav-button-mobile reviews__nav-button-mobile--prev"></button>
+				<button class="reviews__nav-button-mobile reviews__nav-button-mobile--next"></button>
+			</div>
+		</div>
+	</div>
+</section>

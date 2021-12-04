@@ -1,0 +1,48 @@
+<section class="hero">
+
+	<div class="container">
+		<div class="hero__container">
+
+			<div class="row">
+
+				<div class="col-lg-6 col-12">
+          <h1 class="hero__header">{{ module.title }}</h1>
+					<div class="hero__text-roller" data-roll-selected>
+						<div class="hero__text-roller-background"></div>
+						<div class="hero__text-roller-container">
+              {% if(module.images_texts != []) %}
+							<div class="hero__text-roll" data-index="0">{{module.images_texts[0].text}}</div>
+              {% endif %}
+						</div>
+						<div class="hero__text-roller-underline"></div>
+					</div>
+					<div class="hero__description">
+						{{ module.description }}
+					</div>
+          <a href="{{ module.button.url_field.href }}" class="hero__postie-button postie-button postie-button--big d-lg-flex d-none">{{ module.button.text }}</a>
+				</div>
+				<div class="col-lg-6"></div>
+			</div>
+
+			<div class="hero__video-container d-none d-xl-block">
+        {% if(module.images_texts != []) %}
+        <img src="{{module.images_texts[0].image.src}}" alt="{{module.images_texts[0].text}}" data-index="0" />
+        {% endif %}
+			</div>
+		</div>
+	</div>
+	<div class="hero__video-container-tablet d-lg-none d-block">
+    {% if(module.images_texts != []) %}
+    <img src="{{module.images_texts[0].image.src}}" alt="{{module.images_texts[0].text}}" data-index="0" />
+    {% endif %}
+	</div>
+	<div class="container">
+    <a href="{{ module.button.url_field.href }}" class="hero__postie-button postie-button postie-button--big d-md-none d-flex">{{ module.button.text }}</a>
+	</div>
+
+	<div class="hero__video-container d-none d-lg-block d-xl-none">
+    {% if(module.images_texts != []) %}
+    <img src="{{module.images_texts[0].image.src}}" alt="{{module.images_texts[0].text}}" data-index="0" />
+    {% endif %}
+	</div>
+</section>

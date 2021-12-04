@@ -1,0 +1,130 @@
+[ {
+  "id" : "8fb98988-ea2d-8e1b-2ffe-e937f1ce884e",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "websites without"
+}, {
+  "id" : "08f1d722-f892-dc40-211e-1039ca10e034",
+  "name" : "description",
+  "display_width" : null,
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Run powerful Direct Mail campaigns just like you run digital ads — with the push of a button.</p>"
+}, {
+  "id" : "4e5b7b53-e8ff-1266-508e-d5818e9a0a0b",
+  "name" : "button",
+  "display_width" : null,
+  "label" : "Button",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "900f6d06-8075-4ca0-be12-11246cf6d043",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Contact us"
+  }, {
+    "id" : "21bd6b38-df6c-e8c1-6785-4d87a0588236",
+    "name" : "url_field",
+    "display_width" : null,
+    "label" : "URL",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "CONTENT" ],
+    "type" : "url",
+    "default" : {
+      "type" : "CONTENT",
+      "href" : null,
+      "content_id" : 60454526804
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "text" : "Contact us",
+    "url_field" : {
+      "type" : "CONTENT",
+      "href" : null,
+      "content_id" : 60454526804
+    }
+  }
+}, {
+  "id" : "3ea48193-6eec-b81f-a7a9-b2c78a044a90",
+  "name" : "images_texts",
+  "display_width" : null,
+  "label" : "Images texts",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "3466c236-0425-3529-e03f-d2941a24e654",
+    "name" : "image",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/Partner%20Assets/HubSpot-certified-partner-2.png",
+      "alt" : "HubSpot-certified-partner-2",
+      "loading" : "lazy",
+      "width" : 690,
+      "height" : 336,
+      "max_width" : 690,
+      "max_height" : 336
+    }
+  }, {
+    "id" : "a16e7969-5607-eba5-87fb-a9b0c29e9308",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Digital Capabilities"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/Partner%20Assets/HubSpot-certified-partner-2.png",
+      "alt" : "HubSpot-certified-partner-2",
+      "loading" : "lazy",
+      "width" : 690,
+      "height" : 336,
+      "max_width" : 690,
+      "max_height" : 336
+    },
+    "text" : "Digital Capabilities"
+  }
+} ]
