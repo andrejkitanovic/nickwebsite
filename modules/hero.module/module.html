@@ -10,9 +10,12 @@
 					<div class="hero__text-roller" data-roll-selected>
 						<div class="hero__text-roller-background"></div>
 						<div class="hero__text-roller-container">
-              {% if(module.images_texts != []) %}
-							<div class="hero__text-roll" data-index="0">{{module.images_texts[0].text}}</div>
-              {% endif %}
+						{% if(module.images_texts != []) %}
+							<div class="hero__text-roll" data-index="{{loop.index - 1}}">{{module.images_texts[0].text}}</div>
+							{% for item in module.images_texts %}
+								<div class="hero__text-hidden" data-index="{{loop.index - 1}}">{{item.text}}</div>
+							{% endfor%}
+						{% endif %}
 						</div>
 						<div class="hero__text-roller-underline"></div>
 					</div>
@@ -24,25 +27,22 @@
 				<div class="col-lg-6"></div>
 			</div>
 
-			<div class="hero__video-container d-none d-xl-block">
-        {% if(module.images_texts != []) %}
-        <img src="{{module.images_texts[0].image.src}}" alt="{{module.images_texts[0].text}}" data-index="0" />
-        {% endif %}
+			<div class="hero__video-container">
+				{% if(module.images_texts != []) %}
+				<img src="{{module.images_texts[0].image.src}}" class="hero__image" alt="{{module.images_texts[0].text}}" />
+				{% for item in module.images_texts %}
+					<img src="{{item.image.src}}" class="hero__image-hidden" data-index="{{loop.index - 1}}" />
+				{% endfor%}
+				{% endif %}
 			</div>
 		</div>
 	</div>
-	<div class="hero__video-container-tablet d-lg-none d-block">
-    {% if(module.images_texts != []) %}
-    <img src="{{module.images_texts[0].image.src}}" alt="{{module.images_texts[0].text}}" data-index="0" />
-    {% endif %}
-	</div>
+	{# <div class="hero__video-container-tablet d-lg-none d-block">
+	</div> #}
 	<div class="container">
     <a href="{{ module.button.url_field.href }}" class="hero__postie-button postie-button postie-button--big d-md-none d-flex">{{ module.button.text }}</a>
 	</div>
 
-	<div class="hero__video-container d-none d-lg-block d-xl-none">
-    {% if(module.images_texts != []) %}
-    <img src="{{module.images_texts[0].image.src}}" alt="{{module.images_texts[0].text}}" data-index="0" />
-    {% endif %}
-	</div>
+	{# <div class="hero__video-container d-none d-lg-block d-xl-none">
+	</div> #}
 </section>
