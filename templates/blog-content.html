@@ -6,8 +6,7 @@
 
 {% extends "./layouts/base.html" %} {% block body %}
 <main id="main-content" class="body-container-wrapper main case-study">
-    {# IMAGE MODULE HERE, THIS SHOULD BE NATIVE ONE #}
-    <div class="case-study__background" style="background-image: url('https://postie.com/wp-content/uploads/2021/12/MeUndies-Header-.jpg')"></div>
+		{% module 'blog-image' path="../modules/blog-image" %}
     <div class="container">
         <div class="case-study__content-wrapper">
             <div class="row">
@@ -19,10 +18,9 @@
                             </div>
                             <div class="case-study__tags">
                                 {# TAGS LOGIC #}
-                                <span class="case-study__tag case-study__tag--category">
-                                  Tag
-                                </span>
-                                <span class="case-study__tag">Campaign</span>
+																{% for item in content.tag_list %}
+                                <span class="case-study__tag">{{item}}</span>
+																{% endfor %}
                             </div>
                             <h1 class="case-study__title">{{ content.name }}</h1>
                             <div class="case-study__meta">
@@ -50,94 +48,42 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="case-study__social">
-                            <div class="case-study__social__title">Share this article</div>
-                            <div class="d-flex">
-                                <a href="https://twitter.com/intent/tweet?url=<?php echo the_permalink(); ?>" class="case-study__social__share" target="_blank" rel="noopener">
-                                  <img
-                                    src="{{ get_asset_url('../build/assets/icons/svg/icon_twitter.svg') }}"
-                                    alt="Twitter"
-                                  />
-                                </a>
-                                <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo the_permalink();  ?>" class="case-study__social__share" target="_blank" rel="noopener">
-                                  <img
-                                    src="{{ get_asset_url('../build/assets/icons/svg/icon_facebook.svg') }}"
-                                    alt="Facebook"
-                                  />
-                                </a>
-                                <a href="https://linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>" class="case-study__social__share" target="_blank" rel="noopener">
-                                  <img
-                                    src="{{ get_asset_url('../build/assets/icons/svg/icon_linkedin.svg') }}"
-                                    alt="Linkedin"
-                                  />
-                                </a>
-                                <a href="#!" class="case-study__social__share" target="_blank" rel="noopener">
-                                  <img
-                                    src="{{ get_asset_url('../build/assets/icons/svg/icon_messenger.svg') }}"
-                                    alt="Messenger"
-                                  />
-                                </a>
-                            </div>
-                        </div>
+                        
                         <div class="case-study__text-content">
+													<div class="case-study__text-content__text">
                             {{ content.post_body }}
+													</div>
                         </div>
-                        {# Features Block Here #}
-                        <div class="case-study__social">
-                            <div class="case-study__social__title">Share this article</div>
-                            <div class="d-flex">
-                                <a href="https://twitter.com/intent/tweet?url=<?php echo the_permalink(); ?>" class="case-study__social__share" target="_blank" rel="noopener">
-                                  <img
-                                    src="{{ get_asset_url('../build/assets/icons/svg/icon_twitter.svg') }}"
-                                    alt="Twitter"
-                                  />
-                                </a>
-                                <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo the_permalink();  ?>" class="case-study__social__share" target="_blank" rel="noopener">
-                                  <img
-                                    src="{{ get_asset_url('../build/assets/icons/svg/icon_facebook.svg') }}"
-                                    alt="Facebook"
-                                  />
-                                </a>
-                                <a href="https://linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>" class="case-study__social__share" target="_blank" rel="noopener">
-                                  <img
-                                    src="{{ get_asset_url('../build/assets/icons/svg/icon_linkedin.svg') }}"
-                                    alt="Linkedin"
-                                  />
-                                </a>
-                                <a href="#!" class="case-study__social__share" target="_blank" rel="noopener">
-                                  <img
-                                    src="{{ get_asset_url('../build/assets/icons/svg/icon_messenger.svg') }}"
-                                    alt="Messenger"
-                                  />
-                                </a>
-                            </div>
+												<div class="case-study__social">
+													<div class="case-study__social__title">Share this article</div>
+													<div class="d-flex">
+															<a href="https://twitter.com/intent/tweet?text={{ page_meta.name }}%0A{{ request.full_url }}" class="case-study__social__share" target="_blank" rel="noopener">
+																<img
+																	src="{{ get_asset_url('../build/assets/icons/svg/icon_twitter.svg') }}"
+																	alt="Twitter"
+																/>
+															</a>
+															<a href="https://www.facebook.com/sharer/sharer.php?u={{ request.full_url }}" class="case-study__social__share" target="_blank" rel="noopener">
+																<img
+																	src="{{ get_asset_url('../build/assets/icons/svg/icon_facebook.svg') }}"
+																	alt="Facebook"
+																/>
+															</a>
+															<a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.full_url }}&title={{ page_meta.name }}&summary=&source=" class="case-study__social__share" target="_blank" rel="noopener">
+																<img
+																	src="{{ get_asset_url('../build/assets/icons/svg/icon_linkedin.svg') }}"
+																	alt="Linkedin"
+																/>
+															</a>
+													</div>
                         </div>
-
-
                     </div>
                 </div>
                 <div class="d-none d-md-block col-md-4 col-lg-3">
                     {# DEMO BLOCK HERE #}
                 </div>
             </div>
-            <div class="case-study__suggestions">
-                <div class="case-study__suggestions__title">We Think You Will Also Like...</div>
-                <div class="row">
-                {# FEATURED BLOGS MODULE #}
-                    {# <?php foreach ($suggestions as $item) { ?>
-                        <?php
-                        $blogData = array(
-                            'article'    => $item['suggested_post'],
-                            'image-size' => 'read-more'
-                        );
-                        set_query_var('postShowcaseSize', 'small');
-                        set_query_var('postShowcaseType', 'suggestions');
-                        set_query_var('blogData', $blogData);
-                        get_template_part('partials/sub-partials/post-showcase');
-                        ?>
-                    <?php } ?> #}
-                </div>
-            </div>
+            {% module 'related-posts' path="../modules/related-posts" %}
         </div>
     </div>
     {% module 'cta-block' path="../modules/cta" %}

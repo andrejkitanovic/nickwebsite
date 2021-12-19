@@ -1,0 +1,5 @@
+{% set blogImage =  content.featured_image %}
+{% if(module.image_field.src) %}
+  {% set blogImage = module.image_field.src %}
+{% endif %}
+<div class="case-study__background" style="background-image: url('{{blogImage}}')"></div>

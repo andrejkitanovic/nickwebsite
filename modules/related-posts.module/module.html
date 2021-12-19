@@ -1,0 +1,100 @@
+<div class="case-study__suggestions">
+		<div class="case-study__suggestions__title">{{ module.title }}</div>
+		<div class="row">
+		{# FEATURED BLOGS MODULE #}
+		
+		{% set relatedBlogs = blog_recent_tag_posts('default', content.tag_list , 4) %}
+		{% set index = 0 %}
+			{% for post in relatedBlogs %}
+				{% if(post.absolute_url != content.absolute_url && index < 3) %}
+				{% set index = index + 1 %}
+				{% set topics = post.tag_list %}
+				<div class="col-sm-4 col-12">
+					<section class="post-showcase post-showcase--small">
+						<a class="post-showcase__link" href="{{ post.absolute_url }}" title="{{ post.name }}"></a>
+							<div class="post-showcase__image-holder">
+								<img class="post-showcase__image" src="{{ post.featured_image }}" alt="{{ post.name }}" />
+								<div class="post-showcase__post-type">Blog</div>
+							</div>
+							<div class="post-showcase__section post-showcase__section--bottom">
+								<div class="post-showcase__tags">
+									{% for topic in topics %}
+										<span class="post-showcase__tag">{{topic}}</span>
+									{% endfor %}
+								</div>
+								<div class="post-showcase__title">
+								{{ post.name }}
+								</div>
+								<div class="post-showcase__meta">
+									<div class="post-showcase__meta-info">
+										<span class="post-showcase__meta-icon"><img
+											src="{{ get_asset_url('../build/assets/icons/svg/icon_reading-time.svg') }}"
+											alt="Reading Time"
+										/></span>
+										<span class="post-showcase__meta-text">{{ post.post_body|wordcount|divide(300) }}  min Read</span>
+									</div>
+									<div class="post-showcase__meta-info">
+										<span class="post-showcase__meta-icon"><img
+											src="{{ get_asset_url('../build/assets/icons/svg/icon_date.svg') }}"
+											alt="Reading Time"
+										/></span>
+										<span class="post-showcase__meta-text">{{ datetimeformat(post.publish_date_local_time, '%b %d, %Y') }}</span>
+									</div>
+								</div>
+							</div>
+						
+					</section>
+				</div>
+				{% endif %}
+			{% endfor %}
+		</div>
+</div>
+
+{# {% require_js %}
+	<script>
+		const blog_post_formatter = (blogposts) => {
+			let formated = '';
+			blogposts.forEach((blogpost) => {
+			console.log(blogpost);
+				formated += `
+				<div class="col-sm-12 col-12">
+					<section class="post-showcase post-showcase--small">
+						<a class="post-showcase__link" href="${blogpost.absoluteUrl}" title="${blogpost.name}"></a>
+							<div class="post-showcase__image-holder">
+								<img class="post-showcase__image" src="${blogpost.featuredImage}" alt="${blogpost.name}" />
+								<div class="post-showcase__post-type">Blog</div>
+							</div>
+							<div class="post-showcase__section post-showcase__section--bottom">
+								<div class="post-showcase__tags">
+								${blogpost.tagNames.map(tag => `<span class="post-showcase__tag">${tag}</span>`)}
+										
+								</div>
+								<div class="post-showcase__title">
+								${blogpost.name}
+								</div>
+							</div>
+							<div class="post-showcase__meta">
+									<div class="post-showcase__meta-info">
+										<span class="post-showcase__meta-icon"><img
+											src="{{ get_asset_url('../build/assets/icons/svg/icon_reading-time.svg') }}"
+											alt="Reading Time"
+										/></span>
+										<span class="post-showcase__meta-text">{{ blogpost.post_body|wordcount|divide(300) }}  min Read</span>
+									</div>
+									<div class="post-showcase__meta-info">
+										<span class="post-showcase__meta-icon"><img
+											src="{{ get_asset_url('../build/assets/icons/svg/icon_date.svg') }}"
+											alt="Reading Time"
+										/></span>
+										<span class="post-showcase__meta-text">${new Date(blogpost.publishDateLocalTime).toLocaleDateString()}</span>
+									</div>
+								</div>
+					</section>
+				</div>`
+
+			
+			})
+			return formated;
+		}
+	</script>
+{% end_require_js %} #}

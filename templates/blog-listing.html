@@ -13,70 +13,91 @@
           <div class="col-lg-10 col-12">
             <h1 class="learn__header">deckerdevs blogs</h1>
             {# MAP BLOGS HERE #}
-            {# <?php if ($paged == 1) { ?>
-              <div class="learn__featured">
-                <div class="learn__status-title"><?php _e('Featured', 'postie'); ?></div>
-                <div class="learn__status-divider"></div>
-                <?php 
-                  $featuredData = array(
-                    'article'    => $featured,
-                    'image-size' => 'read-more'
-                  );
-                  set_query_var('postShowcaseSize', 'large'); 
-                  set_query_var('blogData', $featuredData); 
-                ?>
-                <?php get_template_part('partials/sub-partials/post-showcase'); ?>
-              </div>
-              <div class="learn__latest">
-                <div class="learn__status-title"><?php _e('Latest', 'postie'); ?></div>
-                <div class="learn__status-divider"></div>
 
-                <?php
-                if ($news) {?>
-                  <?php
-                  $blogData = array(
-                    'article'    => $news[0],
-                    'image-size' => 'read-more'
-                  );
-                  set_query_var('postShowcaseSize', 'medium');
-                  set_query_var('blogData', $blogData);
-                  get_template_part('partials/sub-partials/post-showcase');
-                  ?>
-                <?php } ?>
-              
-                <div class="learn__status-divider"></div>
-              </div>
-            <?php } ?> #}
+            
             <div class="learn__other">
               <div class="row">
-              {# <?php set_query_var('postShowcaseSize', 'small'); ?>
-              <?php for ($i = 0; $i < 9; $i++) { ?>
-                <?php
-                // get_template_part('partials/sub-partials/post-showcase'); 
-                ?>
-              <?php } ?>
-
-              <?php
-              if ($news) {
-                foreach ($news as $key => $newsArticle) { 
-                  if($key > 0 && $newsArticle != $featured) {
-                ?>
-                  <?php
-                  $blogData = array(
-                    'article'    => $newsArticle,
-                    'image-size' => 'read-more'
-                  );
-                  set_query_var('blogData', $blogData);
-                  get_template_part('partials/sub-partials/post-showcase');
-                  ?>
-              <?php } 
-              }
-              } ?> #}
+								{% for post in contents %}
+									<div class="col-sm-4 col-12">
+										<section class="post-showcase post-showcase--small">
+											<a class="post-showcase__link" href="{{ post.absolute_url }}" title="{{ post.name }}"></a>
+												<div class="post-showcase__image-holder">
+													<img class="post-showcase__image" src="{{ post.featured_image }}" alt="{{ post.name }}" />
+													<div class="post-showcase__post-type">Blog</div>
+												</div>
+												<div class="post-showcase__section post-showcase__section--bottom">
+													<div class="post-showcase__tags">
+														{% for item in post.tag_list %}
+															<span class="case-study__tag">{{item}}</span>
+														{% endfor %}
+													</div>
+													<div class="post-showcase__title">
+													{{ post.name }}
+													</div>
+													<div class="post-showcase__meta">
+														<div class="post-showcase__meta-info">
+															<span class="post-showcase__meta-icon"><img
+																src="{{ get_asset_url('../build/assets/icons/svg/icon_reading-time.svg') }}"
+																alt="Reading Time"
+															/></span>
+															<span class="post-showcase__meta-text">{{ post.post_body|wordcount|divide(300) }}  min Read</span>
+														</div>
+														<div class="post-showcase__meta-info">
+															<span class="post-showcase__meta-icon"><img
+																src="{{ get_asset_url('../build/assets/icons/svg/icon_date.svg') }}"
+																alt="Reading Time"
+															/></span>
+															<span class="post-showcase__meta-text">{{ datetimeformat(post.publish_date_local_time, '%b %d, %Y') }}</span>
+														</div>
+													</div>
+												</div>
+											
+										</section>
+									</div>
+								{% endfor %}
               </div>
             </div>
 
             <div class="learn__pagination">
             {# PAGINATION HERE #}
+
+						<div class="container">
+							<div class="blog-pagination">
+									{% set page_list = [-2, -1, 0, 1, 2] %}
+									{% if contents.total_page_count - current_page_num == 1 %}{% set offset = -1 %}
+									{% elif contents.total_page_count - current_page_num == 0 %}{% set offset = -2 %}
+									{% elif current_page_num == 2 %}{% set offset = 1 %}
+									{% elif current_page_num == 1 %}{% set offset = 2 %}
+									{% else %}{% set offset = 0 %}{% endif %}
+
+									<div class="blog-pagination__container blog-pagination__left">
+											{% if last_page_num %}<a class="prev-link" href="{{ blog_page_link(last_page_num) }}">❮</a>{% endif %}
+											{% if contents.total_page_count > 5 %}
+													{% if current_page_num >= 4 %}
+															<a href="{{ blog_page_link(1) }}">1</a>
+															<a class="elipses" href="{% if current_page_num <= 5 %}{{ blog_page_link(1) }}{% else %}{{ blog_page_link(current_page_num - 5) }}{% endif %}">...</a>
+													{% endif %}
+											{% endif %}
+									</div>
+									<div class="blog-pagination__container blog-pagination__center">
+											{% for page in page_list %}
+													{% set this_page = current_page_num + page + offset %}
+													{% if this_page > 0 and this_page <= contents.total_page_count %}
+															<a {% if this_page == current_page_num %}class="active"{% endif %} href="{{ blog_page_link(this_page) }}">{{ this_page }}</a>
+													{% endif %}
+											{% endfor %}
+									</div>
+									<div class="blog-pagination__container blog-pagination__right">
+											{% if contents.total_page_count > 5 %}
+													{% if contents.total_page_count - current_page_num > 2 %}
+															<a class="elipses" href="{% if contents.total_page_count - current_page_num <= 5 %}{{ contents.total_page_count }}{% else %}{{ blog_page_link(current_page_num + 5) }}{% endif %}">...</a>
+															<a href="{{ blog_page_link(contents.total_page_count) }}">{{ contents.total_page_count }}</a>
+													{% endif %}
+											{% endif %}
+											{% if next_page_num %}<a class="next-link" href="{{ blog_page_link(current_page_num + 1) }}">❯</a>{% endif %}
+									</div>
+							</div>
+						</div>
             </div>
             
           </div>

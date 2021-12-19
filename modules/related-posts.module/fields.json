@@ -1,0 +1,13 @@
+[ {
+  "id" : "63894e94-6e62-ab03-3f3f-99a7b6d913ec",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "We Think You Will Also Like..."
+} ]

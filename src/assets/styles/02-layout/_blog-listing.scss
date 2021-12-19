@@ -1,0 +1,53 @@
+.blog-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: #69bc45;
+    background: transparent;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+    transition: 200ms background ease(custom, fluid),
+      200ms background ease(custom, fluid);
+
+    &.elipses {
+      pointer-events: none;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate3D(-50%, -50%, 0);
+      border: 1px solid #cbdfea;
+      border-radius: 50%;
+      transition: 200ms border-color ease(custom, fluid);
+    }
+
+    &.active,
+    &:hover {
+      background: #69bc45;
+      color: #fff;
+
+      &::after {
+        border-color: #69bc45;
+      }
+    }
+  }
+}
