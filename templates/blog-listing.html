@@ -1,0 +1,88 @@
+<!--
+  templateType: blog_listing
+  isAvailableForNewContent: true
+  label:  Blogs listing
+-->
+
+{% extends "./layouts/base.html" %} {% block body %}
+  <main id="main-content" class="body-container-wrapper main ">
+    <div class="learn">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10 col-12">
+            <h1 class="learn__header">deckerdevs blogs</h1>
+            {# MAP BLOGS HERE #}
+            {# <?php if ($paged == 1) { ?>
+              <div class="learn__featured">
+                <div class="learn__status-title"><?php _e('Featured', 'postie'); ?></div>
+                <div class="learn__status-divider"></div>
+                <?php 
+                  $featuredData = array(
+                    'article'    => $featured,
+                    'image-size' => 'read-more'
+                  );
+                  set_query_var('postShowcaseSize', 'large'); 
+                  set_query_var('blogData', $featuredData); 
+                ?>
+                <?php get_template_part('partials/sub-partials/post-showcase'); ?>
+              </div>
+              <div class="learn__latest">
+                <div class="learn__status-title"><?php _e('Latest', 'postie'); ?></div>
+                <div class="learn__status-divider"></div>
+
+                <?php
+                if ($news) {?>
+                  <?php
+                  $blogData = array(
+                    'article'    => $news[0],
+                    'image-size' => 'read-more'
+                  );
+                  set_query_var('postShowcaseSize', 'medium');
+                  set_query_var('blogData', $blogData);
+                  get_template_part('partials/sub-partials/post-showcase');
+                  ?>
+                <?php } ?>
+              
+                <div class="learn__status-divider"></div>
+              </div>
+            <?php } ?> #}
+            <div class="learn__other">
+              <div class="row">
+              {# <?php set_query_var('postShowcaseSize', 'small'); ?>
+              <?php for ($i = 0; $i < 9; $i++) { ?>
+                <?php
+                // get_template_part('partials/sub-partials/post-showcase'); 
+                ?>
+              <?php } ?>
+
+              <?php
+              if ($news) {
+                foreach ($news as $key => $newsArticle) { 
+                  if($key > 0 && $newsArticle != $featured) {
+                ?>
+                  <?php
+                  $blogData = array(
+                    'article'    => $newsArticle,
+                    'image-size' => 'read-more'
+                  );
+                  set_query_var('blogData', $blogData);
+                  get_template_part('partials/sub-partials/post-showcase');
+                  ?>
+              <?php } 
+              }
+              } ?> #}
+              </div>
+            </div>
+
+            <div class="learn__pagination">
+            {# PAGINATION HERE #}
+            </div>
+            
+          </div>
+          <div class="col-lg-1"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock body %}

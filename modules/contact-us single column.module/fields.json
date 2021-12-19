@@ -1,0 +1,149 @@
+[ {
+  "id" : "403ffffd-aece-ff44-2716-7e379930b5f6",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Title"
+}, {
+  "id" : "8535d4c0-36b6-f21e-82cb-a07de1babb17",
+  "name" : "description",
+  "display_width" : null,
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<div>We’re excited to show you the platform! Fill your details below and we’ll be in touch within 24 hours to schedule your demo.</div>"
+}, {
+  "id" : "92f5dbfc-389c-21bb-7e87-f5260b162e6d",
+  "name" : "reviews_title",
+  "display_width" : null,
+  "label" : "Reviews Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Reviews"
+}, {
+  "id" : "b3d3831b-6bf7-db2c-80b6-60d97269c8bb",
+  "name" : "list",
+  "display_width" : null,
+  "label" : "List",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 2,
+    "max" : 2,
+    "sorting_label_field" : null,
+    "default" : 2
+  },
+  "children" : [ {
+    "id" : "6db1622b-2064-c0f0-9b3a-d9aafb152fda",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Text"
+  }, {
+    "id" : "e35e0878-29a4-700d-2797-f41f173d0204",
+    "name" : "image",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/testimonials/lex-hulquist.jpeg",
+      "alt" : "lex-hulquist",
+      "loading" : "lazy",
+      "width" : 347,
+      "height" : 347,
+      "max_width" : 347,
+      "max_height" : 347
+    }
+  }, {
+    "id" : "3f4e306d-3737-dc03-559d-0c4b9fb6e807",
+    "name" : "name_field",
+    "display_width" : null,
+    "label" : "Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "John Johnson"
+  }, {
+    "id" : "dcdd15d5-9661-4adb-9c2f-57c4322d6954",
+    "name" : "role",
+    "display_width" : null,
+    "label" : "Role",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "CEO"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "text" : "Text",
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/testimonials/lex-hulquist.jpeg",
+      "alt" : "lex-hulquist",
+      "loading" : "lazy",
+      "width" : 347,
+      "height" : 347,
+      "max_width" : 347,
+      "max_height" : 347
+    },
+    "name_field" : "John Johnson",
+    "role" : "CEO"
+  }, {
+    "text" : "Text",
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6534445/testimonials/lex-hulquist.jpeg",
+      "alt" : "lex-hulquist",
+      "loading" : "lazy",
+      "width" : 347,
+      "height" : 347,
+      "max_width" : 347,
+      "max_height" : 347
+    },
+    "name_field" : "John Johnson",
+    "role" : "CEO"
+  } ]
+}, {
+  "id" : "3e0299ab-af5c-a863-fee8-90ccd9db8bf7",
+  "name" : "form",
+  "display_width" : null,
+  "label" : "Form",
+  "required" : false,
+  "locked" : false,
+  "type" : "form",
+  "default" : {
+    "response_type" : "inline",
+    "message" : "Thanks for submitting the form."
+  }
+} ]

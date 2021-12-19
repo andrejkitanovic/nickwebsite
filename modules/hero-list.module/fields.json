@@ -120,6 +120,18 @@
     }
   } ]
 }, {
+  "id" : "e7d53e2c-b6c5-1869-ae5b-5058c2dd2e7a",
+  "name" : "h2_text",
+  "display_width" : null,
+  "label" : "H2 Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "push the limits of what’s possible with solutions that take you to places other agencies refuse to go."
+}, {
   "id" : "fb7ef141-16b8-1fcb-98e7-bfa3d167a323",
   "name" : "button",
   "display_width" : null,

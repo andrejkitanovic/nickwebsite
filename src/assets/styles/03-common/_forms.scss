@@ -403,6 +403,8 @@
     height: 48px;
     cursor: pointer;
     transition: background-color 0.2s ease(custom, fluid);
+    margin: 0 auto;
+    font-size: 20px;
 
     &:hover {
       background-color: getPostieColor("primaryBlueHover");
@@ -462,7 +464,8 @@
   .field {
     margin-bottom: 0;
   }
-  fieldset {
+  fieldset,
+  .hs-form-field {
     border: none !important;
     padding-left: 0;
     padding-right: 0;

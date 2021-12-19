@@ -1,0 +1,2 @@
+h2.hero-list__header { font-size: 26px; }
+@media (min-width: 991px) { h2.hero-list__header { font-size: 30px; line-height: 1.1; } }

@@ -16,6 +16,7 @@
                             </div>
                         {% endfor %}
                     </div>
+									  {%- if module.h2_text %}<h2 class="hero-list__header redu">{{ module.h2_text }}</h2>{%- endif -%}
                     <div class="hero-list__image d-sm-none d-block" style="background-image:url('{{ module.image.src }}')"></div>
                     <a href="{{ module.button.url.href }}" class="cta__postie-button postie-button postie-button--big">{{ module.button.text }}</a>
                     <div class="hero-list__image d-sm-none d-block bg-blue" style="background-image:url('{{ module.image.src }}')"></div>
