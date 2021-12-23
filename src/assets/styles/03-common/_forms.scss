@@ -213,7 +213,8 @@
 //   }
 // }
 
-.hs-form.hs-custom-form.hs-form-private {
+.hs-form,
+.hbspt-form {
   input,
   textarea {
     outline: none;
@@ -407,7 +408,7 @@
     font-size: 20px;
 
     &:hover {
-      background-color: getPostieColor("primaryBlueHover");
+      // background-color: getPostieColor("primaryBlueHover");
     }
   }
 

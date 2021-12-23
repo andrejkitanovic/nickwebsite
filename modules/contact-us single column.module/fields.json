@@ -146,4 +146,14 @@
     "response_type" : "inline",
     "message" : "Thanks for submitting the form."
   }
+}, {
+  "id" : "a4cfac0d-e281-4819-dda2-4ce394aef854",
+  "name" : "this_is_a_support_form",
+  "display_width" : null,
+  "label" : "This is a support form",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
 } ]

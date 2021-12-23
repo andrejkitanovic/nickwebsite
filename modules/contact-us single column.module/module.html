@@ -8,17 +8,49 @@
         <h2 class="request-demo__header">
           {{ module.title }}
         </h2>
-
       <div class="request-demo__description">{{ module.description }}</div>
+        
+				{% if module.this_is_a_support_form %}
+					<!--[if lte IE 8]>
+					<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+					<![endif]-->
+					<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+					<script>
+						hbspt.forms.create({
+							region: "na1",
+							portalId: "6534445",
+							formId: "{{ module.form.form_id }}",
+							onFormSubmit: function($form) {
+							  let params = '?'
+  							document.querySelectorAll('form .hs-input').forEach((item) => {
+							    const key = item.name
+									const value = encodeURIComponent(item.value)
+									params = params + key + '=' + value + '&'
+								})
+						    console.log('send this to the api')
+                const Http = new XMLHttpRequest()
+								//?name=nicholas+decker&company=deckerdevs&project=big+hot+dog+secret&email=nicholas@deckerdevs.com&urls=https://deckerdevs.com&priority=High
+								let url = 'https://deckerdevs.com/_hcms/api/support' + params
+                Http.open("GET", url);
+								Http.send();
 
-        {% form
-          form_to_use="{{ module.form.form_id }}"
-          response_response_type="{{ module.form.response_type }}"
-          response_message="{{ module.form.message }}"
-          response_redirect_id="{{ module.form.redirect_id }}"
-          response_redirect_url="{{module.form.redirect_url}}"
-          gotowebinar_webinar_key="{{ module.form.gotowebinar_webinar_key }}"
-        %}
+								Http.onreadystatechange = (e) => {
+									console.log(Http.responseText)
+								}
+								
+							} 
+  					});
+					</script>
+				{% else %}
+					{% form
+						form_to_use="{{ module.form.form_id }}"
+						response_response_type="{{ module.form.response_type }}"
+						response_message="{{ module.form.message }}"
+						response_redirect_id="{{ module.form.redirect_id }}"
+						response_redirect_url="{{module.form.redirect_url}}"
+						gotowebinar_webinar_key="{{ module.form.gotowebinar_webinar_key }}"
+					%}
+				{% endif %}
       </div>
     </div>
   </div>
