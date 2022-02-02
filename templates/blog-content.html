@@ -83,6 +83,16 @@
                     {# DEMO BLOCK HERE #}
                 </div>
             </div>
+
+            {% if group.allow_comments %}
+              <div class="blog-comments">
+                {% module "blog_comments"
+                  path="@hubspot/blog_comments",
+                  label="Blog comments"
+                %}
+              </div>
+            {% endif %}
+
             {% module 'related-posts' path="../modules/related-posts" %}
         </div>
     </div>
