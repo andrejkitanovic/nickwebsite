@@ -1,0 +1,8 @@
+{# Render custom objects by query #}
+{% set contacts = crm_objects("contact") %}
+<h3>{{contacts.total}} contacts<h3>
+<ul>
+{% for contact in contacts.results %}
+	<li>Name: {{ event.name }}</li>
+{% endfor %}
+<ul> 

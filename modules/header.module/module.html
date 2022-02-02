@@ -17,7 +17,8 @@
 																					{% simple_menu menu_tree="{{ module.simplemenu_field }}" %}
                                         </div>
                             </nav> -->
-                        {% simple_menu menu_tree="{{ module.simplemenu_field }}" %}
+                        {% menu id="{{ module.menu_field }}" %}
+<!--                         {% simple_menu menu_tree="{{ module.simplemenu_field }}" %} -->
                     </div>
                     <div class="col-md-3 col-8 header__right">
                         {# <a class="header__login" href="<?php echo $login['url'] ?>">Login</a> #}

@@ -61,6 +61,14 @@
     "children" : [ ]
   } ]
 }, {
+  "id" : "27f4497f-8f40-6392-cb4c-89c8e20ba661",
+  "name" : "menu_field",
+  "display_width" : null,
+  "label" : "Menu",
+  "required" : false,
+  "locked" : true,
+  "type" : "menu"
+}, {
   "id" : "0b8bc2f6-bfdd-30ce-53db-2e2f48956cbf",
   "name" : "contact_us_link",
   "display_width" : null,
